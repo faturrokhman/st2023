@@ -9,47 +9,11 @@
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <script src="./js/swiper-bundle.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-    <style>
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-            z-index: 1;
-        }
-
-        .dropdown-content a {
-            padding: 0.25rem 0.5rem;
-            text-decoration: none;
-            display: block;
-            background-color: white;
-            color: black;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-            background-color: slategray;
-        }
-    </style>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-                    fontFamily: {
-                        poppins: ['Poppins']
-                    },
-                    colors: {
-                        'bg-primary': '#',
-                    }
+                    
                 }
             },
             plugins: [
@@ -57,12 +21,12 @@
             ],
         }
     </script>
-    <title>Tes</title>
+    <title>ST2023</title>
 </head>
 
-<body class="font-poppins">
+<body class="">
     <header>
-        <div class="bg-green-700 w-full h-min p-3 pb-0">
+        <div class="bg-primary w-full h-min p-3 pb-0">
             <div class="max-w-6xl mx-auto">
                 <div class="flex justify-start">
                     <img src="./img/bps.png" alt="Logo BPS" class="w-8">
@@ -84,7 +48,7 @@
         </div>
 
     </header>
-    <main class="">
+    <main class="bg-primary-800">
         <!-- Jumbroton -->
         <div class="w-full bg-green-700">
             <div class="w-full bg-cover bg-right" style="background-image: url('./img/komponen-1.png');">
@@ -108,11 +72,11 @@
             </div>
         </div>
         <!-- Subsektor -->
-        <div class="w-full bg-green-300 h-min">
+        <div class="w-full bg-primary-600 h-min">
             <div class="max-w-6xl text-center mx-auto">
                 <p class="font-semibold text-base p-3 sm:text-lg">Subsektor</p>
                 <div
-                    class="flex flex-row px-5 pt-2 pb-10 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5 md:justify-around">
+                    class="flex flex-row px-5 pt-2 pb-10 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5 lg:justify-evenly">
                     <a href="#" class="">
                         <div
                             class="flex flex-col flex-initial p-2 bg-green-200 rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36">
@@ -172,7 +136,7 @@
             <div class="max-w-6xl text-center mx-auto">
                 <p class="font-semibold text-base p-3 sm:text-lg">Publikasi</p>
                 <div
-                    class="flex flex-row px-5 pt-2 pb-10 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5 md:justify-around">
+                    class="flex flex-row px-5 pt-2 pb-10 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5 lg:justify-around">
                     <a href="#" class="">
                         <div
                             class="flex flex-col flex-initial bg-green-200 rounded-lg w-44 h-60 sm:w-56 sm:h-72 sm:rounded-xl space-y-3 overflow-hidden">
@@ -228,7 +192,7 @@
                         </div>
                         <div class="flex">
                             <span class="iconify" data-icon="fa:fax"></span>
-                              <p class="text-sm ml-2">(62-21) 3841195, 3842508, 3810291</p>
+                              <p class="text-sm ml-2">(62-21) 3857046</p>
                         </div>
                         <div class="flex">
                             <span class="iconify text-lg mt-0.5" data-icon="ic:baseline-email"></span>
@@ -250,7 +214,7 @@
         
         <!-- Navigasi -->
         <nav
-            class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-green-700 text-white text-xs font-medium uppercase md:top-3 md:bg-transparent md:w-fit md:left-auto border-t-2 md:border-t-0">
+            class="font-poppins fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-green-700 text-white text-xs font-medium uppercase md:top-3 md:bg-transparent md:w-fit md:left-auto border-t-2 md:border-t-0">
             <ul class="flex justify-between md:justify-start">
                 <li class="w-full md:mx-2">
                     <a href="#"
