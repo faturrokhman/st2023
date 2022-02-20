@@ -13,6 +13,9 @@ module.exports = {
         'text-body': "#52605F",
         'body-white': '#F5FFFE', //putih
       },
+      screens: {
+        'xss': '360px',
+      },
     },
     
   },

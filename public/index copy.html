@@ -7,13 +7,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper-bundle.css">
-    <script type="text/javascript" src="./js/navbar.js"></script>
+    <script src="./js/swiper-bundle.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script>
         tailwind.config = {
             theme: {
                 extend: {
-
+                    
                 }
             },
             plugins: [
@@ -26,92 +26,32 @@
 
 <body class="">
     <header>
-        <div class="navbar bg-primary text-body-white w-full h-min p-3 pb-0 sticky top-0" id="navbar">
+        <div class="bg-primary text-body-white w-full h-min p-3 pb-0">
             <div class="max-w-6xl mx-auto">
                 <!-- Logo -->
-                <div class="flex justify-between md:text-lg mx-5 sm:mx-10">
+                <div class="justify-around">
                     <div class="flex justify-start">
                         <img src="./img/bps.png" alt="Logo BPS" class="w-8">
                         <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
                     </div>
-                    <div class="hidden sm:block">
+                    <div class="hidden md:block">
                         <div class="flex justify-end">
-                            <img src="./img/st2023.png" alt="Logo ST2023" class="w-20">
+                            <img src="./img/st2023.png" alt="Logo ST2023" class="w-8">
                             <p class="ml-2 font-bold italic uppercase">Sensus Pertanian 2023</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mx-5 sm:mx-10">
-                    <div class="flex py-3 px-0 justify-start">
-                        <div class="w-min">
-                            <form action="">
-                                <input type="search" class="rounded text-black">
-                            </form>
-                        </div>
-                        <div class="ml-5 items-center hidden xss:block">
-                            <div class="flex">
-                                <img src="./icons/map.svg" alt="Location" class="w-3 md:w-4">
-                                <p class="ml-1 uppercase text-sm md:text-base">Indonesia</p>
-                            </div>
-                        </div>
+                <div class="flex py-3 px-0 justify-between sm:justify-start">
+                    <div class="w-min">
+                        <form action="">
+                            <input type="search" class="rounded text-black">
+                        </form>
                     </div>
-                    <!-- Navbar Top -->
-                    <nav class="w-min hidden md:block">
-                        <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase py-2">
-                            <li
-                                class="font-bold w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
-                                <a href="#">Beranda</a>
-                            </li>
-                            <li
-                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
-                                <a href="#" class="">
-                                    Layanan
-                                </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full left-0 rounded-md">
-                                    <a href="#" class="rounded-t-md">Tabel topik</a>
-                                    <a href="#" class="">Query Builder</a>
-                                    <a href="#" class="">perbandingan ANtar wilayah</a>
-                                    <a href="#" class="rounded-b-md">perbandingan Antar Tahun</a>
-                                </div>
-                            </li>
-                            <li
-                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
-                                <a href="#" class="">
-                                    Metadata
-                                </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full left-0 rounded-md">
-                                    <a href="#" class="rounded-t-md">Metadata Sensus</a>
-                                    <a href="#" class="">Kuesioner Sensus</a>
-                                    <a href="#" class="rounded-b-md">Istilah Statistik</a>
-                                </div>
-                            </li>
-                            <li
-                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
-                                <a href="#" class="">
-                                    Galeri
-                                </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full left-0 rounded-md">
-                                    <a href="#" class="rounded-t-md">Galeri Foto</a>
-                                    <a href="#" class="rounded-b-md">Galeri Video</a>
-                                </div>
-                            </li>
-                            <li
-                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
-                                <a href="#" class="">
-                                    Produk
-                                </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full right-0 lg:left-0 rounded-md">
-                                    <a href="#" class="rounded-t-md">Berita Resmi Statistik</a>
-                                    <a href="#" class="">Publikasi</a>
-                                    <a href="#" class="">Infografis</a>
-                                    <a href="#" class="">Leaflet</a>
-                                    <a href="#" class="rounded-b-md">Dokumen terkait</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </nav>
+                    <div class="flex sm:ml-5">
+                        <img src="./icons/map.svg" alt="Location">
+                        <p class="ml-1 uppercase text-sm">Indonesia</p>
+                    </div>
                 </div>
-
             </div>
 
         </div>
@@ -148,7 +88,7 @@
                     class="flex flex-row px-5 pt-2 pb-10 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5 lg:justify-evenly">
                     <a href="#" class="">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 transition hover:-translate-y-2">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36">
                             <span class="iconify text-3xl mx-auto" data-icon="teenyicons:plant-solid"></span>
                             <p class="font-semibold">Tanaman Pangan</p>
                         </div>
@@ -248,7 +188,7 @@
                             <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
                         </div>
                         <div class="flex justify-start">
-                            <img src="./img/st2023.png" alt="Logo BPS" class="w-20">
+                            <img src="./img/st2023.png" alt="Logo BPS" class="w-16">
                             <p class="ml-2 font-bold italic uppercase">Sensus Pertanian 2023</p>
                         </div>
                     </div>
@@ -257,15 +197,15 @@
                         <p class="text-sm">Jalan Dr. Sutomo 6-8 Jakarta, 10710 Indonesia</p>
                         <div class="flex">
                             <span class="iconify text-lg" data-icon="bxs:phone" style="color: white;"></span>
-                            <p class="text-sm ml-2">(62-21) 3841195, 3842508, 3810291</p>
+                              <p class="text-sm ml-2">(62-21) 3841195, 3842508, 3810291</p>
                         </div>
                         <div class="flex">
                             <span class="iconify" data-icon="fa:fax"></span>
-                            <p class="text-sm ml-2">(62-21) 3857046</p>
+                              <p class="text-sm ml-2">(62-21) 3857046</p>
                         </div>
                         <div class="flex">
                             <span class="iconify text-lg mt-0.5" data-icon="ic:baseline-email"></span>
-                            <p class="text-sm ml-2">bpshq@bps.go.id</p>
+                              <p class="text-sm ml-2">bpshq@bps.go.id</p>
                         </div>
                     </div>
                     <div class="text-sm space-y-2 hidden md:block">
@@ -274,19 +214,18 @@
                         <p>Publikasi</p>
                         <p>Infografis</p>
                         <p>Leaflet</p>
-                        <p>Dokumen Terkait</p>
+                        <p>Dokumen Terkait</p>   
                     </div>
                 </div>
-                <p class="text-xs text-center mt-5">Copyright &copy; 2022 - Badan Pusat Statistik | Sensus Pertanian
-                    2023</p>
+                <p class="text-xs text-center mt-5">Copyright &copy; 2022 - Badan Pusat Statistik | Sensus Pertanian 2023</p>
             </div>
         </div>
-
-        <!-- Navigasi Bottom (Mobile) -->
+        
+        <!-- Navigasi -->
         <nav
-            class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2">
-            <ul class="flex justify-between">
-                <li class="w-full">
+            class="font-poppins fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-white text-xs font-medium uppercase md:top-3 md:bg-transparent md:w-fit md:left-auto  md:border-t-0">
+            <ul class="flex justify-between md:justify-start">
+                <li class="w-full md:mx-2">
                     <a href="#"
                         class="w-full block px-2 py-4 text-center hover:bg-green-800 hover:text-slate-100 focus:ring-1 focus:ring-green-100 transition duration-300 md:w-min md:rounded-[4px] md:bg-green-900 md:py-1 md:px-3 ">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto md:hidden" fill="none"
@@ -376,5 +315,5 @@
 
     </footer>
 </body>
-<script type="text/javascript" src="./js/navbar.js"></script>
+
 </html>
