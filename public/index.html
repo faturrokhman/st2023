@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/swiper-bundle.css">
     <script type="text/javascript" src="./js/navbar.js"></script>
+    <script src="../node_modules/flowbite/dist/flowbite.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <script>
         tailwind.config = {
@@ -25,7 +26,7 @@
 </head>
 
 <body class="">
-    <header>
+    <header class="page-header">
         <div class="navbar bg-primary text-body-white w-full h-min p-3 pb-0 sticky top-0" id="navbar">
             <div class="max-w-6xl mx-auto">
                 <!-- Logo -->
@@ -67,7 +68,8 @@
                                 <a href="#" class="">
                                     Layanan
                                 </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full left-0 rounded-md">
+                                <div id="menu_layanan"
+                                    class="dropdown-content w-max text-xs top-full left-0 rounded-md border border-body-white">
                                     <a href="#" class="rounded-t-md">Tabel topik</a>
                                     <a href="#" class="">Query Builder</a>
                                     <a href="#" class="">perbandingan ANtar wilayah</a>
@@ -79,7 +81,8 @@
                                 <a href="#" class="">
                                     Metadata
                                 </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full left-0 rounded-md">
+                                <div id="menu_layanan"
+                                    class="dropdown-content w-max text-xs top-full left-0 rounded-md border border-body-white">
                                     <a href="#" class="rounded-t-md">Metadata Sensus</a>
                                     <a href="#" class="">Kuesioner Sensus</a>
                                     <a href="#" class="rounded-b-md">Istilah Statistik</a>
@@ -90,7 +93,8 @@
                                 <a href="#" class="">
                                     Galeri
                                 </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full left-0 rounded-md">
+                                <div id="menu_layanan"
+                                    class="dropdown-content w-max text-xs top-full left-0 rounded-md border border-body-white">
                                     <a href="#" class="rounded-t-md">Galeri Foto</a>
                                     <a href="#" class="rounded-b-md">Galeri Video</a>
                                 </div>
@@ -100,7 +104,8 @@
                                 <a href="#" class="">
                                     Produk
                                 </a>
-                                <div id="menu_layanan" class="dropdown-content w-max text-xs top-full right-0 lg:left-0 rounded-md">
+                                <div id="menu_layanan"
+                                    class="dropdown-content w-max text-xs top-full right-0 lg:left-0 rounded-md border border-body-white">
                                     <a href="#" class="rounded-t-md">Berita Resmi Statistik</a>
                                     <a href="#" class="">Publikasi</a>
                                     <a href="#" class="">Infografis</a>
@@ -282,66 +287,75 @@
             </div>
         </div>
 
+
         <!-- Navigasi Bottom (Mobile) -->
         <nav
-            class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2">
+            class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2 md:hidden">
             <ul class="flex justify-between">
                 <li class="w-full">
                     <a href="#"
-                        class="w-full block px-2 py-4 text-center hover:bg-green-800 hover:text-slate-100 focus:ring-1 focus:ring-green-100 transition duration-300 md:w-min md:rounded-[4px] md:bg-green-900 md:py-1 md:px-3 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto md:hidden" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                        </svg>
+                        class="w-full block px-2 py-4 text-center transition duration-300 hover:bg-body-white hover:text-primary-hover font-bold">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:home"></span>
                         <span class="hidden sm:block">
                             Beranda
                         </span>
                     </a>
                 </li>
-                <li id="btn_layanan" class="w-full md:mx-2 dropdown">
-                    <a href="#" role="button"
-                        class="w-full block px-2 py-4 text-center hover:bg-green-800 hover:text-slate-100 focus:ring-1 focus:ring-green-100 transition duration-300 md:w-min md:rounded-[4px] md:bg-green-900 md:py-1 md:px-3 ">
+                <li class="w-full">
+                    <button id="dropdownButton" data-dropdown-toggle="dropdown" class="w-full flex-row px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300"
+                        type="button">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto md:hidden" fill="none"
                             viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
                                 d="M5 12h14M5 12a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v4a2 2 0 01-2 2M5 12a2 2 0 00-2 2v4a2 2 0 002 2h14a2 2 0 002-2v-4a2 2 0 00-2-2m-2-4h.01M17 16h.01" />
                         </svg>
-                        <span class="hidden sm:block md:w-max">
-                            Layanan Data
+                        <span class="hidden uppercase font-medium sm:block">
+                            Layanan
                         </span>
-                        <div id="menu_layanan"
-                            class="hidden md:block dropdown-content w-max text-xs right-1/3 md:right-0">
-                            <a href="#" class="bg-green-200">sub menu 1</a>
-                            <a href="#" class="bg-green-200">sub menu menu banyak sekali</a>
-                        </div>
-                        <script>
-                            const btn = document.getElementById("btn_layanan");
-                            const menu = document.getElementById("menu_layanan");
-                            btn.addEventListener("click", () => {
-                                menu.classList.toggle("hidden");
-                            })
-                        </script>
-                    </a>
+                    </button>
+                    <div id="dropdown"
+                        class="hidden w-max rounded-md dropup-content border border-body-white">
+                        <ul class="" aria-labelledby="dropdownButton">
+                            <li>
+                                <a href="#" class="rounded-t-md">Tabel topik</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">Query Builder</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">perbandingan ANtar wilayah</a>
+                            </li>
+                            <li>
+                                <a href="#" class="rounded-b-md">perbandingan Antar Tahun</a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
-                <li class="w-full md:mx-2 dropdown">
-                    <a href="#"
-                        class="w-full block px-2 py-4 text-center hover:bg-green-800 hover:text-slate-100 focus:ring-1 focus:ring-green-100 transition duration-300 md:w-min md:rounded-[4px] md:bg-green-900 md:py-1 sm:px-3 ">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto md:hidden" fill="none"
-                            viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                                d="M4 7v10c0 2.21 3.582 4 8 4s8-1.79 8-4V7M4 7c0 2.21 3.582 4 8 4s8-1.79 8-4M4 7c0-2.21 3.582-4 8-4s8 1.79 8 4m0 5c0 2.21-3.582 4-8 4s-8-1.79-8-4" />
-                        </svg>
-                        <span class="hidden sm:block">
-                            metadata
+                <li class="w-full">
+                    <button id="dropdownButton" data-dropdown-toggle="dropdown2" class="w-full flex-row px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300"
+                        type="button">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:database"></span>
+                        <span class="hidden uppercase font-medium sm:block">
+                            Metadata
                         </span>
-                        <div class="dropdown-content w-max text-xs">
-                            <a href="#" class="bg-green-200">sub menu 1</a>
-                            <a href="#" class="bg-green-200">sub menu menu banyak sekali</a>
-
-                        </div>
-                    </a>
+                    </button>
+                    <div id="dropdown2"
+                        class="hidden w-max rounded-md dropup-content border border-body-white">
+                        <ul class="" aria-labelledby="dropdownButton">
+                            <li>
+                                <a href="#" class="rounded-t-md">Metadata Sensus</a>
+                            </li>
+                            <li>
+                                <a href="#" class="">Kuesioner Sensus</a>
+                            </li>
+                            <li>
+                                <a href="#" class="rounded-b-md">Istilah Statistik
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </li>
+                
                 <li class="w-full md:mx-2">
                     <a href="#"
                         class="w-full block px-2 py-4 text-center hover:bg-green-800 hover:text-slate-100 focus:ring-1 focus:ring-green-100 transition duration-300 md:w-min md:rounded-[4px] md:bg-green-900 md:py-1 md:px-3 ">
@@ -377,4 +391,5 @@
     </footer>
 </body>
 <script type="text/javascript" src="./js/navbar.js"></script>
+
 </html>

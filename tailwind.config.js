@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./public/*.{html,js}"],
+  content: ["./public/*.{html,js}", "./node_modules/flowbite/**/*.js"],
   theme: {
     extend: {
       fontFamily: {
@@ -21,5 +21,6 @@ module.exports = {
   },
   plugins: [
     require('tailwind-scrollbar-hide'),
+    require('flowbite/plugin'),
   ],
 }
