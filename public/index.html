@@ -28,29 +28,28 @@
 
 <body class="">
     <header id="page-header">
-        <div class="navbar bg-primary text-body-white w-full h-min p-3 pb-0 sticky top-0" id="navbar">
+        <div class="navbar bg-primary text-body-white w-full h-min p-3 pb-0 sticky top-0 shadow-lg" id="navbar">
             <div class="max-w-6xl mx-auto">
                 <!-- Logo -->
                 <div class="flex justify-between md:text-lg mx-5 sm:mx-10">
-                    <div class="flex justify-start">
+                    <div class="flex justify-start transition">
                         <img src="./img/bps.png" alt="Logo BPS" class="w-8">
                         <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
                     </div>
-                    <div class="hidden sm:block">
+                    <div class="hidden sm:block transition">
                         <div class="flex justify-end">
                             <img src="./img/st2023.png" alt="Logo ST2023" class="w-20">
                             <p class="ml-2 font-bold italic uppercase">Sensus Pertanian 2023</p>
                         </div>
                     </div>
                 </div>
-                <div class="flex justify-between mx-5 sm:mx-10">
-                    <div class="flex py-3 px-0 justify-start">
-                        <div class="w-full py-0">
+                <!-- Search Bar dan Lokasi -->
+                <div class="flex justify-between mx-5 sm:mx-10 mr-2">
+                    <div class="flex py-3 px-0 justify-start items-center">
+                        <div class="w-full py-0 transition">
                             <form action="">
-                                <input type="search" class="rounded w-full text-black py-1 text-sm focus:ring-primary-hover focus:border-primary-hover focus:border" placeholder="Cari">
-                                
+                                <input type="search" class="rounded w-full py-1 text-primary-hover text-sm border-slate-500 focus:ring-emerald-200 focus:border-emerald-200 border" placeholder="Cari...">
                             </form>
-                            
                         </div>
                         <div class="ml-5 items-center hidden xss:block">
                             <div class="flex">
@@ -60,7 +59,7 @@
                         </div>
                     </div>
                     <!-- Navbar Top -->
-                    <nav class="w-min hidden md:block">
+                    <nav class="w-min hidden md:block ml-2">
                         <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase py-2">
                             <li
                                 class="font-bold w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
@@ -127,7 +126,7 @@
     </header>
     <main class="bg-primary">
         <!-- Jumbroton -->
-        <div class="mt-100 w-full bg-primary-hover">
+        <div class="mt-12 pt-10 w-full bg-primary-hover">
             <div class="w-full bg-cover bg-right" style="background-image: url('./img/komponen-1.png');">
                 <!-- <img class="w-full" src="/img/komponsen 1.png"> -->
                 <div class="container py-12 md:20 lg:py-28">
@@ -202,9 +201,9 @@
             </div>
         </div>
         <!-- Grafik -->
-        <div class="h-full w-full bg-slate-50">
+        <div class="h-full w-full md:w-max bg-slate-100 rounded-md mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-xl hover:-translate-y-3">
             <div class="max-w-6xl text-center mx-auto mb-5">
-                <p class="font-semibold text-base p-3 sm:text-lg">Grafik Sensus</p>
+                <p class="font-semibold text-base p-3 sm:text-lg text-primary-hover">Grafik Sensus</p>
                 <img src="./img/chart.svg" alt="Chart" class="p-5 mx-auto">
             </div>
         </div>

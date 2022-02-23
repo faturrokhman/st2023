@@ -30,7 +30,7 @@
 
   var header = document.getElementById('page-header');
   var toggled;
-  var threshold = 200;
+  var threshold = 300;
 
   var checkScroll = function() {
       curScroll = w.scrollY || doc.scrollTop;
