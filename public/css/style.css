@@ -4658,6 +4658,10 @@ textarea.form-control.is-invalid{
   width: 1rem;
 }
 
+.w-5{
+  width: 1.25rem;
+}
+
 .max-w-6xl{
   max-width: 72rem;
 }
@@ -4821,6 +4825,22 @@ textarea.form-control.is-invalid{
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
   margin-left: calc(0.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-32 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(8rem * var(--tw-space-x-reverse));
+  margin-left: calc(8rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-10 > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 0;
+  margin-right: calc(2.5rem * var(--tw-space-x-reverse));
+  margin-left: calc(2.5rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
+.space-x-reverse > :not([hidden]) ~ :not([hidden]){
+  --tw-space-x-reverse: 1;
 }
 
 .overflow-hidden{
@@ -6198,6 +6218,10 @@ body{
 
   .xss\:w-full{
     width: 100%;
+  }
+
+  .xss\:justify-start{
+    justify-content: flex-start;
   }
 
   .xss\:px-10{
