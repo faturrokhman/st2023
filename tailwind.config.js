@@ -24,7 +24,12 @@ module.exports = {
   },
   plugins: [
     require('tailwind-scrollbar-hide'),
+    require('tailwind-scrollbar'),
     require('flowbite/plugin'),
     require('tw-elements/dist/plugin'),
+    require('@tailwindcss/forms'),
   ],
-}
+  variants: {
+    scrollbar: ['rounded'],
+  },
+};

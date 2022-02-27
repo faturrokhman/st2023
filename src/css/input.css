@@ -10,7 +10,7 @@ html {
 }
 
 body {
-    @apply font-poppins text-body-white;
+    @apply font-poppins text-body-white scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-primary overflow-y-scroll;
 }
 
 .dropdown {
