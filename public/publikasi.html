@@ -259,21 +259,6 @@
 <script src="./js/navbar.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
-    const sub = document.querySelectorAll('.subsektor');
-    sub.forEach((a, i) => {
-        a.dataset.aos = 'fade-down';
-        a.dataset.aosDelay = i * 100;
-    });
-    const layanan = document.querySelectorAll('.layanan');
-    layanan.forEach((a, i) => {
-        a.dataset.aos = 'zoom-in';
-        a.dataset.aosDelay = i * 100;
-    })
-    const publikasi = document.querySelectorAll('.publikasi');
-    publikasi.forEach((a, i) => {
-        a.dataset.aos = 'fade-up';
-        a.dataset.aosDelay = i * 100;
-    })
     AOS.init({
         duration: 1000,
         once: false,

@@ -54,3 +54,7 @@ body {
 #page-header.hide {
     @apply -top-56;
 }
+
+[role="tab"].active{
+    @apply bg-body-white text-primary-hover hover:bg-body-white hover:text-primary-hover;
+}
