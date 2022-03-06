@@ -140,14 +140,15 @@
       <p class="text-sm">Dalam Sensus Pertanian 2023, Lapangan Usaha Pertanian di bagi menjadi 6 Subsektor Pertanian.
       </p>
     </div>
-    <!-- Subsektor -->
     <div class="max-w-6xl mx-auto md:px-10">
-      <div class="bg-primary-hover rounded-t-lg mb-4">
-        <ul class="flex -mb-px" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+      <!-- Tab Subsektor -->
+      <div class="bg-primary-hover rounded-t-lg">
+        <ul class="flex mb-0" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
           <li class="w-full" role="presentation">
             <button
               class="inline-block w-full hover:text-primary-hover rounded-tl-lg p-2 text-sm font-medium text-center active hover:bg-body-white"
-              id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard" aria-selected="true">
+              id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab" aria-controls="dashboard"
+              aria-selected="true">
               <span class="iconify text-3xl mx-auto" data-icon="teenyicons:plant-solid"></span>
               <span class="hidden md:block font-semibold">Tanaman Pangan</span>
             </button>
@@ -176,7 +177,7 @@
               id="contacts-tab" data-tabs-target="#contacts" type="button" role="tab" aria-controls="contacts"
               aria-selected="false">
               <span class="iconify text-3xl mx-auto" data-icon="healthicons:animal-cow"></span>
-              <span class="hidden md:block font-semibold">Peternakan</span>  
+              <span class="hidden md:block font-semibold">Peternakan</span>
             </button>
           </li>
           <li class="w-full" role="presentation">
@@ -185,7 +186,7 @@
               id="ikan-tab" data-tabs-target="#ikan" type="button" role="tab" aria-controls="ikan"
               aria-selected="false">
               <span class="iconify text-3xl mx-auto" data-icon="ion:fish-sharp"></span>
-              <span class="hidden md:block font-semibold">Perikanan</span>  
+              <span class="hidden md:block font-semibold">Perikanan</span>
             </button>
           </li>
           <li class="w-full" role="presentation">
@@ -194,46 +195,254 @@
               id="hutan-tab" data-tabs-target="#hutan" type="button" role="tab" aria-controls="hutan"
               aria-selected="false">
               <span class="iconify text-3xl mx-auto" data-icon="bi:tree-fill"></span>
-              <span class="hidden md:block font-semibold">Kehutanan</span>  
+              <span class="hidden md:block font-semibold">Kehutanan</span>
             </button>
           </li>
         </ul>
       </div>
-      <div id="myTabContent">
-        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800" id="dashboard" role="tabpanel"
-          aria-labelledby="dashboard-tab">
-          <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong
-              class="font-medium text-gray-800 dark:text-white">Dashboard tab's associated content</strong>. Clicking
+      <!-- Content Subsektor Tab -->
+      <div id="myTabContent" class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6">
+        <div class="p-4 rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+          <h1 class="text-lg font-bold md:text-2xl mb-4">Tanaman Pangan</h1>
+          <!-- Tabel Hijau -->
+          <div class="grid grid-rows-1 md:grid-cols-2 gap-4">
+            <div class="bg-primary-hover rounded-md py-2 px-4 text-body-white">
+              <h2 class="font-semibold md:text-lg">Padi</h2>
+              <table class="table-auto w-full text-sm lg:text-base">
+                <tbody>
+                  <tr class="w-full">
+                    <td class="align-top">Rumah Tangga Padi</td>
+                    <td class="font-semibold align-top">17.162.942 ruta</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold">18,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Luas Tanam Padi</td>
+                    <td class="font-semibold align-top">9.767.898 hektar</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">5,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Rata-rata Luas Tanam</td>
+                    <td class="font-semibold align-top">6.678 m<span class="align-super text-[10px]">2</span></td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">15,76%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-primary-hover rounded-md py-2 px-4 text-body-white">
+              <h2 class="font-semibold md:text-lg">Palawija</h2>
+              <table class="table-auto w-full text-sm lg:text-base">
+                <tbody>
+                  <tr class="w-full">
+                    <td class="align-top">Rumah Tangga Palawija</td>
+                    <td class="font-semibold align-top">17.162.942 ruta</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold">18,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Luas Tanam Palawija</td>
+                    <td class="font-semibold align-top">9.767.898 hektar</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">5,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Rata-rata Luas Tanam</td>
+                    <td class="font-semibold align-top">6.678 m<span class="align-super text-[10px]">2</span></td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">15,76%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-primary-hover rounded-md py-2 px-4 text-body-white">
+              <h2 class="font-semibold md:text-lg">Jagung</h2>
+              <table class="table-auto w-full text-sm lg:text-base">
+                <tbody>
+                  <tr class="w-full">
+                    <td class="align-top">Rumah Tangga Jagung</td>
+                    <td class="font-semibold align-top">17.162.942 ruta</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold">18,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Luas Tanam Jagung</td>
+                    <td class="font-semibold align-top">9.767.898 hektar</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">5,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Rata-rata Luas Tanam</td>
+                    <td class="font-semibold align-top">6.678 m<span class="align-super text-[10px]">2</span></td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">15,76%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="bg-primary-hover rounded-md py-2 px-4 text-body-white">
+              <h2 class="font-semibold md:text-lg">Kedelai</h2>
+              <table class="table-auto w-full text-sm lg:text-base">
+                <tbody>
+                  <tr class="w-full">
+                    <td class="align-top">Rumah Tangga Kedelai</td>
+                    <td class="font-semibold align-top">17.162.942 ruta</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold">18,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Luas Tanam Kedelai</td>
+                    <td class="font-semibold align-top">9.767.898 hektar</td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">5,76%</span>
+                    </td>
+                  </tr>
+                  <tr class="w-full">
+                    <td class="align-top">Rata-rata Luas Tanam</td>
+                    <td class="font-semibold align-top">6.678 m<span class="align-super text-[10px]">2</span></td>
+                    <td class="text-emerald-300 flex items-center align-top">
+                      <span class="iconify text-2xl" data-icon="heroicons-solid:arrow-sm-up"></span>
+                      <span class="font-semibold align-top">15,76%</span>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <h2 class="font-bold mt-4 md:text-lg md:text-center">Dataset Tanaman Pangan</h2>
+          <div class="md:text-center">
+            <form action="./belumtersedia.html" class="py-4 px-2">
+              <label for="dataset" class="text-sm font-semibold md:text-base">Judul Dataset :</label>
+              <select name="dataset" id=dataset" class="w-full rounded-md mb-3 text-sm md:w-max">
+                <option value="ruta" class="w-96">Jumlah Rumah Tangga, Luas Tanam, dan...</option>
+                <option value="padi1">Jumlah Rumah Tangga Usaha Tanaman Padi</option>
+                <option value="padi2">Jumlah Rumah Tangga Usaha Tanaman Padi</option>
+                <option value="padi3">Jumlah Rumah Tangga Usaha Tanaman Padi</option>
+              </select>
+            </form>
+          </div>
+          <h3 class="text-sm font-medium text-text-color mb-3 md:text-center md:w-1/2 md:mx-auto">
+            Tabel Jumlah Rumah Tangga, Luas Tanam, dan Rata-rata Luas Tanam Usaha Tanaman Padi dan Palawija menurut Jenis Tanaman
+          </h3>
+          <!-- label hijau -->
+          <div>
+            <ul class="flex space-x-4 justify-center">
+              <li>
+                <a href="./belumtersedia.html" class="bg-emerald-100 rounded-md text-emerald-700 flex text-xs w-min px-2 py-1 items-center font-semibold hover:bg-emerald-200">
+                  <span class="iconify" data-icon="heroicons-outline:document-duplicate"></span>
+                  Copy
+                </a>
+              </li>
+              <li>
+                <a href="./belumtersedia.html" class="bg-emerald-100 rounded-md text-emerald-700 flex text-xs w-min px-2 py-1 items-center font-semibold hover:bg-emerald-200">
+                  <span class="iconify" data-icon="heroicons-outline:document-duplicate"></span>
+                  PDF
+                </a>
+              </li>
+              <li>
+                <a href="./belumtersedia.html" class="bg-emerald-100 rounded-md text-emerald-700 flex text-xs w-min px-2 py-1 items-center font-semibold hover:bg-emerald-200">
+                  <span class="iconify" data-icon="heroicons-outline:document-duplicate"></span>
+                  Excel
+                </a>
+              </li>
+              <li>
+                <a href="./belumtersedia.html" class="bg-emerald-100 rounded-md text-emerald-700 flex text-xs w-min px-2 py-1 items-center font-semibold hover:bg-emerald-200">
+                  <span class="iconify" data-icon="heroicons-outline:printer"></span>
+                  Print
+                </a>
+              </li>
+            </ul>
+          </div>
+          <!-- Tabel Item -->
+          <div class="overflow-auto rounded-md border mt-3 border-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded py-1 px-2">
+            <table class="text-text-color w-full whitespace-nowrap text-sm divide-y divide-text-body">
+              <thead>
+                <tr class="items-center">
+                  <th class="whitespace-nowrap">Jenis Tanaman</th>
+                  <th class="whitespace-nowrap">Rumah Tangga</th>
+                  <th class="whitespace-nowrap">Luas Tanam m<span class="align-super text-xs">2</span></th>
+                  <th class="whitespace-nowrap">Rata-rata Luas Tanam m<span class="align-super text-xs">2</span></th>
+                </tr>
+              </thead>
+              <tbody >
+                <tr class="bg-slate-200">
+                  <td>Tanaman Pangan</td>
+                  <td class="text-right">17.134.827</td>
+                  <td class="text-right">13.131.131</td>
+                  <td class="text-right">7.685</td>
+                </tr>
+                <tr class="">
+                  <td>Tanaman Pangan</td>
+                  <td class="text-right">17.134.827</td>
+                  <td class="text-right">13.131.131</td>
+                  <td class="text-right">7.685</td>
+                </tr>
+                <tr class="bg-slate-200">
+                  <td>Tanaman Pangan</td>
+                  <td class="text-right">17.134.827</td>
+                  <td class="text-right">13.131.131</td>
+                  <td class="text-right">7.685</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          
+        </div>
+        <div class="p-4 rounded-lg hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+          <p class="text-sm">This is some placeholder content the <strong class="font-medium">Profile tab's associated
+              content</strong>. Clicking
             another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control
             the content visibility and styling.</p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="profile" role="tabpanel"
-          aria-labelledby="profile-tab">
-          <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong
-              class="font-medium text-gray-800 dark:text-white">Profile tab's associated content</strong>. Clicking
+
+        <div class="p-4 rounded-lg hidden" id="settings" role="tabpanel" aria-labelledby="settings-tab">
+          <p class="text-sm">This is some placeholder content the <strong class="font-medium">Settings tab's associated
+              content</strong>. Clicking
             another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control
             the content visibility and styling.</p>
         </div>
-        
-        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="settings" role="tabpanel"
-          aria-labelledby="settings-tab">
-          <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong
-              class="font-medium text-gray-800 dark:text-white">Settings tab's associated content</strong>. Clicking
+        <div class="p-4 rounded-lg hidden" id="contacts" role="tabpanel" aria-labelledby="contacts-tab">
+          <p class="text-sm">This is some placeholder content the <strong class="font-medium">Contacts tab's associated
+              content</strong>. Clicking
             another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control
             the content visibility and styling.</p>
         </div>
-        <div class="bg-gray-50 p-4 rounded-lg dark:bg-gray-800 hidden" id="contacts" role="tabpanel"
-          aria-labelledby="contacts-tab">
-          <p class="text-gray-500 dark:text-gray-400 text-sm">This is some placeholder content the <strong
-              class="font-medium text-gray-800 dark:text-white">Contacts tab's associated content</strong>. Clicking
+        <div class="p-4 rounded-lg hidden" id="ikan" role="tabpanel" aria-labelledby="ikan-tab">
+          <p class="text-sm">This is some placeholder content the <strong class="font-medium">Ikan tab's associated
+              content</strong>. Clicking
+            another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control
+            the content visibility and styling.</p>
+        </div>
+        <div class="p-4 rounded-lg hidden" id="hutan" role="tabpanel" aria-labelledby="hutan-tab">
+          <p class="text-sm">This is some placeholder content the <strong class="font-medium">Hutan tab's associated
+              content</strong>. Clicking
             another tab will toggle the visibility of this one for the next. The tab JavaScript swaps classes to control
             the content visibility and styling.</p>
         </div>
       </div>
 
-      <p class="mt-5 text-slate-200">This tabs component is part of a larger, open-source library of Tailwind CSS
-        components. Learn more by going to the official <a class="text-blue-600 hover:underline"
-          href="https://flowbite.com/docs/getting-started/introduction/" target="_blank">Flowbite Documentation</a>.</p>
     </div>
 
     <!-- Navigasi Bottom (Mobile) -->
