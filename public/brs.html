@@ -12,7 +12,7 @@
     <script src="../node_modules/flowbite/dist/flowbite.js"></script>
     <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    <title>Laman Belum Tersedia</title>
+    <title>Berita Resmi Statistik</title>
     <link rel="icon" href="./img/bps.png">
 </head>
 
@@ -72,9 +72,10 @@
                                                     <option value="sumbar">Provinsi Sumatera Barat</option>
                                                 </select>
                                                 <div class="text-center">
-                                                    <input type="submit" value="Ubah" class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
+                                                    <input type="submit" value="Ubah"
+                                                        class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
                                                 </div>
-                                                
+
                                             </form>
                                             <button onclick="showLocation(true)"
                                                 class="absolute top-4 right-4 xl:right-8" aria-label="close">
@@ -97,7 +98,7 @@
                     <nav class="w-min hidden md:block ml-2">
                         <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase py-2">
                             <li
-                                class="font-bold w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                class="w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
                                 <a href="./index.html">Beranda</a>
                             </li>
                             <li
@@ -118,7 +119,7 @@
                                 </div>
                             </li>
                             <li
-                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                class="font-bold w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
                                 <a href="#" class="">
                                     Produk
                                 </a>
@@ -136,7 +137,239 @@
 
     </header>
     <main class="bg-primary mt-12 pt-10 w-full">
-
+        <!-- Content -->
+        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+            <h1 class="font-bold text-2xl mb-1">Berita Resmi Statistik</h1>
+            <form action="./belumtersedia.html" class="h-min w-48 ">
+                <select name="dataset" id=dataset
+                    class="w-full rounded-md mb-3 text-sm md:w-max border-2 border-primary-hover bg-body-white">
+                    <option value="ruta" class="text-text-body">Periode Sensus</option>
+                    <option value="padi1">2013</option>
+                    <option value="padi2">2023</option>
+                </select>
+            </form>
+        </div>
+        <div class="max-w-6xl mx-auto px-4 pb-4">
+            <div
+                class="overflow-auto max-w-3xl mx-auto rounded-md border border-body-white scrollbar-thin scrollbar-thumb-body-white scrollbar-rounded pt-1 pb-2 px-2">
+                <table class="text-body-white w-full whitespace-nowrap text-sm divide-y divide-body-white">
+                    <thead class="px-1">
+                        <tr class="items-center">
+                            <th class="px-2 py-1">Judul</th>
+                            <th class="px-2 py-1">Tanggal Rilis</th>
+                        </tr>
+                    </thead>
+                    <tbody class="px-1">
+                        <tr class="bg-primary-hover hover:bg-body-white hover:text-primary-hover cursor-pointer"
+                            onclick="showHasil1(true)">
+                            <td class="px-1 py-2">Hasil ST 2023</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="hover:bg-body-white hover:text-primary-hover cursor-pointer" onclick="showHasil2(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Aceh</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="bg-primary-hover hover:bg-body-white hover:text-primary-hover px-1 cursor-pointer" onclick="showHasil3(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Sumatera Utara</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="hover:bg-body-white hover:text-primary-hover cursor-pointer" onclick="showHasil2(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Sumatera Barat</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="bg-primary-hover hover:bg-body-white hover:text-primary-hover px-1 cursor-pointer" onclick="showHasil3(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Riau</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="hover:bg-body-white hover:text-primary-hover cursor-pointer" onclick="showHasil2(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Kepulauan Riau</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="bg-primary-hover hover:bg-body-white hover:text-primary-hover px-1 cursor-pointer" onclick="showHasil3(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Jambi</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="hover:bg-body-white hover:text-primary-hover cursor-pointer" onclick="showHasil2(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Bengkulu</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="bg-primary-hover hover:bg-body-white hover:text-primary-hover px-1 cursor-pointer" onclick="showHasil3(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Sumatera Selatan</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                        <tr class="hover:bg-body-white hover:text-primary-hover cursor-pointer" onclick="showHasil2(true)">
+                            <td class="px-1 py-2">Hasil ST 2023 Provinsi Kepulauan Bangka Belitung</td>
+                            <td class="text-right px-1">23 Januari 2024</td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="hasil1" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 z-50 hidden">
+                    <div class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
+                        <div
+                            class="w-96 relative flex flex-col justify-center items-center bg-primary-hover text-text-color rounded-xl">
+                            <div
+                                class="bg-primary-hover flex items-center text-body-white w-full justify-center rounded-t-xl py-1 md:py-3 pr-4">
+                                <h2 class="font-semibold md:text-lg text-center py-2">Hasil ST 2023</h2>
+                                <button onclick="showHasil1(true)" class="absolute md:top-4 right-4 xl:right-8"
+                                    aria-label="close">
+                                    <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
+                                </button>
+                            </div>
+                            <div class="bg-body-white w-full text-primary-hover rounded-b-lg py-4 px-2 lg:px-6 text-sm lg:text-base">
+                                <table class="w-full">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Tanggal Rilis
+                                            </td>
+                                            <td class="font-medium">
+                                                23 Januari 2024
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Lampiran
+                                            </td>
+                                            <td>
+                                                <a href="./Hasil Sensus ST2023 (example).pdf" target="_blank" download="Hasil Sensus ST2023">
+                                                    <div class="bg-primary-hover rounded-full text-body-white pl-4 pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer" >
+                                                        <span class="iconify text-2xl" data-icon="heroicons-solid:document-download"></span>
+                                                        <span class="ml-1 text-sm font-semibold">
+                                                            Download
+                                                        </span>
+                                                        
+                                                    </div>
+                                                </a>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Abstrak</p>
+                                <p class="text-text-color mt-1 text-justify">
+                                    Reiciendis sit aut ab ab quia incidunt et aut ut. Et officia sed aut fugiat saepe laboriosam. Dolore soluta quam modi sint debitis. Facere aut corrupti reprehenderit 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hasil2" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 z-50 hidden">
+                    <div class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
+                        <div
+                            class="w-96 relative flex flex-col justify-center items-center bg-primary-hover text-text-color rounded-xl">
+                            <div
+                                class="bg-primary-hover flex items-center text-body-white w-full justify-center rounded-t-xl py-1 md:py-3 pr-4">
+                                <h2 class="font-semibold md:text-lg text-center py-2">Hasil ST 2023 Provinsi Aceh</h2>
+                                <button onclick="showHasil2(true)" class="absolute md:top-4 right-4 xl:right-8"
+                                    aria-label="close">
+                                    <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
+                                </button>
+                            </div>
+                            <div class="bg-body-white w-full text-primary-hover rounded-b-lg py-4 px-2 lg:px-6 text-sm lg:text-base">
+                                <table class="w-full">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Tanggal Rilis
+                                            </td>
+                                            <td class="font-medium">
+                                                23 Januari 2024
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Lampiran
+                                            </td>
+                                            <td>
+                                                <a href="./Hasil Sensus ST2023 (example).pdf" target="_blank" download="Hasil Sensus ST2023">
+                                                    <div class="bg-primary-hover rounded-full text-body-white pl-4 pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer" >
+                                                        <span class="iconify text-2xl" data-icon="heroicons-solid:document-download"></span>
+                                                        <span class="ml-1 text-sm font-semibold">
+                                                            Download
+                                                        </span>
+                                                        
+                                                    </div>
+                                                </a>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Abstrak</p>
+                                <p class="text-text-color mt-1 text-justify">
+                                    Reiciendis sit aut ab ab quia incidunt et aut ut. Et officia sed aut fugiat saepe laboriosam. Dolore soluta quam modi sint debitis. Facere aut corrupti reprehenderit 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="hasil3" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 z-50 hidden">
+                    <div class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
+                        <div
+                            class="w-96 relative flex flex-col justify-center items-center bg-primary-hover text-text-color rounded-xl">
+                            <div
+                                class="bg-primary-hover flex items-center text-body-white w-full justify-center rounded-t-xl py-1 md:py-3 pr-4">
+                                <h2 class="font-semibold md:text-lg text-center py-2 px-4">Hasil ST 2023 Provinsi Sumatera Utara</h2>
+                                <button onclick="showHasil3(true)" class="absolute md:top-4 right-4 xl:right-8"
+                                    aria-label="close">
+                                    <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
+                                </button>
+                            </div>
+                            <div class="bg-body-white w-full text-primary-hover rounded-b-lg py-4 px-2 lg:px-6 text-sm lg:text-base">
+                                <table class="w-full">
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                Tanggal Rilis
+                                            </td>
+                                            <td class="font-medium">
+                                                23 Januari 2024
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                Lampiran
+                                            </td>
+                                            <td>
+                                                <a href="./Hasil Sensus ST2023 (example).pdf" target="_blank" download="Hasil Sensus ST2023">
+                                                    <div class="bg-primary-hover rounded-full text-body-white pl-4 pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer" >
+                                                        <span class="iconify text-2xl" data-icon="heroicons-solid:document-download"></span>
+                                                        <span class="ml-1 text-sm font-semibold">
+                                                            Download
+                                                        </span>
+                                                        
+                                                    </div>
+                                                </a>
+                                                
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <p>Abstrak</p>
+                                <p class="text-text-color mt-1 text-justify">
+                                    Reiciendis sit aut ab ab quia incidunt et aut ut. Et officia sed aut fugiat saepe laboriosam. Dolore soluta quam modi sint debitis. Facere aut corrupti reprehenderit 
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Script Memunculkan Modal -->
+                <script>
+                    let hasil1 = document.getElementById("hasil1");
+                    const showHasil1 = (flag) => {
+                        hasil1.classList.toggle("hidden");
+                    };
+                    let hasil2 = document.getElementById("hasil2");
+                    const showHasil2 = (flag) => {
+                        hasil2.classList.toggle("hidden");
+                    };
+                    let hasil3 = document.getElementById("hasil3");
+                    const showHasil3 = (flag) => {
+                        hasil3.classList.toggle("hidden");
+                    };
+                </script>
+            </div>
+        </div>
         <!-- Navigasi Bottom (Mobile) -->
         <nav
             class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2 md:hidden">
@@ -144,7 +377,7 @@
                 <li class="w-full">
                     <a href="./index.html"
                         class="w-full block px-2 py-4 text-center transition duration-300 hover:bg-body-white hover:text-primary-hover font-bold">
-                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:home"></span>
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:home"></span>
                         <span class="hidden sm:block">
                             Beranda
                         </span>
@@ -181,12 +414,13 @@
                     <button id="produkButton" data-dropdown-toggle="produkDropdown"
                         class="w-full flex-row px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300"
                         type="button">
-                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:chart-bar"></span>
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:chart-bar"></span>
                         <span class="hidden uppercase font-medium sm:block">
                             Produk
                         </span>
                     </button>
-                    <div id="produkDropdown" class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
+                    <div id="produkDropdown"
+                        class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
                         <ul class="" aria-labelledby="dropdownButton">
                             <li>
                                 <a href="./brs.html" class="rounded-t-md">Berita Resmi Statistik</a>
@@ -247,11 +481,12 @@
                                 <a href="./publikasi.html">Publikasi</a>
                             </li>
                         </ul>
-                        
-                        
+
+
                     </div>
                 </div>
-                <p class="text-xs text-center mt-5 mb-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi Sensus Pertanian 2023</p>
+                <p class="text-xs text-center mt-5 mb-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi
+                    Sensus Pertanian 2023</p>
             </div>
         </div>
     </footer>

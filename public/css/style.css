@@ -4375,16 +4375,16 @@ textarea.form-control.is-invalid{
   z-index: 40;
 }
 
+.m-0{
+  margin: 0px;
+}
+
 .m-3{
   margin: 0.75rem;
 }
 
 .m-2{
   margin: 0.5rem;
-}
-
-.m-0{
-  margin: 0px;
 }
 
 .mx-auto{
@@ -4402,6 +4402,11 @@ textarea.form-control.is-invalid{
   margin-bottom: 0px;
 }
 
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
@@ -4410,11 +4415,6 @@ textarea.form-control.is-invalid{
 .my-4{
   margin-top: 1rem;
   margin-bottom: 1rem;
-}
-
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
 }
 
 .mb-20{
@@ -4461,6 +4461,18 @@ textarea.form-control.is-invalid{
   margin-bottom: 0.5rem;
 }
 
+.mb-1{
+  margin-bottom: 0.25rem;
+}
+
+.mb-6{
+  margin-bottom: 1.5rem;
+}
+
+.mb-0{
+  margin-bottom: 0px;
+}
+
 .-mt-2{
   margin-top: -0.5rem;
 }
@@ -4501,18 +4513,6 @@ textarea.form-control.is-invalid{
   margin-bottom: 2.5rem;
 }
 
-.mb-1{
-  margin-bottom: 0.25rem;
-}
-
-.mb-6{
-  margin-bottom: 1.5rem;
-}
-
-.mb-0{
-  margin-bottom: 0px;
-}
-
 .ml-3{
   margin-left: 0.75rem;
 }
@@ -4523,6 +4523,10 @@ textarea.form-control.is-invalid{
 
 .mt-2{
   margin-top: 0.5rem;
+}
+
+.mt-1{
+  margin-top: 0.25rem;
 }
 
 .block{
@@ -4571,6 +4575,10 @@ textarea.form-control.is-invalid{
   height: 2.5rem;
 }
 
+.h-auto{
+  height: auto;
+}
+
 .h-24{
   height: 6rem;
 }
@@ -4585,10 +4593,6 @@ textarea.form-control.is-invalid{
 
 .h-4{
   height: 1rem;
-}
-
-.h-auto{
-  height: auto;
 }
 
 .max-h-36{
@@ -4639,6 +4643,10 @@ textarea.form-control.is-invalid{
   width: 2.5rem;
 }
 
+.w-48{
+  width: 12rem;
+}
+
 .w-3\/4{
   width: 75%;
 }
@@ -4651,16 +4659,8 @@ textarea.form-control.is-invalid{
   width: 11rem;
 }
 
-.w-48{
-  width: 12rem;
-}
-
 .w-64{
   width: 16rem;
-}
-
-.w-56{
-  width: 14rem;
 }
 
 .max-w-6xl{
@@ -4746,6 +4746,14 @@ textarea.form-control.is-invalid{
 
 .grid-cols-7{
   grid-template-columns: repeat(7, minmax(0, 1fr));
+}
+
+.grid-cols-2{
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.grid-cols-1{
+  grid-template-columns: repeat(1, minmax(0, 1fr));
 }
 
 .grid-rows-1{
@@ -4851,6 +4859,11 @@ textarea.form-control.is-invalid{
   border-color: rgb(82 96 95 / var(--tw-divide-opacity));
 }
 
+.divide-body-white > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(245 255 254 / var(--tw-divide-opacity));
+}
+
 .overflow-auto{
   overflow: auto;
 }
@@ -4901,9 +4914,9 @@ textarea.form-control.is-invalid{
   border-bottom-left-radius: 0.375rem;
 }
 
-.rounded-t-xl{
-  border-top-left-radius: 0.75rem;
-  border-top-right-radius: 0.75rem;
+.rounded-t-lg{
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
 }
 
 .rounded-b-lg{
@@ -4911,9 +4924,9 @@ textarea.form-control.is-invalid{
   border-bottom-left-radius: 0.5rem;
 }
 
-.rounded-t-lg{
-  border-top-left-radius: 0.5rem;
-  border-top-right-radius: 0.5rem;
+.rounded-t-xl{
+  border-top-left-radius: 0.75rem;
+  border-top-right-radius: 0.75rem;
 }
 
 .rounded-l-lg{
@@ -5043,6 +5056,11 @@ textarea.form-control.is-invalid{
   background-color: rgb(255 255 255 / 0.5);
 }
 
+.bg-slate-600{
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
 .bg-opacity-80{
   --tw-bg-opacity: 0.8;
 }
@@ -5137,6 +5155,11 @@ textarea.form-control.is-invalid{
   padding-right: 1rem;
 }
 
+.px-6{
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
 .px-5{
   padding-left: 1.25rem;
   padding-right: 1.25rem;
@@ -5145,11 +5168,6 @@ textarea.form-control.is-invalid{
 .px-1{
   padding-left: 0.25rem;
   padding-right: 0.25rem;
-}
-
-.px-6{
-  padding-left: 1.5rem;
-  padding-right: 1.5rem;
 }
 
 .px-3{
@@ -5182,24 +5200,24 @@ textarea.form-control.is-invalid{
   padding-bottom: 5rem;
 }
 
-.pt-12{
-  padding-top: 3rem;
-}
-
-.pb-5{
-  padding-bottom: 1.25rem;
-}
-
-.pl-24{
-  padding-left: 6rem;
-}
-
 .pr-5{
   padding-right: 1.25rem;
 }
 
 .pt-2{
   padding-top: 0.5rem;
+}
+
+.pb-5{
+  padding-bottom: 1.25rem;
+}
+
+.pt-12{
+  padding-top: 3rem;
+}
+
+.pl-24{
+  padding-left: 6rem;
 }
 
 .pt-5{
@@ -5228,6 +5246,14 @@ textarea.form-control.is-invalid{
 
 .pb-2{
   padding-bottom: 0.5rem;
+}
+
+.pr-6{
+  padding-right: 1.5rem;
+}
+
+.pb-4{
+  padding-bottom: 1rem;
 }
 
 .text-center{
@@ -5357,6 +5383,11 @@ textarea.form-control.is-invalid{
   color: rgb(34 43 42 / var(--tw-text-opacity));
 }
 
+.text-text-body{
+  --tw-text-opacity: 1;
+  color: rgb(82 96 95 / var(--tw-text-opacity));
+}
+
 .text-white{
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
@@ -5375,11 +5406,6 @@ textarea.form-control.is-invalid{
 .text-slate-400{
   --tw-text-opacity: 1;
   color: rgb(148 163 184 / var(--tw-text-opacity));
-}
-
-.text-text-body{
-  --tw-text-opacity: 1;
-  color: rgb(82 96 95 / var(--tw-text-opacity));
 }
 
 .text-gray-900{
@@ -5543,6 +5569,10 @@ textarea.form-control.is-invalid{
 
 .scrollbar-thumb-text-body{
   --scrollbar-thumb: #52605F !important;
+}
+
+.scrollbar-thumb-body-white{
+  --scrollbar-thumb: #F5FFFE !important;
 }
 
 /* Component CSS */
@@ -5711,6 +5741,28 @@ body{
 .hover\:bg-blue-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(30 66 159 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-400:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(148 163 184 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-slate-600:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(71 85 105 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-primary-hover\/30:hover{
+  background-color: rgb(6 78 59 / 0.3);
+}
+
+.hover\:bg-primary-hover\/5:hover{
+  background-color: rgb(6 78 59 / 0.05);
+}
+
+.hover\:bg-primary-hover\/60:hover{
+  background-color: rgb(6 78 59 / 0.6);
 }
 
 .hover\:text-primary-hover:hover{
@@ -5893,6 +5945,10 @@ body{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 
+  .sm\:grid-cols-2{
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .sm\:flex-row{
     flex-direction: row;
   }
@@ -6010,6 +6066,10 @@ body{
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
+  .md\:grid-cols-4{
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+
   .md\:flex-row{
     flex-direction: row;
   }
@@ -6051,16 +6111,16 @@ body{
     padding-bottom: 1.25rem;
   }
 
-  .md\:pt-6{
-    padding-top: 1.5rem;
-  }
-
   .md\:pl-3{
     padding-left: 0.75rem;
   }
 
   .md\:pl-16{
     padding-left: 4rem;
+  }
+
+  .md\:pt-6{
+    padding-top: 1.5rem;
   }
 
   .md\:text-center{
@@ -6077,6 +6137,11 @@ body{
     line-height: 1.5rem;
   }
 
+  .md\:text-2xl{
+    font-size: 1.5rem;
+    line-height: 2rem;
+  }
+
   .md\:text-3xl{
     font-size: 1.875rem;
     line-height: 2.25rem;
@@ -6090,11 +6155,6 @@ body{
   .md\:text-6xl{
     font-size: 3.75rem;
     line-height: 1;
-  }
-
-  .md\:text-2xl{
-    font-size: 1.5rem;
-    line-height: 2rem;
   }
 }
 
@@ -6116,20 +6176,12 @@ body{
     display: block;
   }
 
-  .lg\:w-1\/2{
-    width: 50%;
-  }
-
-  .lg\:w-full{
-    width: 100%;
-  }
-
-  .lg\:w-\[700px\]{
-    width: 700px;
-  }
-
   .lg\:w-\[500px\]{
     width: 500px;
+  }
+
+  .lg\:w-1\/2{
+    width: 50%;
   }
 
   .lg\:flex-row{
@@ -6156,6 +6208,11 @@ body{
   .lg\:py-14{
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
+  }
+
+  .lg\:px-6{
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
   }
 
   .lg\:text-left{
