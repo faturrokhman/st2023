@@ -97,7 +97,7 @@
                     <nav class="w-min hidden md:block ml-2">
                         <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase py-2">
                             <li
-                                class="font-bold w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                class="w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
                                 <a href="./index.html">Beranda</a>
                             </li>
                             <li
@@ -107,7 +107,7 @@
                                 </a>
                             </li>
                             <li
-                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                class="font-bold w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
                                 <a href="#" class="">
                                     Tentang
                                 </a>
@@ -136,6 +136,162 @@
 
     </header>
     <main class="bg-primary mt-12 pt-10 w-full">
+        <!-- Content -->
+        <!-- Judul -->
+        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+            <h1 class="font-bold text-2xl mb-1">Galeri Sensus</h1>
+            <form action="./belumtersedia.html" class="h-min w-48 ">
+                <select name="dataset" id=dataset
+                    class="w-full rounded-md mb-3 text-sm md:w-max border-2 border-primary-hover bg-body-white">
+                    <option value="ruta" class="text-text-body">Periode Sensus</option>
+                    <option value="padi1">2013</option>
+                    <option value="padi2">2023</option>
+                </select>
+            </form>
+        </div>
+
+        <!-- Tab Galeri -->
+        <div class="max-w-6xl mx-auto md:px-10 mb-6">
+            <!-- Tab -->
+            <div class="bg-primary-hover rounded-t-lg">
+                <ul class="flex mb-0" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
+                    <li class="w-full" role="presentation">
+                        <button
+                            class="w-full hover:text-primary-hover rounded-tl-lg p-2 text-sm font-medium text-center active hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center"
+                            id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
+                            aria-controls="dashboard" aria-selected="true">
+                            <span class="iconify text-3xl" data-icon="heroicons-solid:photograph"></span>
+                            <span class="font-semibold md:pl-3 md:text-lg">Foto</span>
+                        </button>
+                    </li>
+                    <li class="w-full" role="presentation">
+                        <button
+                            class="w-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center"
+                            id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
+                            aria-controls="profile" aria-selected="false">
+                            <span class="iconify text-3xl" data-icon="heroicons-solid:video-camera"></span>
+                            <span class="font-semibold md:pl-3 md:text-lg">Video</span>
+                        </button>
+                    </li>
+                </ul>
+            </div>
+            <div id="myTabContent" class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6">
+                <div class="rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <div class="p-4 md:pl-16">
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Persiapan Sensus</h1>
+                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/persiapan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/persiapan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/persiapan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
+                                </figure>
+                            </div>
+                        </div>   
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Sosialisasi</h1>
+                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/sosialisasi.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/sosialisasi.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/sosialisasi.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Pelaksaaan Sensus</h1>
+                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
+                            <div class="">
+                                <figure class="w-96 lg:w-[500px]">
+                                    <img src="./img/pelaksanaan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/pelaksanaan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/pelaksanaan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Pengolahan Data</h1>
+                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/pengolahan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/pengolahan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/pengolahan.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Serba-serbi</h1>
+                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/serba.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/serba.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
+                                </figure>
+                            </div>
+                            <div class="">
+                                <figure class="w-96">
+                                    <img src="./img/serba.png" alt="Persiapan Sensus" class="w-full h-auto">
+                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
+                                </figure>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="p-4 rounded-lg hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                    <div class="p-4 md:pl-16">
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Galeri Video</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <!-- Navigasi Bottom (Mobile) -->
         <nav
@@ -144,7 +300,7 @@
                 <li class="w-full">
                     <a href="./index.html"
                         class="w-full block px-2 py-4 text-center transition duration-300 hover:bg-body-white hover:text-primary-hover font-bold">
-                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:home"></span>
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:home"></span>
                         <span class="hidden sm:block">
                             Beranda
                         </span>
@@ -171,7 +327,7 @@
                 <li class="w-full">
                     <a href="./galeri.html"
                         class="w-full block px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300">
-                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:photograph"></span>
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:photograph"></span>
                         <span class="hidden sm:block">
                             galeri
                         </span>
