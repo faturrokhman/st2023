@@ -138,14 +138,14 @@
     </header>
     <main class="bg-primary mt-12 pt-10 w-full">
         <!-- Content -->
-        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col sm:flex-row justify-between">
             <h1 class="font-bold text-2xl mb-1">Berita Resmi Statistik</h1>
             <form action="./belumtersedia.html" class="h-min w-48 ">
-                <select name="dataset" id=dataset
-                    class="w-full rounded-md mb-3 text-sm md:w-max border-2 border-primary-hover bg-body-white">
-                    <option value="ruta" class="text-text-body">Periode Sensus</option>
-                    <option value="padi1">2013</option>
-                    <option value="padi2">2023</option>
+                <select name="periode" id=periode
+                    class="w-52 rounded-md mb-3 text-sm border-2 py-1 px-3 border-primary-hover bg-body-white text-text-color transition-all">
+                    <option value="ruta" selected disabled class="">Periode Sensus</option>
+                    <option value="2013">2013</option>
+                    <option value="2023">2023</option>
                 </select>
             </form>
         </div>
