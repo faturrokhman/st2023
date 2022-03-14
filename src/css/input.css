@@ -58,3 +58,39 @@ body {
 [role="tab"].active{
     @apply bg-body-white text-primary-hover hover:bg-body-white hover:text-primary-hover;
 }
+
+.dropdown2 {
+    @apply relative md:hidden rounded-md text-sm border-2 border-primary-hover mx-4;
+  }
+.dropdown2:hover .dropdown-list {
+    @apply opacity-100 visible;
+  }
+.dropdown-select {
+    @apply px-4 py-2 w-full rounded-md bg-white flex items-center justify-between cursor-pointer text-primary-hover/50;
+  }
+.dropdown-list {
+    @apply text-sm overflow-hidden;
+    border-radius: 4px;
+    background-color: white;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s linear, visibility 0.2s linear;
+    transform: translateY(10px);
+  }
+.dropdown-list:before {
+    content: "";
+    width: 100%;
+    height: 10px;
+    background-color: transparent;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translateY(-100%);
+  }
+.dropdown-list__item {
+    @apply text-sm px-4 py-2 text-primary-hover hover:bg-primary-hover/30;
+  }

@@ -139,7 +139,8 @@
     <main class="bg-primary mt-12 pt-10 w-full">
         <!-- Content Metadata -->
         <!-- Judul -->
-        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col md:flex-row justify-between">
+        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col md:flex-row justify-between"
+            data-aos="fade-down">
             <h1 class="font-bold text-2xl mb-1">Metadata Sensus</h1>
             <form action="./belumtersedia.html" class="h-min w-48 ">
                 <select name="periode" id=periode
@@ -152,7 +153,7 @@
         </div>
 
         <!-- Tab Metadata -->
-        <div class="max-w-6xl mx-auto md:px-10 mb-6">
+        <div class="max-w-6xl mx-auto md:px-10 mb-6" data-aos="fade-up">
             <!-- Tab -->
             <div class="bg-primary-hover rounded-t-lg">
                 <ul class="flex mb-0" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
@@ -185,60 +186,91 @@
                     </li>
                 </ul>
             </div>
-            <div id="myTabContent" class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6">
+            <div id="myTabContent" class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6 pt-4 md:pt-0">
                 <div class="rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                    <!--
                     <form action="./belumtersedia.html" class="p-4 h-min w-full md:hidden">
                         <select name="dataset" id=dataset"
                             class="w-full rounded-md mb-3 text-sm md:w-max border-2 border-primary-hover">
                             <option value="keterangan" class="">Keterangan Umum</option>
-                            <option value="organisasi">Organisasi</option>
+                            <option value="organisasi">
+                                <div class="cursor-pointer" onclick="openBagian(event, 'organisasi')">
+                                    Organisasi
+                                </div>
+                            </option>
                             <option value="metodologi">Metodologi</option>
                             <option value="diseminasi">Diseminasi</option>
                         </select>
                     </form>
-                    <div class="flex">
-                        <aside class="hidden sm:block w-full m-0 border-r-2 border-primary-hover" aria-label="Sidebar">
+                    -->
+                    <div class="dropdown2 text-sm">
+                        <div class="dropdown-select">
+                            <span class="select">-- Pilih Metadata --</span>
+                            <span class="iconify text-primary-hover text-xl"
+                                data-icon="heroicons-solid:chevron-down"></span>
+                        </div>
+                        <div class="dropdown-list">
+                            <div class="dropdown-list__item cursor-pointer bg-primary-hover/30 tablink"
+                                onclick="openBagian(event, 'keterangan')">
+                                Keterangan Umum</div>
+                            <div class="dropdown-list__item cursor-pointer tablink"
+                                onclick="openBagian(event, 'organisasi')">
+                                Organisasi</div>
+                            <div class="dropdown-list__item cursor-pointer tablink"
+                                onclick="openBagian(event, 'metodologi')">
+                                Metodologi</div>
+                            <div class="dropdown-list__item cursor-pointer tablink"
+                                onclick="openBagian(event, 'diseminasi')">
+                                Diseminasi</div>
+                        </div>
+                    </div>
+                    <div class="flex w-full flex-wrap md:divide-x-2 md:divide-primary-hover">
+                        <aside class="hidden md:block w-1/3 m-0 " aria-label="Sidebar">
                             <div class="overflow-y-auto py-4 px-3 rounded ">
                                 <ul class="space-y-2 ">
-                                   <li>
-                                      <a href="#" class="flex items-center p-2 text-base font-semibold text-primary-hover hover:text-body-white hover:bg-primary-hover rounded-lg w-full">
-                                         
-                                         <span class="">Dashboard</span>
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        
-                                         <span class="flex-1 ml-3 whitespace-nowrap">Kanban</span>
-                                         
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                         
-                                         <span class="flex-1 ml-3 whitespace-nowrap">Inbox</span>
-                                      
-                                      </a>
-                                   </li>
-                                   <li>
-                                      <a href="#" class="flex items-center p-2 text-base font-normal text-gray-900 rounded-lg dark:text-white hover:bg-gray-100 dark:hover:bg-gray-700">
-                                        
-                                         <span class="flex-1 ml-3 whitespace-nowrap">Users</span>
-                                      </a>
-                                   </li>
-                                   
+                                    <li>
+                                        <button
+                                            class="flex items-center p-2 text-base font-semibold bg-primary-hover/30 text-primary-hover hover:bg-primary-hover/30 rounded-lg w-full tab"
+                                            onclick="openBagian(event, 'keterangan')">
+                                            <span class="">Keterangan Umum</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center p-2 text-base font-semibold text-primary-hover hover:bg-primary-hover/30 rounded-lg w-full tab"
+                                            onclick="openBagian(event, 'organisasi')">
+                                            <span class="">Organisasi</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center p-2 text-base font-semibold text-primary-hover hover:bg-primary-hover/30 rounded-lg w-full tab"
+                                            onclick="openBagian(event, 'metodologi')">
+                                            <span class="">Metodologi</span>
+                                        </button>
+                                    </li>
+                                    <li>
+                                        <button
+                                            class="flex items-center p-2 text-base font-semibold text-primary-hover hover:bg-primary-hover/30 rounded-lg w-full tab"
+                                            onclick="openBagian(event, 'diseminasi')">
+                                            <span class="">Diseminasi</span>
+                                        </button>
+                                    </li>
                                 </ul>
-                             </div>
+                            </div>
                         </aside>
-                        <div class="keterangan text-text-color p-4 md:pl-16">
+                        <div id="keterangan" class="bagian text-text-color md:w-2/3 p-4 md:px-8">
                             <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Keterangan Umum</h1>
                             <h2 class="font-bold md:text-lg">Penjelasan Umum</h2>
                             <p class="text-sm text-justify mb-4">
-                                Perferendis enim necessitatibus eligendi dolorum recusandae a fugit. Alias unde quos quae
+                                Perferendis enim necessitatibus eligendi dolorum recusandae a fugit. Alias unde quos
+                                quae
                                 eius. Saepe rerum sed quo atque id nihil aliquam ipsa ducimus.
-                                Qui excepturi ut sed velit. Aliquam aut dolores. Porro in et placeat laboriosam qui cumque
+                                Qui excepturi ut sed velit. Aliquam aut dolores. Porro in et placeat laboriosam qui
+                                cumque
                                 nobis et dolores.
-                                Eveniet eum recusandae est sunt deleniti nostrum sit rem est. Cumque facere consequatur et.
+                                Eveniet eum recusandae est sunt deleniti nostrum sit rem est. Cumque facere consequatur
+                                et.
                                 Est et et consequatur ratione non est expedita magnam.
                             </p>
                             <h2 class="font-bold md:text-lg">Dasar Hukum</h2>
@@ -249,8 +281,107 @@
                             <h2 class="font-bold md:text-lg">Waktu Pelaksanaan Sensus</h2>
                             <p class="text-sm mb-4">Bulan Mei 2023</p>
                         </div>
+                        <div id="organisasi" class="bagian text-text-color md:w-2/3 p-4 md:px-8 hidden">
+                            <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Organisasi</h1>
+                            <h2 class="font-bold md:text-lg">Penyelenggara</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Badan Pusat Statistik
+                            </p>
+                            <h2 class="font-bold md:text-lg">Penanggung Jawab Administrasi</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Direktorat Tanaman Pangan, Hortikultura dan Perkebunan
+                            </p>
+                            <h2 class="font-bold md:text-lg">Penanggung jawab Teknis
+                            </h2>
+                            <p class="text-sm mb-4">Direktorat Tanaman Pangan, Hortikultura dan Perkebunan
+                            </p>
+                            <h2 class="font-bold md:text-lg">Penanggung jawab Lapangan</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Direktorat Tanaman Pangan, Hortikultura dan Perkebunan
+                            </p>
+                            <h2 class="font-bold md:text-lg">Penanggung jawab Pengolahan Data</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Direktorat Sistem Informasi Statistik
+                            </p>
+                            <h2 class="font-bold md:text-lg">Penanggung jawab Diseminasi Data
+                            </h2>
+                            <p class="text-sm mb-4">Direktorat Diseminasi Statistik
+                            </p>
+                        </div>
+                        <div id="metodologi" class="bagian text-text-color md:w-2/3 p-4 md:px-8 hidden">
+                            <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Metodologi</h1>
+                            <h2 class="font-bold md:text-lg">Variabel Utama</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Keterangan rumah tangga usaha pertanian, Penguasaan/pengusahaan/kegiatan tanaman pangan (padi dan palawija), Pengusahaan tanaman hortikultura, pengusahaan tanaman perkebunan, Penguasaan/pengusahaan ternak, Pengusahaan kegiatan perikanan, Pengusahaan tanaman kehutanan dan kegiatan kehutanan lainnya, Keterangan penguasaan lahan rumah tangga,
+                            </p>
+                            <h2 class="font-bold md:text-lg">Tipe Pengumpulan Data</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Cross sectional, yaitu data dikumpulkan pada waktu tertentu dan menggambarkan parameter pada saat itu serta digunakan untuk keterkaitan antar variabel
+                            </p>
+                            <h2 class="font-bold md:text-lg">Petugas Pengumpul Data
+                            </h2>
+                            <p class="text-sm mb-4">Staf BPS, KSK, Mitra
+                            </p>
+                            <h2 class="font-bold md:text-lg">Cakupan Responden</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Rumah tangga pertanian dan perusahaan pertanian
+                            </p>
+                            <h2 class="font-bold md:text-lg">Cakupan Wilayah</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Seluruh wilayah di Indonesia
+                            </p>
+                            <h2 class="font-bold md:text-lg">Unit Statistik
+                            </h2>
+                            <p class="text-sm mb-4">Rumah tangga
+                            </p>
+                        </div>
+                        <div id="diseminasi" class="bagian text-text-color md:w-2/3 p-4 md:px-8 hidden">
+                            <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Diseminasi</h1>
+                            <h2 class="font-bold md:text-lg">Cara Memperoleh Data</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Datang langsung, email, atau telepon ke BPS serta dapat melalui web
+                            </p>
+                            <h2 class="font-bold md:text-lg">Produk Data
+                            </h2>
+                            <ol class="list-decimal list-outside pl-4 text-sm mb-4">
+                                <li>Publikasi Dalam Media Cetak</li>
+                                <li>Publikasi Dalam Media Elektronik
+                                </li>
+                                <li>Macro Data</li>
+                                <li>Micro Data/Raw
+                                </li>
+                            </ol>
+                            <h2 class="font-bold md:text-lg">Kuesioner
+                            </h2>
+                            <p class="text-sm mb-4">Daftar ST2013-P, Daftar ST2013-L, Daftar ST2013-KB
+
+                            </p>
+                            <h2 class="font-bold md:text-lg">Rancangan Penyajian s.d dengan Tingkat</h2>
+                            <p class="text-sm text-justify mb-4">
+                                Kabupaten/Kota
+                            </p>
+                        </div>
+                        <script>
+                            function openBagian(evt, bagianName) {
+                                var i, x, tablinks, tab;
+                                x = document.getElementsByClassName("bagian");
+                                for (i = 0; i < x.length; i++) {
+                                    x[i].style.display = "none";
+                                }
+                                tablinks = document.getElementsByClassName("tablink");
+                                for (i = 0; i < x.length; i++) {
+                                    tablinks[i].className = tablinks[i].className.replace(" bg-primary-hover/30", "");
+                                }
+                                tab = document.getElementsByClassName("tab");
+                                for (i = 0; i < x.length; i++) {
+                                    tab[i].className = tab[i].className.replace(" bg-primary-hover/30", "");
+                                }
+                                document.getElementById(bagianName).style.display = "block";
+                                evt.currentTarget.className += " bg-primary-hover/30";
+                            }
+                        </script>
                     </div>
-                    
+
 
 
 
