@@ -4363,6 +4363,18 @@ textarea.form-control.is-invalid{
   bottom: 4rem;
 }
 
+.top-14{
+  top: 3.5rem;
+}
+
+.top-20{
+  top: 5rem;
+}
+
+.top-2{
+  top: 0.5rem;
+}
+
 .z-50{
   z-index: 50;
 }
@@ -4522,10 +4534,6 @@ textarea.form-control.is-invalid{
   margin-bottom: 2.5rem;
 }
 
-.ml-3{
-  margin-left: 0.75rem;
-}
-
 .mt-2{
   margin-top: 0.5rem;
 }
@@ -4536,6 +4544,10 @@ textarea.form-control.is-invalid{
 
 .mt-3{
   margin-top: 0.75rem;
+}
+
+.-ml-4{
+  margin-left: -1rem;
 }
 
 .block{
@@ -4602,6 +4614,10 @@ textarea.form-control.is-invalid{
 
 .h-4{
   height: 1rem;
+}
+
+.h-screen{
+  height: 100vh;
 }
 
 .max-h-36{
@@ -4680,12 +4696,44 @@ textarea.form-control.is-invalid{
   width: 16rem;
 }
 
+.w-1\/4{
+  width: 25%;
+}
+
+.w-1\/6{
+  width: 16.666667%;
+}
+
+.w-14{
+  width: 3.5rem;
+}
+
+.w-12{
+  width: 3rem;
+}
+
 .max-w-6xl{
   max-width: 72rem;
 }
 
 .max-w-3xl{
   max-width: 48rem;
+}
+
+.max-w-5xl{
+  max-width: 64rem;
+}
+
+.max-w-4xl{
+  max-width: 56rem;
+}
+
+.max-w-\[900px\]{
+  max-width: 900px;
+}
+
+.max-w-\[920px\]{
+  max-width: 920px;
 }
 
 .flex-initial{
@@ -4702,6 +4750,10 @@ textarea.form-control.is-invalid{
 
 .table-auto{
   table-layout: auto;
+}
+
+.border-collapse{
+  border-collapse: collapse;
 }
 
 .-translate-x-full{
@@ -4821,6 +4873,10 @@ textarea.form-control.is-invalid{
   gap: 1rem;
 }
 
+.gap-2{
+  gap: 0.5rem;
+}
+
 .space-y-4 > :not([hidden]) ~ :not([hidden]){
   --tw-space-y-reverse: 0;
   margin-top: calc(1rem * calc(1 - var(--tw-space-y-reverse)));
@@ -4875,6 +4931,12 @@ textarea.form-control.is-invalid{
   border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
 }
 
+.divide-x > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-x-reverse: 0;
+  border-right-width: calc(1px * var(--tw-divide-x-reverse));
+  border-left-width: calc(1px * calc(1 - var(--tw-divide-x-reverse)));
+}
+
 .divide-body-white > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(245 255 254 / var(--tw-divide-opacity));
@@ -4883,6 +4945,11 @@ textarea.form-control.is-invalid{
 .divide-text-body > :not([hidden]) ~ :not([hidden]){
   --tw-divide-opacity: 1;
   border-color: rgb(82 96 95 / var(--tw-divide-opacity));
+}
+
+.divide-text-color > :not([hidden]) ~ :not([hidden]){
+  --tw-divide-opacity: 1;
+  border-color: rgb(34 43 42 / var(--tw-divide-opacity));
 }
 
 .overflow-auto{
@@ -4925,6 +4992,10 @@ textarea.form-control.is-invalid{
   border-radius: 0.5rem;
 }
 
+.rounded-sm{
+  border-radius: 0.125rem;
+}
+
 .rounded-t-md{
   border-top-left-radius: 0.375rem;
   border-top-right-radius: 0.375rem;
@@ -4958,6 +5029,11 @@ textarea.form-control.is-invalid{
 .rounded-r-lg{
   border-top-right-radius: 0.5rem;
   border-bottom-right-radius: 0.5rem;
+}
+
+.rounded-r-md{
+  border-top-right-radius: 0.375rem;
+  border-bottom-right-radius: 0.375rem;
 }
 
 .rounded-tl-lg{
@@ -5075,6 +5151,10 @@ textarea.form-control.is-invalid{
 
 .bg-white\/50{
   background-color: rgb(255 255 255 / 0.5);
+}
+
+.bg-transparent{
+  background-color: transparent;
 }
 
 .bg-opacity-80{
@@ -5272,12 +5352,12 @@ textarea.form-control.is-invalid{
   padding-right: 0.5rem;
 }
 
-.pb-3{
-  padding-bottom: 0.75rem;
-}
-
 .pt-4{
   padding-top: 1rem;
+}
+
+.pb-3{
+  padding-bottom: 0.75rem;
 }
 
 .text-center{
@@ -5294,6 +5374,10 @@ textarea.form-control.is-invalid{
 
 .align-top{
   vertical-align: top;
+}
+
+.align-middle{
+  vertical-align: middle;
 }
 
 .align-super{
@@ -5427,11 +5511,6 @@ textarea.form-control.is-invalid{
   color: rgb(148 163 184 / var(--tw-text-opacity));
 }
 
-.text-gray-900{
-  --tw-text-opacity: 1;
-  color: rgb(17 24 39 / var(--tw-text-opacity));
-}
-
 .text-emerald-700{
   --tw-text-opacity: 1;
   color: rgb(4 120 87 / var(--tw-text-opacity));
@@ -5440,6 +5519,11 @@ textarea.form-control.is-invalid{
 .text-gray-500{
   --tw-text-opacity: 1;
   color: rgb(107 114 128 / var(--tw-text-opacity));
+}
+
+.text-gray-900{
+  --tw-text-opacity: 1;
+  color: rgb(17 24 39 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -5584,6 +5668,10 @@ textarea.form-control.is-invalid{
 .scrollbar-thin::-webkit-scrollbar{
   width: 8px;
   height: 8px;
+}
+
+.scrollbar-thumb-primary-hover{
+  --scrollbar-thumb: #064E3B !important;
 }
 
 .scrollbar-thumb-text-body{
@@ -5822,11 +5910,6 @@ body{
   background-color: rgb(6 78 59 / 0.3);
 }
 
-.hover\:bg-gray-100:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-
 .hover\:bg-emerald-200:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(167 243 208 / var(--tw-bg-opacity));
@@ -5837,9 +5920,26 @@ body{
   background-color: rgb(203 213 225 / var(--tw-bg-opacity));
 }
 
+.hover\:bg-gray-100:hover{
+  --tw-bg-opacity: 1;
+  background-color: rgb(243 244 246 / var(--tw-bg-opacity));
+}
+
 .hover\:bg-blue-800:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(30 66 159 / var(--tw-bg-opacity));
+}
+
+.hover\:bg-body-white\/30:hover{
+  background-color: rgb(245 255 254 / 0.3);
+}
+
+.hover\:bg-body-white\/50:hover{
+  background-color: rgb(245 255 254 / 0.5);
+}
+
+.hover\:bg-body-white\/70:hover{
+  background-color: rgb(245 255 254 / 0.7);
 }
 
 .hover\:text-primary-hover:hover{
@@ -5942,11 +6042,6 @@ body{
   color: rgb(156 163 175 / var(--tw-text-opacity));
 }
 
-.dark .dark\:hover\:bg-gray-700:hover{
-  --tw-bg-opacity: 1;
-  background-color: rgb(55 65 81 / var(--tw-bg-opacity));
-}
-
 .dark .dark\:hover\:bg-gray-600:hover{
   --tw-bg-opacity: 1;
   background-color: rgb(75 85 99 / var(--tw-bg-opacity));
@@ -5983,6 +6078,10 @@ body{
 
   .sm\:ml-0{
     margin-left: 0px;
+  }
+
+  .sm\:ml-1{
+    margin-left: 0.25rem;
   }
 
   .sm\:block{
@@ -6055,6 +6154,14 @@ body{
     border-radius: 0.75rem;
   }
 
+  .sm\:pr-6{
+    padding-right: 1.5rem;
+  }
+
+  .sm\:pl-4{
+    padding-left: 1rem;
+  }
+
   .sm\:text-center{
     text-align: center;
   }
@@ -6110,6 +6217,10 @@ body{
 
   .md\:mr-0{
     margin-right: 0px;
+  }
+
+  .md\:mt-8{
+    margin-top: 2rem;
   }
 
   .md\:block{
@@ -6189,14 +6300,14 @@ body{
     padding-bottom: 2.5rem;
   }
 
-  .md\:py-2{
-    padding-top: 0.5rem;
-    padding-bottom: 0.5rem;
-  }
-
   .md\:px-8{
     padding-left: 2rem;
     padding-right: 2rem;
+  }
+
+  .md\:py-2{
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
   }
 
   .md\:pb-5{
@@ -6273,6 +6384,10 @@ body{
     margin-left: 1.25rem;
   }
 
+  .lg\:ml-2{
+    margin-left: 0.5rem;
+  }
+
   .lg\:block{
     display: block;
   }
@@ -6291,6 +6406,10 @@ body{
 
   .lg\:flex-col{
     flex-direction: column;
+  }
+
+  .lg\:justify-between{
+    justify-content: space-between;
   }
 
   .lg\:justify-around{
