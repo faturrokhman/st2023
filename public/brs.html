@@ -10,7 +10,6 @@
     <script src="./js/navbar.js"></script>
     <script src="./js/upButton.js"></script>
     <script src="../node_modules/flowbite/dist/flowbite.js"></script>
-    <script src="./TW-ELEMENTS-PATH/dist/js/index.min.js"></script>
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <title>Berita Resmi Statistik</title>
     <link rel="icon" href="./img/bps.png">
@@ -48,7 +47,7 @@
                         <div class="ml-5 items-center transition">
                             <div class="flex">
                                 <button onclick="showLocation(true)" class="flex items-center">
-                                    <img src="./icons/map.svg" alt="Location" class="w-4">
+                                    <span class="iconify text-2xl" data-icon="heroicons-solid:location-marker"></span>
                                     <span
                                         class="ml-1 uppercase text-base md:text-base hidden xss:block hover:underline">
                                         Indonesia</span>
@@ -138,7 +137,7 @@
     </header>
     <main class="bg-primary mt-12 pt-10 w-full">
         <!-- Content -->
-        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col sm:flex-row justify-between">
+        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col sm:flex-row justify-between" data-aos="fade-down">
             <h1 class="font-bold text-2xl mb-1">Berita Resmi Statistik</h1>
             <form action="./belumtersedia.html" class="h-min w-48 ">
                 <select name="periode" id=periode
@@ -149,7 +148,7 @@
                 </select>
             </form>
         </div>
-        <div class="max-w-6xl mx-auto px-4 pb-4">
+        <div class="max-w-6xl mx-auto px-4 pb-4" data-aos="fade-up">
             <div
                 class="overflow-auto max-w-3xl mx-auto rounded-md border border-body-white scrollbar-thin scrollbar-thumb-body-white scrollbar-rounded pt-1 pb-2 px-2">
                 <table class="text-body-white w-full whitespace-nowrap text-sm divide-y divide-body-white">
