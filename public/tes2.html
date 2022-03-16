@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="../node_modules/flowbite/dist/flowbite.js"></script>
+  <title>Document</title>
+  <style>
+    /*each image is referenced twice in the HTML, but each image only needs to be updated in the CSS*/
+    .image1 {
+      content: url("https://randomwordgenerator.com/img/picture-generator/52e4d7434f51a914f1dc8460962e33791c3ad6e04e5074417d2c7ed09f4acc_640.jpg")
+    }
+
+    .image2 {
+      content: url("https://randomwordgenerator.com/img/picture-generator/55e8d146425bb10ff3d8992cc12c30771037dbf852547848702a7fd19545_640.jpg")
+    }
+
+    .image3 {
+      content: url("https://randomwordgenerator.com/img/picture-generator/55e8d24b4257ac14f1dc8460962e33791c3ad6e04e507440752972d3924cc6_640.jpg")
+    }
+
+    .image4 {
+      content: url("https://randomwordgenerator.com/img/picture-generator/55e0d44b4b56a414f1dc8460962e33791c3ad6e04e5074417c2d78d2954bcd_640.jpg")
+    }
+
+    .image5 {
+      content: url("https://randomwordgenerator.com/img/picture-generator/5ee3dc414954b10ff3d8992cc12c30771037dbf85254794e732f7ad7934e_640.jpg")
+    }
+  </style>
+</head>
+
+<body>
+  <section class="mx-auto max-w-2xl">
+    <h2 class="text-4xl text-center tracking-wide font-extrabold font-serif leading-loose mb-2">Slideshow Gallery</h2>
+    <div class="shadow-2xl relative">
+      <!-- large image on slides -->
+      <div class="mySlides hidden">
+        <div class="image1 w-full object-cover"></div>
+      </div>
+      <div class="mySlides hidden">
+        <div class="image2 w-full object-cover"></div>
+      </div>
+      <div class="mySlides hidden">
+        <div class="image3 w-full object-cover"></div>
+      </div>
+      <div class="mySlides hidden">
+        <div class="image4 w-full object-cover"></div>
+      </div>
+      <div class="mySlides hidden">
+        <div class="image5 w-full object-cover"></div>
+      </div>
+
+      <!-- butttons -->
+      <a class="absolute left-0 inset-y-0 flex items-center -mt-32 px-4 text-white hover:text-gray-800 cursor-pointer text-3xl font-extrabold"
+        onclick="plusSlides(-1)">❮</a>
+      <a class="absolute right-0 inset-y-0 flex items-center -mt-32 px-4 text-white hover:text-gray-800 cursor-pointer text-3xl font-extrabold"
+        onclick="plusSlides(1)">❯</a>
+
+      <!-- image description -->
+      <div class="text-center text-white font-light tracking-wider bg-gray-800 py-2">
+        <p id="caption"></p>
+      </div>
+
+      <!-- smaller images under description -->
+      <div class="flex">
+        <div>
+          <img class="image1 description h-24 opacity-50 hover:opacity-100 cursor-pointer" src="#"
+            onclick="currentSlide(1)" alt="Dog's Nose">
+        </div>
+        <div>
+          <img class="image2 description h-24 opacity-50 hover:opacity-100 cursor-pointer" src="#"
+            onclick="currentSlide(2)" alt="Lawnmower">
+        </div>
+        <div>
+          <img class="image3 description h-24 opacity-50 hover:opacity-100 cursor-pointer" src="#"
+            onclick="currentSlide(3)" alt="Globe">
+        </div>
+        <div>
+          <img class="image4 description h-24 opacity-50 hover:opacity-100 cursor-pointer" src="#"
+            onclick="currentSlide(4)" alt="Optical Illusion">
+        </div>
+        <div>
+          <img class="image5 description h-24 opacity-50 hover:opacity-100 cursor-pointer" src="#"
+            onclick="currentSlide(5)" alt="Lips">
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <script>
+    //JS to switch slides and replace text in bar//
+    var slideIndex = 1;
+    showSlides(slideIndex);
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("description");
+      var captionText = document.getElementById("caption");
+      if (n > slides.length) {
+        slideIndex = 1
+      }
+      if (n < 1) {
+        slideIndex = slides.length
+      }
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" opacity-100", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " opacity-100";
+      captionText.innerHTML = dots[slideIndex - 1].alt;
+    }
+  </script>
+
+  <div id="default-carousel" data-carousel="slide" class="relative">
+
+    <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
+
+      <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0"
+        data-carousel-item="active">
+        <img src="./img/pelaksanaan.png"
+          class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+
+      <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+        data-carousel-item="">
+        <img src="./img/publikasi1.png"
+          class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+
+      <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+        <img src="./img/publikasi2.png"
+          class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+
+      <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
+        <img src="./img/sosialisasi.png"
+          class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+
+      <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform -translate-x-full"
+        data-carousel-item="">
+        <img src="./img/persiapan.png"
+          class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="...">
+      </div>
+    </div>
+
+    <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+      <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800" aria-current="true"
+        aria-label="Slide 1" data-carousel-slide-to="0"></button>
+      <button type="button"
+        class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+        aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+      <button type="button"
+        class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+        aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
+      <button type="button"
+        class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+        aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
+      <button type="button"
+        class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+        aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+    </div>
+
+    <button type="button"
+      class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+      data-carousel-prev="">
+      <span
+        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+        </svg>
+        <span class="hidden">Previous</span>
+      </span>
+    </button>
+    <button type="button"
+      class="flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
+      data-carousel-next="">
+      <span
+        class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
+        <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
+          viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+        </svg>
+        <span class="hidden">Next</span>
+      </span>
+    </button>
+  </div>
+
+</body>
+
+</html>
