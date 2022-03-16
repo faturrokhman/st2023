@@ -72,9 +72,10 @@
                                                     <option value="sumbar">Provinsi Sumatera Barat</option>
                                                 </select>
                                                 <div class="text-center">
-                                                    <input type="submit" value="Ubah" class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
+                                                    <input type="submit" value="Ubah"
+                                                        class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
                                                 </div>
-                                                
+
                                             </form>
                                             <button onclick="showLocation(true)"
                                                 class="absolute top-4 right-4 xl:right-8" aria-label="close">
@@ -181,188 +182,365 @@
                 <div class="rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
                     <div class="p-4 md:pl-16">
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Persiapan Sensus</h1>
-                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/persiapan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
-                                </figure>
-                            </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/persiapan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
-                                </figure>
-                            </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/persiapan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
-                                </figure>
-                            </div>
-                        </div>   
-                        <!-- Carousel Galery -->
-                        <div id="default-carousel" data-carousel="slide" class="relative">
+                        <!-- Carousel Persiapan -->
+                        <div id="default-carousel" data-carousel="slide" class="relative md:-ml-8 mx-auto">
 
-                            <div class="overflow-hidden relative h-56 rounded-lg sm:h-64 xl:h-80 2xl:h-96">
-                        
-                              <div class="duration-1000 ease-in-out relative inset-0 transition-all transform translate-x-0"
-                                data-carousel-item="active">
-                                <img src="./img/persiapan.png"
-                                  class="block absolute top-full left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Persiapan Sensus">
-                                  <div class="absolute block bottom-0 inset-0 text-center my-2">
-                                      Rapat Persiapan di BPS RI
+                            <div
+                                class="overflow-hidden relative h-56 rounded-lg max-w-3xl mx-auto sm:h-64 xl:h-80 2xl:h-96">
+
+                                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0"
+                                    data-carousel-item="active">
+                                    <img src="./img/persiapan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                    <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Rapat Persiapan di BPS RI
                                     </div>
-                              </div>
-                        
-                              <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
-                                data-carousel-item="">
-                                <img src="./img/persiapan.png"
-                                  class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Persiapan Sensus">
-                              </div>
-                        
-                              <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
-                                <img src="./img/persiapan.png"
-                                  class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Persiapan Sensus">
-                              </div>
-                        
-                              <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform" data-carousel-item="">
-                                <img src="./img/persiapan.png"
-                                  class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Persiapan Sensus">
-                              </div>
-                        
-                              <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform -translate-x-full"
-                                data-carousel-item="">
-                                <img src="./img/persiapan.png"
-                                  class="block absolute top-1/2 left-1/2 w-full -translate-x-1/2 -translate-y-1/2" alt="Persiapan Sensus">
-                              </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/persiapan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Rapat Persiapan di BPS Provinsi
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/persiapan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Rapat Persiapan di BPS Kabupaten Kota
+                                    </div>
+                                </div>
                             </div>
-                        
+
                             <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
-                              <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800" aria-current="true"
-                                aria-label="Slide 1" data-carousel-slide-to="0"></button>
-                              <button type="button"
-                                class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-                                aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
-                              <button type="button"
-                                class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-                                aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
-                              <button type="button"
-                                class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-                                aria-current="false" aria-label="Slide 4" data-carousel-slide-to="3"></button>
-                              <button type="button"
-                                class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
-                                aria-current="false" aria-label="Slide 5" data-carousel-slide-to="4"></button>
+                                <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
+                                    aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                             </div>
-                        
+
                             <button type="button"
-                              class="flex absolute top-0 left-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-                              data-carousel-prev="">
-                              <span
-                                class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
-                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
-                                </svg>
-                                <span class="hidden">Previous</span>
-                              </span>
+                                class="flex absolute top-0 left-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-prev="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pr-0.5"
+                                        data-icon="heroicons-solid:chevron-left"></span>
+                                    <span class="hidden">Previous</span>
+                                </span>
                             </button>
                             <button type="button"
-                              class="flex absolute top-0 right-0 justify-center items-center px-4 h-full cursor-pointer group focus:outline-none"
-                              data-carousel-next="">
-                              <span
-                                class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-white/30 dark:bg-gray-800/30 group-hover:bg-white/50 dark:group-hover:bg-gray-800/60 group-focus:ring-4 group-focus:ring-white dark:group-focus:ring-gray-800/70 group-focus:outline-none">
-                                <svg class="w-5 h-5 text-white sm:w-6 sm:h-6 dark:text-gray-800" fill="none" stroke="currentColor"
-                                  viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
-                                </svg>
-                                <span class="hidden">Next</span>
-                              </span>
+                                class="flex absolute top-0 right-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-next="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pl-0.5"
+                                        data-icon="heroicons-solid:chevron-right"></span>
+                                    <span class="hidden">Next</span>
+                                </span>
                             </button>
-                          </div>
+                        </div>
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Sosialisasi</h1>
-                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/sosialisasi.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
-                                </figure>
+                        <div id="sosialisasi-carousel" data-carousel="slide" class="relative md:-ml-8 mx-auto">
+
+                            <div
+                                class="overflow-hidden relative h-56 rounded-lg max-w-3xl mx-auto sm:h-64 xl:h-80 2xl:h-96">
+
+                                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0"
+                                    data-carousel-item="active">
+                                    <img src="./img/sosialisasi.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                    <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Sosialisasi di BPS RI
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/sosialisasi.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Sosialisasi di BPS Provinsi
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/sosialisasi.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Sosialisasi di BPS Kabupaten Kota
+                                    </div>
+                                </div>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/sosialisasi.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
-                                </figure>
+
+                            <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
+                                    aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/sosialisasi.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
-                                </figure>
-                            </div>
+
+                            <button type="button"
+                                class="flex absolute top-0 left-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-prev="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pr-0.5"
+                                        data-icon="heroicons-solid:chevron-left"></span>
+                                    <span class="hidden">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="flex absolute top-0 right-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-next="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pl-0.5"
+                                        data-icon="heroicons-solid:chevron-right"></span>
+                                    <span class="hidden">Next</span>
+                                </span>
+                            </button>
                         </div>
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Pelaksaaan Sensus</h1>
-                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
-                            <div class="">
-                                <figure class="w-96 lg:w-[500px]">
-                                    <img src="./img/pelaksanaan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
-                                </figure>
+                        <div id="pelaksanaan-carousel" data-carousel="slide" class="relative md:-ml-8 mx-auto">
+
+                            <div
+                                class="overflow-hidden relative h-56 rounded-lg max-w-3xl mx-auto sm:h-64 xl:h-80 2xl:h-96">
+
+                                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0"
+                                    data-carousel-item="active">
+                                    <img src="./img/pelaksanaan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                    <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Pelaksanaan di BPS RI
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/pelaksanaan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Pelaksanaan di BPS Provinsi
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/pelaksanaan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Pelaksanaan di BPS Kabupaten Kota
+                                    </div>
+                                </div>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/pelaksanaan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
-                                </figure>
+
+                            <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
+                                    aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/pelaksanaan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
-                                </figure>
-                            </div>
+
+                            <button type="button"
+                                class="flex absolute top-0 left-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-prev="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pr-0.5"
+                                        data-icon="heroicons-solid:chevron-left"></span>
+                                    <span class="hidden">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="flex absolute top-0 right-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-next="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pl-0.5"
+                                        data-icon="heroicons-solid:chevron-right"></span>
+                                    <span class="hidden">Next</span>
+                                </span>
+                            </button>
                         </div>
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Pengolahan Data</h1>
-                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/pengolahan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
-                                </figure>
+                        <div id="pengolahan-carousel" data-carousel="slide" class="relative md:-ml-8 mx-auto">
+
+                            <div
+                                class="overflow-hidden relative h-56 rounded-lg max-w-3xl mx-auto sm:h-64 xl:h-80 2xl:h-96">
+
+                                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0"
+                                    data-carousel-item="active">
+                                    <img src="./img/Pengolahan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                    <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Pengolahan di BPS RI
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/Pengolahan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Pengolahan di BPS Provinsi
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/Pengolahan.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Pengolahan di BPS Kabupaten Kota
+                                    </div>
+                                </div>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/pengolahan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
-                                </figure>
+
+                            <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
+                                    aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/pengolahan.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
-                                </figure>
-                            </div>
+
+                            <button type="button"
+                                class="flex absolute top-0 left-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-prev="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pr-0.5"
+                                        data-icon="heroicons-solid:chevron-left"></span>
+                                    <span class="hidden">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="flex absolute top-0 right-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-next="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pl-0.5"
+                                        data-icon="heroicons-solid:chevron-right"></span>
+                                    <span class="hidden">Next</span>
+                                </span>
+                            </button>
                         </div>
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Serba-serbi</h1>
-                        <div class="flex flex-row pr-5 pt-2 pb-5 overflow-x-auto touch-pan-x w-full scrollbar-hide text-sm space-x-5">
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/serba.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS RI</figcaption>
-                                </figure>
+                        <div id="serba-carousel" data-carousel="slide" class="relative md:-ml-8 mx-auto">
+
+                            <div
+                                class="overflow-hidden relative h-56 rounded-lg max-w-3xl mx-auto sm:h-64 xl:h-80 2xl:h-96">
+
+                                <div class="duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-0"
+                                    data-carousel-item="active">
+                                    <img src="./img/serba.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                    <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Serba-serbi ST2023
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/serba.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Serba-serbi ST2023 Provinsi
+                                    </div>
+                                </div>
+
+                                <div class="hidden duration-1000 ease-in-out absolute inset-0 transition-all transform translate-x-full"
+                                    data-carousel-item="">
+                                    <img src="./img/serba.png"
+                                        class="block absolute top-1/2 left-1/2 w-full max-w-3xl -translate-x-1/2 -translate-y-1/2"
+                                        alt="Persiapan Sensus">
+                                        <div
+                                        class="absolute block top-3/4 inset-0 text-center my-2 bg-primary-hover text-body-white items-center h-min w-full max-w-3xl mx-auto text-sm md:text-base">
+                                        Serba-serbi ST2023 Kabupaten Kota
+                                    </div>
+                                </div>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/serba.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Provinsi</figcaption>
-                                </figure>
+
+                            <div class="flex absolute bottom-5 left-1/2 space-x-3 -translate-x-1/2">
+                                <button type="button" class="w-3 h-3 rounded-full bg-white dark:bg-gray-800"
+                                    aria-current="true" aria-label="Slide 1" data-carousel-slide-to="0"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 2" data-carousel-slide-to="1"></button>
+                                <button type="button"
+                                    class="w-3 h-3 rounded-full bg-white/50 dark:bg-gray-800/50 hover:bg-white dark:hover:bg-gray-800"
+                                    aria-current="false" aria-label="Slide 3" data-carousel-slide-to="2"></button>
                             </div>
-                            <div class="">
-                                <figure class="w-96">
-                                    <img src="./img/serba.png" alt="Persiapan Sensus" class="w-full h-auto">
-                                    <figcaption class="text-center my-2">Rapat Persiapan di BPS Kabupaten/Kota</figcaption>
-                                </figure>
-                            </div>
+
+                            <button type="button"
+                                class="flex absolute top-0 left-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-prev="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pr-0.5"
+                                        data-icon="heroicons-solid:chevron-left"></span>
+                                    <span class="hidden">Previous</span>
+                                </span>
+                            </button>
+                            <button type="button"
+                                class="flex absolute top-0 right-0 justify-center items-center px-4 lg:px-10 h-full cursor-pointer group focus:outline-none"
+                                data-carousel-next="">
+                                <span
+                                    class="inline-flex justify-center items-center w-8 h-8 rounded-full sm:w-10 sm:h-10 bg-primary-hover/30  group-hover:bg-primary-hover/80 group-focus:ring-4 group-focus:ring-body-white group-focus:outline-none">
+                                    <span class="iconify text-2xl text-body-white sm:text-4xl pl-0.5"
+                                        data-icon="heroicons-solid:chevron-right"></span>
+                                    <span class="hidden">Next</span>
+                                </span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -424,7 +602,8 @@
                             Produk
                         </span>
                     </button>
-                    <div id="produkDropdown" class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
+                    <div id="produkDropdown"
+                        class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
                         <ul class="" aria-labelledby="dropdownButton">
                             <li>
                                 <a href="./brs.html" class="rounded-t-md">Berita Resmi Statistik</a>
@@ -485,11 +664,12 @@
                                 <a href="./publikasi.html">Publikasi</a>
                             </li>
                         </ul>
-                        
-                        
+
+
                     </div>
                 </div>
-                <p class="text-xs text-center mt-5 mb-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi Sensus Pertanian 2023</p>
+                <p class="text-xs text-center mt-5 mb-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi
+                    Sensus Pertanian 2023</p>
             </div>
         </div>
     </footer>
