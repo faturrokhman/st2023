@@ -26,14 +26,13 @@
                     </a>
                     <div class="hidden sm:block transition">
                         <div class="flex justify-end">
-                            <img src="./img/st2023.png" alt="Logo ST2023" class="w-20">
-                            <p class="ml-2 font-bold italic uppercase">Sensus Pertanian 2023</p>
+                            <img src="./img/st2023.png" alt="Logo ST2023" class="w-24">
                         </div>
                     </div>
                 </div>
                 <!-- Search Bar dan Lokasi dan Navbar Top -->
-                <div class="flex justify-between mx-5 sm:mx-10 mr-2">
-                    <div class="flex py-3 px-0 xss:justify-start items-center justify-between">
+                <div class="flex justify-between mx-5 sm:mx-10 mr-2 pt-1 pb-3">
+                    <div class="flex px-0 xss:justify-start items-center justify-between">
                         <div class="w-full py-0 transition">
                             <form action="./belumtersedia.html">
                                 <input type="search"
@@ -92,9 +91,9 @@
                     </div>
                     <!-- Navbar Top -->
                     <nav class="w-min hidden md:block ml-2">
-                        <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase py-2">
+                        <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase">
                             <li
-                                class="font-bold w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                class="font-bold w-full py-1 px-2 lg:px-4 rounded-md border-2 border-primary-hover transition duration-300 bg-body-white text-primary-hover">
                                 <a href="./index.html">Beranda</a>
                             </li>
                             <li
@@ -134,7 +133,7 @@
     </header>
     <main class="bg-primary">
         <!-- Jumbroton -->
-        <div class="mt-12 pt-10 w-full">
+        <div class="mt-10 pt-10 w-full">
             <div class="w-full bg-cover bg-center bg-blend-multiply bg-primary-hover"
                 style="background-image: url('./img/bgjpg.png');">
                 <!-- Content -->
@@ -193,15 +192,71 @@
                 <img src="./img/wave.svg" alt="wave" class="w-full max-h-36 m-0 p-0 mx-auto  2xl:max-h-44">
             </div>
         </div>
-        <!-- Subsektor -->
+        <!-- Umum dan Subsektor -->
         <div class="-mt-2 w-full h-min bg-body-white">
-            <div class="max-w-6xl text-center mx-auto">
-                <p class="font-semibold text-primary-hover text-xl p-3 pt-5 sm:text-2xl">Subsektor Pertanian</p>
+            <!-- Umum -->
+            <div class="max-w-6xl mx-5 pt-5 grid grid-cols-6 gap-6 md:gap-8 justify-between lg:mx-auto transition-all">
                 <div
-                    class="flex flex-row px-5 pt-2 pb-10 overflow-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-evenly">
+                    class="col-span-6 sm:col-span-3 bg-primary-hover rounded-xl shadow-xl shadow-primary-hover/30 hover:shadow-primary-hover/60 w-full space-y-2 py-8 px-6 transition-all umum">
+                    <span class="iconify text-center text-4xl mx-auto shadow-sm"
+                        data-icon="academicons:ideas-repec"></span>
+                    <h2 class="text-center font-semibold text-lg md:text-2xl">Latar Belakang ST2023</h2>
+                    <p class="text-justify text-sm md:text-base">Sesuai Undang-Undang Republik Indonesia Nomor 16 Tahun
+                        1997 tentang statistik, penyelenggaraan sensus dilakukan setiap 10 tahun sekali, termasuk Sensus
+                        Pertanian pada setiap tahun berakhiran angka 3 (tiga).</p>
+                </div>
+                <div
+                    class="col-span-6 sm:col-span-3 lg:row-start-2 bg-primary-hover rounded-xl shadow-xl shadow-primary-hover/30 hover:shadow-primary-hover/60 w-full space-y-2 py-8 px-6 transition-all umum">
+                    <span class="iconify text-center text-4xl mx-auto shadow-sm"
+                        data-icon="fluent:target-arrow-16-regular"></span>
+                    <h2 class="text-center font-semibold text-lg md:text-2xl">Tujuan ST2023</h2>
+                    <ol class="list-decimal text-justify text-sm md:text-base pl-3">
+                        <li>
+                            Menyediakan data struktur pertanian, terutama untuk unit-unit administrasi terkecil.
+                        </li>
+                        <li>
+                            Menyediakan data yang dapat digunakan sebagai tolok ukur statistik pertanian saat ini.
+                        </li>
+                        <li>
+                            Menyediakan kerangka sampel untuk survei pertanian lanjutan.
+                        </li>
+                    </ol>
+                </div>
+                <div
+                    class="col-span-6 lg:col-span-3 lg:row-start-1 lg:row-end-3 bg-primary-hover rounded-xl shadow-xl shadow-primary-hover/30 hover:shadow-primary-hover/60 w-full space-y-2 py-8 px-6 transition-all umum">
+                    <span class="iconify text-center text-4xl mx-auto shadow-sm"
+                        data-icon="carbon:data-structured"></span>
+                    <h2 class="text-center font-semibold text-lg md:text-2xl">Data Hasil ST2023</h2>
+                    <ol class="list-decimal text-justify text-sm md:text-base pl-3 space-y-3">
+                        <li>
+                            <b>Data Pokok Pertanian Nasional</b><br>Melengkapi data yang dapat menjawab isu strategis
+                            terkini di Sektor Pertanian
+                        </li>
+                        <li>
+                            <b>Petani Gurem</b><br>Petani yang memiliki atau menyewa lahan pertanian kurang dari 0,5 ha
+                        </li>
+                        <li>
+                            <b>Indikator SDGs Pertanian</b> <br>Terpenuhinya data pertanian untuk agenda global,
+                            misalnya Indikator SDGs di Sektor Pertanian
+                        </li>
+                        <li>
+                            <b>Small Scale Food Producer</b> <br>Petani skala kecil sesuai standar FAO
+                        </li>
+                        <li>
+                            <b>Data Geospasial</b> <br>Tersedianya data Statistik Pertanian baik dalam bentuk tabular
+                            (publikasi dua Bahasa) maupun geospasial
+                        </li>
+                    </ol>
+                </div>
+            </div>
+            <!-- Subsektor -->
+            <div class="max-w-6xl text-center mx-auto">
+                <p class="font-semibold text-primary-hover text-xl p-3 pt-12 sm:text-2xl">Subsektor Pertanian</p>
+                <div
+                    class="flex flex-row px-5 pt-2 pb-10 overflow-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-between ">
                     <a href="./subsektor.html" class="subsektor">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 transition hover:-translate-y-2 shadow-xl shadow-primary-hover/30">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto"
                                 data-icon="teenyicons:plant-solid"></span>
                             <p class="font-semibold">Tanaman Pangan</p>
@@ -209,7 +264,7 @@
                     </a>
                     <a href="./subsektor.html" class="subsektor">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 items-center transition hover:-translate-y-2 shadow-xl shadow-primary-hover/30">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto"
                                 data-icon="icon-park-outline:chili"></span>
                             <p class="font-semibold text-center">Hortikultura</p>
@@ -217,14 +272,14 @@
                     </a>
                     <a href="./subsektor.html" class="subsektor">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 items-center transition hover:-translate-y-2 shadow-xl shadow-primary-hover/30">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto" data-icon="dashicons:palmtree"></span>
                             <p class="font-semibold">Perkebunan</p>
                         </div>
                     </a>
                     <a href="./subsektor.html" class="subsektor">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 items-center transition hover:-translate-y-2 shadow-xl shadow-primary-hover/30">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-4xl sm:text-6xl mx-auto"
                                 data-icon="healthicons:animal-cow"></span>
                             <p class="font-semibold">Peternakan</p>
@@ -232,23 +287,33 @@
                     </a>
                     <a href="./subsektor.html" class="subsektor">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 items-center transition hover:-translate-y-2 shadow-xl shadow-primary-hover/30">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto" data-icon="ion:fish-sharp"></span>
                             <p class="font-semibold">Perikanan</p>
                         </div>
                     </a>
                     <a href="./subsektor.html" class="subsektor">
                         <div
-                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-36 sm:h-36 mr-4 md:mr-0 items-center transition hover:-translate-y-2 shadow-xl shadow-primary-hover/30">
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl md:text-5xl mx-auto" data-icon="bi:tree-fill"></span>
                             <p class="font-semibold">Kehutanan</p>
                         </div>
                     </a>
+                    <a href="./subsektor.html" class="subsektor">
+                        <div
+                            class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 mr-4 md:mr-0 items-center transition hover:-translate-y-2">
+                            <span class="iconify text-4xl md:text-6xl mx-auto"
+                                data-icon="healthicons:agriculture"></span>
+                            <p class="font-semibold">Jasa Pertanian</p>
+                        </div>
+                    </a>
                 </div>
             </div>
+            <img src="./img/wave.svg" alt="wave"
+                class="bg-primary w-full max-h-36 -m-8 p-0 mx-auto 2xl:max-h-44 rotate-180">
         </div>
         <!-- Layanan Data -->
-        <div class="w-full h-full bg-primary mb-14">
+        <div class="w-full h-full bg-primary my-14">
             <div class="max-w-6xl mx-auto">
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl">Layanan Data</h1>
                 <div
@@ -256,7 +321,7 @@
                     <button onclick="showQuery(true)"
                         class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
                         <span class="iconify text-3xl sm:text-5xl md:text-6xl" data-icon="heroicons-solid:code"></span>
-                        <span class="ml-4 sm:ml-0 font-semibold">Query Builder</span>
+                        <span class="ml-4 sm:ml-0 font-semibold">Dataset</span>
                     </button>
                     <button onclick="showWilayah(true)"
                         class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
@@ -278,7 +343,7 @@
                             <div
                                 class="bg-primary-hover flex items-center text-body-white w-full justify-center rounded-t-xl py-1 md:py-3 pr-4">
                                 <span class="iconify text-3xl" data-icon="heroicons-solid:code"></span>
-                                <h2 class="ml-4 font-semibold md:text-lg">Query Builder</h2>
+                                <h2 class="ml-4 font-semibold md:text-lg">Dataset</h2>
                                 <button onclick="showQuery(true)" class="absolute md:top-4 right-4 xl:right-8"
                                     aria-label="close">
                                     <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
@@ -506,7 +571,7 @@
             <ul class="flex justify-between">
                 <li class="w-full">
                     <a href="./index.html"
-                        class="w-full block px-2 py-4 text-center transition duration-300 hover:bg-body-white hover:text-primary-hover font-bold">
+                        class="w-full block px-2 py-4 text-center transition duration-300 bg-body-white text-primary-hover font-bold">
                         <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:home"></span>
                         <span class="hidden sm:block">
                             Beranda
@@ -564,24 +629,192 @@
             </ul>
         </nav>
         <!-- Tombol Up Kembali ke Atas -->
-        <button onclick="topFunction()" id="onTopBtn" title="Kembali ke Atas"
+        <button onclick="topFunction()" id="onTopBtn" data-tooltip-target="up" data-tooltip-placement="left"
             class="fixed bottom-16 sm:bottom-20 md:bottom-5 right-4 md:right-8 w-10 h-10 p-1 cursor-pointer rounded-full border border-primary-hover focus:outline-none z-1 bg-body-white items-center">
             <span class="iconify text-primary-hover mx-auto text-3xl" data-icon="heroicons-solid:chevron-up"></span>
+            <div id="up" role="tooltip"
+                class="inline-block absolute invisible z-10 py-1 px-2 text-sm font-medium text-body-white bg-text-color rounded-lg opacity-0 transition-opacity duration-300 tooltip w-max">
+                Kembali ke atas
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
         </button>
+        <!-- Tombol FAQ -->
+        <button onclick="showFAQ(true)" id="faq" data-tooltip-target="faqq" data-tooltip-placement="left"
+            class="fixed bottom-28 sm:bottom-32 md:bottom-16 right-4 md:right-8 w-10 h-10 p-1 cursor-pointer rounded-full border border-primary-hover focus:outline-none z-1 bg-body-white items-center">
+            <span class="iconify text-primary-hover mx-auto text-3xl" data-icon="bi:question-lg"></span>
+            <div id="faqq" role="tooltip"
+                class="inline-block absolute invisible z-10 py-1 px-2 text-sm font-medium text-body-white bg-text-color rounded-lg opacity-0 transition-opacity duration-300 tooltip w-max">
+                FAQ
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+        </button>
+        <!-- Modal FAQ -->
+        <div id="faqmodal"
+            class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden">
+            <div class="2xl:container 2xl:mx-auto py-10 px-4 sm:px-10 md:px-28 flex justify-center items-center">
+                <div
+                    class="w-auto relative flex flex-col justify-center items-center bg-primary-hover text-text-color rounded-xl">
+                    <div
+                        class="bg-primary-hover flex items-center text-body-white w-full justify-center rounded-t-xl py-3 pr-4">
+                        <h2 class="ml-4 font-semibold md:text-lg">Daftar FAQ</h2>
+                        <button onclick="showFAQ(true)" class="absolute md:top-4 right-4 xl:right-8" aria-label="close">
+                            <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
+                        </button>
+                    </div>
+                    <div class="bg-body-white w-fit max-w-3xl h-[450px] text-primary-hover rounded-b-lg overflow-auto touch-pan-x touch-pan-y scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-emerald-600 transition-all">
+                        <div id="accordion-open" data-accordion="open">
+                            <h2 id="accordion-open-heading-1">
+                                <button type="button"
+                                    class="flex justify-between items-center p-2 md:px-5 w-full font-medium text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 bg-gray-100 text-gray-900"
+                                    data-accordion-target="#accordion-open-body-1" aria-expanded="true"
+                                    aria-controls="accordion-open-body-1">
+                                    <span class="flex items-center">Apa itu Sensus Pertanian 2023 (ST2023)?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-open-body-1" class="" aria-labelledby="accordion-open-heading-1">
+                                <div
+                                    class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Sensus Pertanian 2023 (ST2023) merupakan Sensus Pertanian ketujuh yang dilakukan oleh Badan Pusat Statistik. Sensus Pertanian sebelumnya dilaksanakan pada tahun 1963, 1973, 1983, 1993, 2003, dan 2013. Sensus Pertanian 2023 merujuk pada World Programme for The Census of Agriculture 2020 yang dibuat oleh Food and Agriculture Organization of the United Nations (FAO).</p>
+                                </div>
+                            </div>
+                            <h2 id="accordion-open-heading-2">
+                                <button type="button"
+                                    class="flex justify-between items-center p-2 md:px-5 w-full font-medium text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 bg-gray-100 text-gray-900"
+                                    data-accordion-target="#accordion-open-body-2" aria-expanded="true"
+                                    aria-controls="accordion-open-body-2">
+                                    <span class="flex items-center">Apa tujuan dilaksanakannya ST2023?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-open-body-2" class="" aria-labelledby="accordion-open-heading-2">
+                                <div class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <ol class="mb-2 pl-4 pr-2 text-text-body text-sm text-justify list-decimal">
+                                        <li>Menyediakan data struktur pertanian, terutama untuk unit-unit administrasi terkecil</li>
+                                        <li>Menyediakan data yang dapat digunakan sebagai tolok ukur statistik pertanian saat ini</li>
+                                        <li>Menyediakan kerangka sampel untuk survei pertanian lanjutan</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <h2 id="accordion-open-heading-3">
+                                <button type="button"
+                                    class="flex justify-between items-center p-2 md:px-5 w-full font-medium text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 bg-gray-100 text-gray-900"
+                                    data-accordion-target="#accordion-open-body-3" aria-expanded="true"
+                                    aria-controls="accordion-open-body-3">
+                                    <span class="flex items-center">Apa dasar hukum pelaksanaan ST2023?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-open-body-3" class="" aria-labelledby="accordion-open-heading-3">
+                                <div class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <p class="mb-1 pr-2 text-text-body text-sm text-justify">Dasar hukum pelaksanaan ST2023 adalah sebagai berikut :
+                                    </p>
+                                    <ol class="mb-2 pl-4 pr-2 text-text-body text-sm text-justify list-decimal">
+                                        <li>UU No. 16 Tahun 1997 tentang Statistik</li>
+                                        <li>PP No. 51 Tahun 1999 tentang Penyelenggaraan Statistik</li>
+                                    </ol>
+                                </div>
+                            </div>
+                            <h2 id="accordion-open-heading-4">
+                                <button type="button"
+                                    class="flex justify-between items-center p-2 md:px-5 w-full font-medium text-left border border-b-0 border-gray-200 focus:ring-4 focus:ring-gray-200 hover:bg-gray-100 bg-gray-100 text-gray-900"
+                                    data-accordion-target="#accordion-open-body-4" aria-expanded="true"
+                                    aria-controls="accordion-open-body-4">
+                                    <span class="flex items-center">Kapan ST2023 dilaksanakan?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-open-body-4" class="" aria-labelledby="accordion-open-heading-4">
+                                <div class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Pencacahan lengkap ST2023 akan dilaksanakan pada 1-31 Mei 2023 dimana akan dilakukan pendataan oleh petugas menggunakan Paper Assisted Personal Interviewing (PAPI) dan Computer Assisted Personal Interviewing (CAPI) ataupun pendataan mandiri melalui Computer Aided Web Interviewing (CAWI).
+                                    </p>
+                                </div>
+                            </div>
+                            <h2 id="accordion-open-heading-5">
+                                <button type="button"
+                                    class="flex justify-between items-center p-2 md:px-5 w-full font-medium text-left border border-b-0 border-gray-200 focus:ring-5 focus:ring-gray-200 hover:bg-gray-100 bg-gray-100 text-gray-900"
+                                    data-accordion-target="#accordion-open-body-5" aria-expanded="true"
+                                    aria-controls="accordion-open-body-5">
+                                    <span class="flex items-center">Mengapa ST2023 penting?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-open-body-5" class="" aria-labelledby="accordion-open-heading-5">
+                                <div class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Sensus Pertanian 2023 dilaksanakan untuk mendapatkan data statistik pertanian yang lengkap dan akurat untuk bahan perencanaan dan evaluasi hasil-hasil pembangunan khususnya di sektor pertanian. Selain itu, ST2023 juga menjadi langkah awal pemerintah untuk mewujudkan kedaulatan pangan dan kesejahteraan petani
+                                    </p>
+                                </div>
+                            </div>
+                            <h2 id="accordion-open-heading-6">
+                                <button type="button"
+                                    class="flex justify-between items-center p-2 md:px-5 w-full font-medium text-left border border-b-0 border-gray-200 focus:ring-6 focus:ring-gray-200 hover:bg-gray-100 bg-gray-100 text-gray-900"
+                                    data-accordion-target="#accordion-open-body-6" aria-expanded="true"
+                                    aria-controls="accordion-open-body-6">
+                                    <span class="flex items-center">Bagaimana metode pelaksanaan ST2023?</span>
+                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                        viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd"
+                                            d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                                            clip-rule="evenodd"></path>
+                                    </svg>
+                                </button>
+                            </h2>
+                            <div id="accordion-open-body-6" class="" aria-labelledby="accordion-open-heading-6">
+                                <div class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Pelaksanaan ST2023 dengan menanyakan secara langsung ke responden dari rumah ke rumah (door-to-door) untuk pendataan di wilayah konsentrasi, selain itu dilakukan dengan hanya mengunjungi responden yang menjadi target pendataan ST2023 berdasarkan informasi yang diperoleh dari kunjungan ke narasumber misalnya ketua SLS, ketua kelompok tani, dll (snowballing) untuk pendataan di wilayah nonkonsentrasi.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let faqmodal = document.getElementById("faqmodal");
+            const showFAQ = (flag) => {
+                faqmodal.classList.toggle("hidden");
+            };
+        </script>
     </main>
     <footer class="bg-primary">
         <!-- Footer -->
         <div class="w-full border-t-2 border-primary-hover text-body-white">
             <div class="max-w-6xl mx-auto p-5 pb-20 md:pb-5">
                 <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:justify-around">
-                    <div class="flex-col space-y-5">
+                    <div class="flex-col space-y-3">
                         <div class="flex justify-start">
                             <img src="./img/bps.png" alt="Logo BPS" class="w-8">
                             <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
                         </div>
                         <div class="flex justify-start">
-                            <img src="./img/st2023.png" alt="Logo BPS" class="w-20">
-                            <p class="ml-2 font-bold italic uppercase">Sensus Pertanian 2023</p>
+                            <img src="./img/st2023.png" alt="Logo BPS" class="w-24">
                         </div>
                     </div>
                     <div class="space-y-2">
@@ -600,6 +833,58 @@
                             <p class="text-sm ml-2">bpshq@bps.go.id</p>
                         </div>
                     </div>
+                    <div class="">
+                        <p class="font-semibold uppercase mb-2">Kontak Markas Besar ST2023</p>
+                        <div class="flex">
+                            <span class="iconify text-lg mt-0.5" data-icon="ic:baseline-email"></span>
+                            <p class="text-sm ml-2">st2023@bps.go.id</p>
+                        </div>
+                        <div class="mt-5">
+                            <p class="font-semibold mb-2">Media Sosial BPS</p>
+                            <div class="flex">
+                                <ul class="space-x-2 flex">
+                                    <li>
+                                        <a href="https://instagram.com/bps_statistics" target="_blank"
+                                            data-tooltip-target="ig">
+                                            <span class="iconify text-2xl sm:text-3xl"
+                                                data-icon="ant-design:instagram-filled"></span>
+                                        </a>
+                                        <div id="ig" role="tooltip"
+                                            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-body-white bg-primary-hover rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
+                                            bps_statistics
+                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="https://twitter.com/bps_statistics" target="_blank"
+                                            data-tooltip-target="ig">
+                                            <span class="iconify text-2xl sm:text-3xl"
+                                                data-icon="ant-design:twitter-outlined"></span>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.facebook.com/bpsstatistics" target="_blank"
+                                            data-tooltip-target="fb">
+                                            <span class="iconify text-2xl sm:text-3xl"
+                                                data-icon="ant-design:facebook-filled"></span>
+                                        </a>
+                                        <div id="fb" role="tooltip"
+                                            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-body-white bg-primary-hover rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
+                                            Badan Pusat Statistik
+                                            <div class="tooltip-arrow" data-popper-arrow></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <a href="https://www.youtube.com/c/BPSStatistics/videos target=" _blank"
+                                            data-tooltip-target="fb">
+                                            <span class="iconify text-2xl sm:text-3xl"
+                                                data-icon="ant-design:youtube-filled"></span>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
                     <div class="text-sm space-y-2 hidden md:block">
                         <p class="text-base font-semibold uppercase">produk statistik</p>
                         <ul class="space-y-2">
@@ -614,7 +899,8 @@
 
                     </div>
                 </div>
-                <p class="text-xs text-center mt-5 mb-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi
+
+                <p class="text-xs text-center my-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi
                     Sensus Pertanian 2023</p>
             </div>
         </div>
@@ -625,6 +911,11 @@
 <script src="./js/flowbite.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
+    const umum = document.querySelectorAll('.umum');
+    umum.forEach((a, i) => {
+        a.dataset.aos = 'slide-up';
+        a.dataset.aosDelay = i * 100;
+    });
     const sub = document.querySelectorAll('.subsektor');
     sub.forEach((a, i) => {
         a.dataset.aos = 'fade-down';
