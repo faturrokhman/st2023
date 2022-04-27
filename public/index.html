@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css"/>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
     <title>Sensus Pertanian 2023</title>
     <link rel="icon" href="./img/bps.png">
@@ -154,10 +154,10 @@
                             <div class="bg-primary-hover w-full m-2 h-min rounded-xl" data-aos="fade-right">
                                 <div class="flex flex-col lg:flex-row items-center text-center mx-auto p-5">
                                     <div
-                                        class="flex text-emerald-300 items-center font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto">
-                                        <span class="iconify text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                                        class="flex lg:w-44 lg:h-16 text-emerald-300 items-center font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto">
+                                        <span class="iconify lg:w-14 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                                             data-icon="heroicons-solid:arrow-sm-up"></span>
-                                        <p class="angka">18,76%</p>
+                                        <p id="angka1" class="lg:w-28">0</p>%
                                     </div>
                                     <div class="lg:text-left lg:ml-5">
                                         <h2 class="font-medium text-sm sm:text-base lg:text-2xl">76.872.728 ruta</h2>
@@ -170,19 +170,20 @@
                                 data-aos-delay="500">
                                 <div class="flex flex-col lg:flex-row items-center text-center mx-auto p-5">
                                     <div
-                                        class="flex text-red-400 items-center font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto lg:mx-0">
-                                        <span class="iconify text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
+                                        class="flex lg:w-44 lg:h-16 text-red-400 items-center font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto lg:mx-0">
+                                        <span class="iconify lg:w-14 text-3xl sm:text-4xl md:text-5xl lg:text-6xl"
                                             data-icon="heroicons-solid:arrow-sm-down"></span>
-                                        -9,16%
+                                        <p id="angka2" class="lg:w-28">0</p>%
                                     </div>
                                     <div class="lg:text-left lg:ml-5">
-                                        <h2 class="font-medium text-sm sm:text-base lg:text-2xl">72.728 perusahaan</h2>
+                                        <h2 class="font-medium text-sm sm:text-base lg:text-2xl">72728 perusahaan</h2>
                                         <p class="text-[0.7rem] font-thin sm:text-sm lg:text-base">Jumlah Perusahaan
                                             Pertanian</p>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- Ornamen -->
                         <img src="./img/ornamen.png" alt="hiasan" class="hidden lg:block w-1/2 pl-24" data-aos="zoom-in"
                             data-aos-delay="1000">
@@ -309,9 +310,11 @@
                     </a>
                 </div>
             </div>
-            <img src="./img/wave.svg" alt="wave"
-                class="bg-primary w-full max-h-36 -m-8 p-0 mx-auto 2xl:max-h-44 rotate-180">
+
         </div>
+
+        <img src="./img/wave.svg" alt="wave"
+            class="bg-primary w-full max-h-36 -m-8 p-0 mx-auto 2xl:max-h-44 rotate-180">
         <!-- Layanan Data -->
         <div class="w-full h-full bg-primary my-14">
             <div class="max-w-6xl mx-auto">
@@ -389,7 +392,7 @@
                                 </button>
                             </div>
                             <div class="bg-body-white w-full text-primary-hover rounded-b-lg ">
-                                <form action="./belumtersedia.html" class="p-4">
+                                <form class="p-4">
                                     <label for="dataset" class="text-sm font-normal">Dataset</label>
                                     <select name="judul" id="judul" class="w-full rounded-md text-sm mb-4">
                                         <option value="ruta">Jumlah Usaha Pertanian</option>
@@ -398,31 +401,21 @@
                                         <option value="hewan">Populasi Ternak yang Dipelihara</option>
                                     </select>
                                     <label for="wilayah1" class="text-sm font-normal mt-4">Wilayah 1</label>
-                                    <div class="flex justify-between mb-4">
-                                        <select name="wilayah1" id="wilayah1" class="rounded-md text-sm">
-                                            <option value="indonesia">Indonesia</option>
-                                            <option value="aceh">Provinsi Aceh</option>
-                                            <option value="sumut">Provinsi Sumatera Utara</option>
-                                            <option value="sumbar">Provinsi Sumatera Barat</option>
-                                        </select>
-                                        <button class="bg-primary-hover rounded-md p-1">
-                                            <span class="iconify text-3xl text-body-white"
-                                                data-icon="heroicons-solid:plus"></span>
-                                        </button>
-                                    </div>
-                                    <label for="wilayah2" class="text-sm font-normal mt-4">Wilayah 2</label>
-                                    <div class="flex justify-between">
-                                        <select name="wilayah2" id="wilayah2" class="rounded-md text-sm ">
-                                            <option value="indonesia">Indonesia</option>
-                                            <option value="aceh">Provinsi Aceh</option>
-                                            <option value="sumut">Provinsi Sumatera Utara</option>
-                                            <option value="sumbar">Provinsi Sumatera Barat</option>
-                                        </select>
-                                        <button class="bg-red-600 rounded-md p-1">
-                                            <span class="iconify text-3xl text-body-white"
-                                                data-icon="heroicons-solid:x"></span>
-                                        </button>
-                                    </div>
+                                    <select name="wilayah1" id="wilayah1" class="w-full rounded-md text-sm mb-4">
+                                        <option value="indonesia">Indonesia</option>
+                                        <option value="aceh">Provinsi Aceh</option>
+                                        <option value="sumut">Provinsi Sumatera Utara</option>
+                                        <option value="sumbar">Provinsi Sumatera Barat</option>
+                                    </select>
+                                    <label for="wilayah2" class="text-sm font-normal mt-4">Wilayah
+                                        2</label>
+                                    <select name="wilayah2" id="wilayah2" class="w-full rounded-md text-sm ">
+                                        <option value="indonesia">Indonesia</option>
+                                        <option value="aceh">Provinsi Aceh</option>
+                                        <option value="sumut">Provinsi Sumatera Utara</option>
+                                        <option value="sumbar">Provinsi Sumatera Barat</option>
+                                    </select>
+
                                     <div class="text-center my-4">
                                         <input type="submit" value="Tampilkan"
                                             class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
@@ -463,27 +456,15 @@
                                         <option value="sumbar">Provinsi Sumatera Barat</option>
                                     </select>
                                     <label for="tahun1" class="text-sm font-normal mt-4">Tahun 1</label>
-                                    <div class="flex justify-between mb-4 space-x-4">
-                                        <select name="tahun1" id="tahun1" class="rounded-md text-sm w-full">
-                                            <option value="2013">2013</option>
-                                            <option value="2023">2023</option>
-                                        </select>
-                                        <button class="bg-primary-hover rounded-md p-1">
-                                            <span class="iconify text-3xl text-body-white"
-                                                data-icon="heroicons-solid:plus"></span>
-                                        </button>
-                                    </div>
+                                    <select name="tahun1" id="tahun1" class="rounded-md text-sm w-full mb-4">
+                                        <option value="2013">2013</option>
+                                        <option value="2023">2023</option>
+                                    </select>
                                     <label for="tahun2" class="text-sm font-normal mt-4">Tahun 2</label>
-                                    <div class="flex justify-between space-x-4">
-                                        <select name="tahun2" id="tahun2" class="rounded-md text-sm w-full">
-                                            <option value="2013">2013</option>
-                                            <option value="2023">2023</option>
-                                        </select>
-                                        <button class="bg-red-600 rounded-md p-1">
-                                            <span class="iconify text-3xl text-body-white"
-                                                data-icon="heroicons-solid:x"></span>
-                                        </button>
-                                    </div>
+                                    <select name="tahun2" id="tahun2" class="rounded-md text-sm w-full">
+                                        <option value="2013">2013</option>
+                                        <option value="2023">2023</option>
+                                    </select>
                                     <div class="text-center my-4">
                                         <input type="submit" value="Tampilkan"
                                             class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
@@ -518,7 +499,8 @@
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl text-primary-hover my-4">Grafik Sensus
                     Pertanian
                     2023</h1>
-                <img src="./img/chart.svg" alt="Chart" class="p-5 mx-auto">
+                <canvas id="grafikST"
+                    class="p-5 w-full h-[60vh] md:max-w-5xl mx-auto scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded overflow-auto"></canvas>
             </div>
         </div>
         <!-- Publikasi -->
@@ -661,7 +643,8 @@
                             <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
                         </button>
                     </div>
-                    <div class="bg-body-white w-fit max-w-3xl h-[450px] text-primary-hover rounded-b-lg overflow-auto touch-pan-x touch-pan-y scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-emerald-600 transition-all">
+                    <div
+                        class="bg-body-white w-fit max-w-3xl h-[450px] text-primary-hover rounded-b-lg overflow-auto touch-pan-x touch-pan-y scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-emerald-600 transition-all">
                         <div id="accordion-open" data-accordion="open">
                             <h2 id="accordion-open-heading-1">
                                 <button type="button"
@@ -678,9 +661,13 @@
                                 </button>
                             </h2>
                             <div id="accordion-open-body-1" class="" aria-labelledby="accordion-open-heading-1">
-                                <div
-                                    class="p-2 md:px-5 border border-b-0 border-gray-200">
-                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Sensus Pertanian 2023 (ST2023) merupakan Sensus Pertanian ketujuh yang dilakukan oleh Badan Pusat Statistik. Sensus Pertanian sebelumnya dilaksanakan pada tahun 1963, 1973, 1983, 1993, 2003, dan 2013. Sensus Pertanian 2023 merujuk pada World Programme for The Census of Agriculture 2020 yang dibuat oleh Food and Agriculture Organization of the United Nations (FAO).</p>
+                                <div class="p-2 md:px-5 border border-b-0 border-gray-200">
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Sensus Pertanian 2023
+                                        (ST2023) merupakan Sensus Pertanian ketujuh yang dilakukan oleh Badan Pusat
+                                        Statistik. Sensus Pertanian sebelumnya dilaksanakan pada tahun 1963, 1973, 1983,
+                                        1993, 2003, dan 2013. Sensus Pertanian 2023 merujuk pada World Programme for The
+                                        Census of Agriculture 2020 yang dibuat oleh Food and Agriculture Organization of
+                                        the United Nations (FAO).</p>
                                 </div>
                             </div>
                             <h2 id="accordion-open-heading-2">
@@ -689,7 +676,7 @@
                                     data-accordion-target="#accordion-open-body-2" aria-expanded="true"
                                     aria-controls="accordion-open-body-2">
                                     <span class="flex items-center">Apa tujuan dilaksanakannya ST2023?</span>
-                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -700,8 +687,10 @@
                             <div id="accordion-open-body-2" class="" aria-labelledby="accordion-open-heading-2">
                                 <div class="p-2 md:px-5 border border-b-0 border-gray-200">
                                     <ol class="mb-2 pl-4 pr-2 text-text-body text-sm text-justify list-decimal">
-                                        <li>Menyediakan data struktur pertanian, terutama untuk unit-unit administrasi terkecil</li>
-                                        <li>Menyediakan data yang dapat digunakan sebagai tolok ukur statistik pertanian saat ini</li>
+                                        <li>Menyediakan data struktur pertanian, terutama untuk unit-unit administrasi
+                                            terkecil</li>
+                                        <li>Menyediakan data yang dapat digunakan sebagai tolok ukur statistik pertanian
+                                            saat ini</li>
                                         <li>Menyediakan kerangka sampel untuk survei pertanian lanjutan</li>
                                     </ol>
                                 </div>
@@ -712,7 +701,7 @@
                                     data-accordion-target="#accordion-open-body-3" aria-expanded="true"
                                     aria-controls="accordion-open-body-3">
                                     <span class="flex items-center">Apa dasar hukum pelaksanaan ST2023?</span>
-                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -722,7 +711,8 @@
                             </h2>
                             <div id="accordion-open-body-3" class="" aria-labelledby="accordion-open-heading-3">
                                 <div class="p-2 md:px-5 border border-b-0 border-gray-200">
-                                    <p class="mb-1 pr-2 text-text-body text-sm text-justify">Dasar hukum pelaksanaan ST2023 adalah sebagai berikut :
+                                    <p class="mb-1 pr-2 text-text-body text-sm text-justify">Dasar hukum pelaksanaan
+                                        ST2023 adalah sebagai berikut :
                                     </p>
                                     <ol class="mb-2 pl-4 pr-2 text-text-body text-sm text-justify list-decimal">
                                         <li>UU No. 16 Tahun 1997 tentang Statistik</li>
@@ -736,7 +726,7 @@
                                     data-accordion-target="#accordion-open-body-4" aria-expanded="true"
                                     aria-controls="accordion-open-body-4">
                                     <span class="flex items-center">Kapan ST2023 dilaksanakan?</span>
-                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -746,7 +736,11 @@
                             </h2>
                             <div id="accordion-open-body-4" class="" aria-labelledby="accordion-open-heading-4">
                                 <div class="p-2 md:px-5 border border-b-0 border-gray-200">
-                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Pencacahan lengkap ST2023 akan dilaksanakan pada 1-31 Mei 2023 dimana akan dilakukan pendataan oleh petugas menggunakan Paper Assisted Personal Interviewing (PAPI) dan Computer Assisted Personal Interviewing (CAPI) ataupun pendataan mandiri melalui Computer Aided Web Interviewing (CAWI).
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Pencacahan lengkap ST2023
+                                        akan dilaksanakan pada 1-31 Mei 2023 dimana akan dilakukan pendataan oleh
+                                        petugas menggunakan Paper Assisted Personal Interviewing (PAPI) dan Computer
+                                        Assisted Personal Interviewing (CAPI) ataupun pendataan mandiri melalui Computer
+                                        Aided Web Interviewing (CAWI).
                                     </p>
                                 </div>
                             </div>
@@ -756,7 +750,7 @@
                                     data-accordion-target="#accordion-open-body-5" aria-expanded="true"
                                     aria-controls="accordion-open-body-5">
                                     <span class="flex items-center">Mengapa ST2023 penting?</span>
-                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -766,7 +760,11 @@
                             </h2>
                             <div id="accordion-open-body-5" class="" aria-labelledby="accordion-open-heading-5">
                                 <div class="p-2 md:px-5 border border-b-0 border-gray-200">
-                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Sensus Pertanian 2023 dilaksanakan untuk mendapatkan data statistik pertanian yang lengkap dan akurat untuk bahan perencanaan dan evaluasi hasil-hasil pembangunan khususnya di sektor pertanian. Selain itu, ST2023 juga menjadi langkah awal pemerintah untuk mewujudkan kedaulatan pangan dan kesejahteraan petani
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Sensus Pertanian 2023
+                                        dilaksanakan untuk mendapatkan data statistik pertanian yang lengkap dan akurat
+                                        untuk bahan perencanaan dan evaluasi hasil-hasil pembangunan khususnya di sektor
+                                        pertanian. Selain itu, ST2023 juga menjadi langkah awal pemerintah untuk
+                                        mewujudkan kedaulatan pangan dan kesejahteraan petani
                                     </p>
                                 </div>
                             </div>
@@ -776,7 +774,7 @@
                                     data-accordion-target="#accordion-open-body-6" aria-expanded="true"
                                     aria-controls="accordion-open-body-6">
                                     <span class="flex items-center">Bagaimana metode pelaksanaan ST2023?</span>
-                                    <svg data-accordion-icon="" class="w-6 h-6 shrink-0" fill="currentColor"
+                                    <svg data-accordion-icon="" class="w-6 h-6 rotate-180 shrink-0" fill="currentColor"
                                         viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
                                         <path fill-rule="evenodd"
                                             d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
@@ -786,7 +784,12 @@
                             </h2>
                             <div id="accordion-open-body-6" class="" aria-labelledby="accordion-open-heading-6">
                                 <div class="p-2 md:px-5 border border-b-0 border-gray-200">
-                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Pelaksanaan ST2023 dengan menanyakan secara langsung ke responden dari rumah ke rumah (door-to-door) untuk pendataan di wilayah konsentrasi, selain itu dilakukan dengan hanya mengunjungi responden yang menjadi target pendataan ST2023 berdasarkan informasi yang diperoleh dari kunjungan ke narasumber misalnya ketua SLS, ketua kelompok tani, dll (snowballing) untuk pendataan di wilayah nonkonsentrasi.
+                                    <p class="mb-2 pr-2 text-text-body text-sm text-justify">Pelaksanaan ST2023 dengan
+                                        menanyakan secara langsung ke responden dari rumah ke rumah (door-to-door) untuk
+                                        pendataan di wilayah konsentrasi, selain itu dilakukan dengan hanya mengunjungi
+                                        responden yang menjadi target pendataan ST2023 berdasarkan informasi yang
+                                        diperoleh dari kunjungan ke narasumber misalnya ketua SLS, ketua kelompok tani,
+                                        dll (snowballing) untuk pendataan di wilayah nonkonsentrasi.
                                     </p>
                                 </div>
                             </div>
@@ -910,6 +913,9 @@
 <script src="./js/upButton.js"></script>
 <script src="./js/flowbite.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
 <script>
     const umum = document.querySelectorAll('.umum');
     umum.forEach((a, i) => {
@@ -934,6 +940,96 @@
     AOS.init({
         duration: 1000,
         once: false,
+    });
+
+    var obj5 = { value: 0 },
+        obj6 = { value: 0 },
+        element5 = document.getElementById("angka1"),
+        element6 = document.getElementById("angka2");
+
+    TweenMax.to(obj5, 2.4, {
+        value: 17.56,
+        delay: 1,
+        ease: Linear.easeNone,
+        onUpdate: function () {
+            element5.innerHTML = obj5.value.toFixed(2).toString().replace(".", ",");
+        }
+    });
+
+    TweenMax.to(obj6, 2.4, {
+        value: -9.16,
+        delay: 1.5,
+        ease: Linear.easeNone,
+        onUpdate: function () {
+            element6.innerHTML = obj6.value.toFixed(2).toString().replace(".", ",");
+        }
+    });
+
+    // Grafik
+    let grafikST = document.getElementById("grafikST").getContext("2d");
+    Chart.defaults.global.defaultFontFamily = 'Poppins';
+    Chart.defaults.global.defaultFontSize = 12;
+    Chart.defaults.global.defaultFontColor = '#777';
+    let grafST = new Chart(grafikST, {
+        type: 'bar',
+        data: {
+            labels: ['Tanaman Pangan', 'Hortikultura', 'Perkebunan', 'Peternakan', 'Perikanan', 'Kehutanan', 'Jasa Pertanian'],
+            datasets: [{
+                label: '2003',
+                data: [
+                    17728185,
+                    17337617,
+                    14128539,
+                    18595824,
+                    2489681,
+                    6827937,
+                    1846140
+                ],
+                backgroundColor: '#065F46',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+            }, {
+                label: '2013',
+                data: [
+                    16937617,
+                    10602147,
+                    12770090,
+                    12969210,
+                    1975233,
+                    6782885,
+                    1075935
+                ],
+                backgroundColor: '#064E3B',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+            }
+            ],
+
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Grafik Jumlah Rumah Tangga Usaha Pertanian Tahun 2003 dan 2013',
+                fontSize: 18,
+                fontColor: '#000'
+            },
+            legend: {
+                display: true,
+                position: 'right',
+                labels: {
+                    fontColor: '#000'
+                }
+            },
+            tooltips: {
+                enabled: true
+            },
+            //maintainAspectRatio: false,
+            responsive: true
+        }
     });
 </script>
 
