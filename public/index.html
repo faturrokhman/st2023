@@ -496,11 +496,22 @@
         <div class="h-full w-full pt-3 md:pt-6 bg-body-white rounded-lg sm:rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl"
             data-aos="slide-up" data-aos-duration="1500">
             <div class="max-w-6xl text-center mx-auto mb-5">
-                <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl text-primary-hover my-4">Grafik Sensus
-                    Pertanian
-                    2023</h1>
-                <canvas id="grafikST"
-                    class="p-5 w-full h-[60vh] md:max-w-5xl mx-auto scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded overflow-auto"></canvas>
+                <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl text-primary-hover my-4">Grafik Hasil
+                    Sensus Pertanian 2003 dan 2013</h1>
+                <div class="grid grid-cols-2 justify-between gap-4 lg:mx-auto">
+                    <div class="max-w-xl h-full col-span-2 md:col-span-1 mx-auto">
+                        <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Rumah Tangga Usaha Pertanian
+                            Tahun 2003 dan 2013</h2>
+                        <canvas id="grafikST" class="p-2 md:p-5"></canvas>
+                    </div>
+                    <div class="max-w-xl h-full col-span-2 md:col-span-1 mx-auto">
+                        <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Perusahaan Pertanian Berbadan Hukum
+                            Tahun 2003 dan 2013</h2>
+                        <canvas id="grafikST2" class="p-2 md:p-5"></canvas>
+                    </div>
+                </div>
+
+
             </div>
         </div>
         <!-- Publikasi -->
@@ -917,6 +928,7 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 
 <script>
+    // AOS
     const umum = document.querySelectorAll('.umum');
     umum.forEach((a, i) => {
         a.dataset.aos = 'slide-up';
@@ -942,6 +954,7 @@
         once: false,
     });
 
+    // Angka bergerak
     var obj5 = { value: 0 },
         obj6 = { value: 0 },
         element5 = document.getElementById("angka1"),
@@ -966,10 +979,11 @@
     });
 
     // Grafik
-    let grafikST = document.getElementById("grafikST").getContext("2d");
     Chart.defaults.global.defaultFontFamily = 'Poppins';
     Chart.defaults.global.defaultFontSize = 12;
     Chart.defaults.global.defaultFontColor = '#777';
+
+    let grafikST = document.getElementById("grafikST").getContext("2d");
     let grafST = new Chart(grafikST, {
         type: 'bar',
         data: {
@@ -977,8 +991,8 @@
             datasets: [{
                 label: '2003',
                 data: [
-                    17728185,
-                    17337617,
+                    18708052,
+                    16937617,
                     14128539,
                     18595824,
                     2489681,
@@ -993,7 +1007,7 @@
             }, {
                 label: '2013',
                 data: [
-                    16937617,
+                    17728185,
                     10602147,
                     12770090,
                     12969210,
@@ -1011,15 +1025,12 @@
 
         },
         options: {
-            title: {
-                display: true,
-                text: 'Grafik Jumlah Rumah Tangga Usaha Pertanian Tahun 2003 dan 2013',
-                fontSize: 18,
-                fontColor: '#000'
+            layout: {
+                padding: 0
             },
             legend: {
                 display: true,
-                position: 'right',
+                position: 'bottom',
                 labels: {
                     fontColor: '#000'
                 }
@@ -1028,9 +1039,70 @@
                 enabled: true
             },
             //maintainAspectRatio: false,
-            responsive: true
+            responsive: true,
+            aspectRatio: 1,
         }
     });
+    let grafikST2 = document.getElementById("grafikST2").getContext("2d");
+    let grafST2 = new Chart(grafikST2, {
+        type: 'bar',
+        data: {
+            labels: ['Tanaman Pangan', 'Hortikultura', 'Perkebunan', 'Peternakan', 'Perikanan', 'Kehutanan'],
+            datasets: [{
+                label: '2003',
+                data: [
+                    87,
+                    225,
+                    1862,
+                    475,
+                    631,
+                    730
+                ],
+                backgroundColor: '#065F46',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+            }, {
+                label: '2013',
+                data: [
+                    112,
+                    191,
+                    2216,
+                    629,
+                    394,
+                    678
+                ],
+                backgroundColor: '#064E3B',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+            }
+            ],
+
+        },
+        options: {
+            layout: {
+                padding: 0
+            },
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    fontColor: '#000'
+                }
+            },
+            tooltips: {
+                enabled: true
+            },
+            //maintainAspectRatio: false,
+            responsive: true,
+            aspectRatio: 1,
+        }
+    });
+
+
 </script>
 
 </html>
