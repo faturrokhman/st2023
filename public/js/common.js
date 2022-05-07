@@ -2,7 +2,7 @@
 
 // Logo di atas
 class Logo extends HTMLElement {
-    connectedCallback(){
+    connectedCallback() {
         this.innerHTML = `
         <div class="flex justify-between md:text-lg mx-5 sm:mx-10">
           <a href="./index.html">
@@ -22,9 +22,10 @@ class Logo extends HTMLElement {
 }
 customElements.define('my-logo', Logo)
 
-// Pencarian dan Lokasi
+// Pencarian dan Button Lokasi
 class PencarianLokasi extends HTMLElement {
-    connectedCallback(){
+    constructor() {
+        super();
         this.innerHTML = `
         <div class="flex px-0 xss:justify-start items-center justify-between">
             <div class="w-full py-0 transition">
@@ -42,44 +43,6 @@ class PencarianLokasi extends HTMLElement {
                             class="ml-1 uppercase text-base md:text-base hidden xss:block hover:underline">
                             Indonesia</span>
                     </button>
-                    <!-- Modal Lokasi -->
-                    <div id="lokasi"
-                        class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden">
-                        <div
-                            class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
-                            <div
-                                class="w-96 md:w-auto relative flex flex-col justify-center items-center bg-body-white text-text-color rounded-xl py-4 px-4 md:px-10 xl:py-8 xl:px-12">
-                                <h1 class="text-base font-medium">
-                                    Ubah Wilayah
-                                </h1>
-                                <form action="./belumtersedia.html" class="py-4 px-2">
-                                    <label for="wilayah" class="text-sm font-normal">Pilih Wilayah :</label>
-                                    <select name="wilayah" id="wilayah" class="w-full rounded-md mb-3">
-                                        <option value="indonesia">Indonesia</option>
-                                        <option value="aceh">Provinsi Aceh</option>
-                                        <option value="sumut">Provinsi Sumatera Utara</option>
-                                        <option value="sumbar">Provinsi Sumatera Barat</option>
-                                    </select>
-                                    <div class="text-center">
-                                        <input type="submit" value="Ubah"
-                                            class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
-                                    </div>
-
-                                </form>
-                                <button onclick="showLocation(true)"
-                                    class="absolute top-4 right-4 xl:right-8" aria-label="close">
-                                    <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
-                                </button>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Script Memunculkan Modal Lokasi -->
-                    <script>
-                        let lokasi = document.getElementById("lokasi");
-                        const showLocation = (flag) => {
-                            lokasi.classList.toggle("hidden");
-                        };
-                    </script>
                 </div>
             </div>
           </div>
@@ -87,10 +50,45 @@ class PencarianLokasi extends HTMLElement {
     }
 }
 customElements.define('pencarian-lokasi', PencarianLokasi)
+// Modal Lokasi
+class ModalLokasi extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = `
+        <!-- Modal Lokasi -->
+        <div class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
+        <div
+            class="w-96 md:w-auto relative flex flex-col justify-center items-center bg-body-white text-text-color rounded-xl py-4 px-4 md:px-10 xl:py-8 xl:px-12">
+            <h1 class="text-base font-medium">
+                Ubah Wilayah
+            </h1>
+            <form action="./belumtersedia.html" class="py-4 px-2">
+                <label for="wilayah" class="text-sm font-normal">Pilih Wilayah :</label>
+                <select name="wilayah" id="wilayah" class="w-full rounded-md mb-3">
+                    <option value="indonesia">Indonesia</option>
+                    <option value="aceh">Provinsi Aceh</option>
+                    <option value="sumut">Provinsi Sumatera Utara</option>
+                    <option value="sumbar">Provinsi Sumatera Barat</option>
+                </select>
+                <div class="text-center">
+                    <input type="submit" value="Ubah"
+                        class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
+                </div>
+
+            </form>
+            <button onclick="showLocation(true)" class="absolute top-4 right-4 xl:right-8" aria-label="close">
+                <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
+            </button>
+        </div>
+        </div>                
+        `
+    }
+}
+customElements.define('modal-lokasi', ModalLokasi)
 
 // Tombol Up ke Atas
 class TopButton extends HTMLElement {
-    connectedCallback(){
+    connectedCallback() {
         this.innerHTML = `
         <button onclick="topFunction()" id="onTopBtn" data-tooltip-target="up" data-tooltip-placement="left"
             class="fixed bottom-16 sm:bottom-20 md:bottom-5 right-4 md:right-8 w-10 h-10 p-1 cursor-pointer rounded-full border border-primary-hover focus:outline-none z-1 bg-body-white items-center">
@@ -108,7 +106,7 @@ customElements.define('my-topbutton', TopButton)
 
 // FAQ
 class FAQ extends HTMLElement {
-    connectedCallback(){
+    connectedCallback() {
         this.innerHTML = `
         <!-- Tombol FAQ -->
     <button onclick="showFAQ(true)" id="faq" data-tooltip-target="faqq" data-tooltip-placement="left"
@@ -120,10 +118,17 @@ class FAQ extends HTMLElement {
         <div class="tooltip-arrow" data-popper-arrow></div>
     </div>
     </button>
-<!-- Modal FAQ -->
-<div id="faqmodal"
-    class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden">
-    <div class="2xl:container 2xl:mx-auto py-10 px-4 sm:px-10 md:px-28 flex justify-center items-center">
+        `
+    }
+}
+customElements.define('my-faq', FAQ)
+// Modal FAQ
+class ModalFAQ extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = `
+        <!-- Modal FAQ -->
+        <div class="2xl:container 2xl:mx-auto py-10 px-4 sm:px-10 md:px-28 flex justify-center items-center">
         <div
             class="w-auto relative flex flex-col justify-center items-center bg-primary-hover text-text-color rounded-xl">
             <div
@@ -288,20 +293,14 @@ class FAQ extends HTMLElement {
             </div>
         </div>
     </div>
-</div>
-<script>
-    let faqmodal = document.getElementById("faqmodal");
-    const showFAQ = (flag) => {
-        faqmodal.classList.toggle("hidden");
-    };
-</script>
         `
     }
 }
-customElements.define('my-faq', FAQ)
+customElements.define('modal-faq', ModalFAQ)
 
 class Tes extends HTMLElement {
-    connectedCallback(){
+    constructor() {
+        super();
         this.innerHTML = `
         
         `
