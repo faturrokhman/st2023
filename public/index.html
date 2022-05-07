@@ -17,78 +17,18 @@
         <div class="navbar bg-primary text-body-white w-full h-min p-3 pb-0 sticky top-0 shadow-lg" id="navbar">
             <div class="max-w-6xl mx-auto">
                 <!-- Logo -->
-                <div class="flex justify-between md:text-lg mx-5 sm:mx-10">
-                    <a href="./index.html">
-                        <div class="flex justify-start transition">
-                            <img src="./img/bps.png" alt="Logo BPS" class="w-8">
-                            <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
-                        </div>
-                    </a>
-                    <div class="hidden sm:block transition">
-                        <div class="flex justify-end">
-                            <img src="./img/st2023.png" alt="Logo ST2023" class="w-24">
-                        </div>
-                    </div>
-                </div>
+                <my-logo></my-logo>
                 <!-- Search Bar dan Lokasi dan Navbar Top -->
                 <div class="flex justify-between mx-5 sm:mx-10 mr-2 pt-1 pb-3">
-                    <div class="flex px-0 xss:justify-start items-center justify-between">
-                        <div class="w-full py-0 transition">
-                            <form action="./belumtersedia.html">
-                                <input type="search"
-                                    class="rounded w-full py-1 text-primary-hover text-sm border-slate-500 focus:ring-emerald-200 focus:border-emerald-200 border"
-                                    placeholder="Cari...">
-                            </form>
-                        </div>
-                        <div class="ml-5 items-center transition">
-                            <div class="flex">
-                                <button onclick="showLocation(true)" class="flex items-center">
-                                    <span class="iconify text-2xl" data-icon="heroicons-solid:location-marker"></span>
-                                    <span
-                                        class="ml-1 uppercase text-base md:text-base hidden xss:block hover:underline">
-                                        Indonesia</span>
-                                </button>
-                                <!-- Modal Lokasi -->
-                                <div id="lokasi"
-                                    class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden">
-                                    <div
-                                        class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
-                                        <div
-                                            class="w-96 md:w-auto relative flex flex-col justify-center items-center bg-body-white text-text-color rounded-xl py-4 px-4 md:px-10 xl:py-8 xl:px-12">
-                                            <h1 class="text-base font-medium">
-                                                Ubah Wilayah
-                                            </h1>
-                                            <form action="./belumtersedia.html" class="py-4 px-2">
-                                                <label for="wilayah" class="text-sm font-normal">Pilih Wilayah :</label>
-                                                <select name="wilayah" id="wilayah" class="w-full rounded-md mb-3">
-                                                    <option value="indonesia">Indonesia</option>
-                                                    <option value="aceh">Provinsi Aceh</option>
-                                                    <option value="sumut">Provinsi Sumatera Utara</option>
-                                                    <option value="sumbar">Provinsi Sumatera Barat</option>
-                                                </select>
-                                                <div class="text-center">
-                                                    <input type="submit" value="Ubah"
-                                                        class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
-                                                </div>
-
-                                            </form>
-                                            <button onclick="showLocation(true)"
-                                                class="absolute top-4 right-4 xl:right-8" aria-label="close">
-                                                <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
-                                            </button>
-                                        </div>
-                                    </div>
-                                </div>
-                                <!-- Script Memunculkan Modal Lokasi -->
-                                <script>
-                                    let lokasi = document.getElementById("lokasi");
-                                    const showLocation = (flag) => {
-                                        lokasi.classList.toggle("hidden");
-                                    };
-                                </script>
-                            </div>
-                        </div>
-                    </div>
+                    <!-- Pencarian dan Lokasi -->
+                    <pencarian-lokasi></pencarian-lokasi>
+                    <modal-lokasi id="lokasi" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden"></modal-lokasi>
+                    <script>
+                        let lokasi = document.getElementById("lokasi");
+                        const showLocation = (flag) => {
+                            lokasi.classList.toggle("hidden");
+                        };
+                    </script>
                     <!-- Navbar Top -->
                     <nav class="w-min hidden md:block ml-2">
                         <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase">
@@ -318,6 +258,7 @@
         <div class="w-full h-full bg-primary my-14">
             <div class="max-w-6xl mx-auto">
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl">Layanan Data</h1>
+                <!-- Button Layanan Data -->
                 <div
                     class="mt-4 grid sm:grid-cols-3 sm:gap-8 mx-4 sm:mx-5 space-y-4 sm:space-y-0 sm:justify-between sm:items-start">
                     <button onclick="showQuery(true)"
@@ -816,112 +757,13 @@
             };
         </script>
     </main>
-    <footer class="bg-primary">
-        <!-- Footer -->
-        <div class="w-full border-t-2 border-primary-hover text-body-white">
-            <div class="max-w-6xl mx-auto p-5 pb-20 md:pb-5">
-                <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:justify-around">
-                    <div class="flex-col space-y-3">
-                        <div class="flex justify-start">
-                            <img src="./img/bps.png" alt="Logo BPS" class="w-8">
-                            <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
-                        </div>
-                        <div class="flex justify-start">
-                            <img src="./img/st2023.png" alt="Logo BPS" class="w-24">
-                        </div>
-                    </div>
-                    <div class="space-y-2">
-                        <p class="font-semibold uppercase">Kontak BPS</p>
-                        <p class="text-sm">Jalan Dr. Sutomo 6-8 Jakarta, 10710 Indonesia</p>
-                        <div class="flex">
-                            <span class="iconify text-lg" data-icon="bxs:phone" style="color: white;"></span>
-                            <p class="text-sm ml-2">(62-21) 3841195, 3842508, 3810291</p>
-                        </div>
-                        <div class="flex">
-                            <span class="iconify" data-icon="fa:fax"></span>
-                            <p class="text-sm ml-2">(62-21) 3857046</p>
-                        </div>
-                        <div class="flex">
-                            <span class="iconify text-lg mt-0.5" data-icon="ic:baseline-email"></span>
-                            <p class="text-sm ml-2">bpshq@bps.go.id</p>
-                        </div>
-                    </div>
-                    <div class="">
-                        <p class="font-semibold uppercase mb-2">Kontak Markas Besar ST2023</p>
-                        <div class="flex">
-                            <span class="iconify text-lg mt-0.5" data-icon="ic:baseline-email"></span>
-                            <p class="text-sm ml-2">st2023@bps.go.id</p>
-                        </div>
-                        <div class="mt-5">
-                            <p class="font-semibold mb-2">Media Sosial BPS</p>
-                            <div class="flex">
-                                <ul class="space-x-2 flex">
-                                    <li>
-                                        <a href="https://instagram.com/bps_statistics" target="_blank"
-                                            data-tooltip-target="ig">
-                                            <span class="iconify text-2xl sm:text-3xl"
-                                                data-icon="ant-design:instagram-filled"></span>
-                                        </a>
-                                        <div id="ig" role="tooltip"
-                                            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-body-white bg-primary-hover rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
-                                            bps_statistics
-                                            <div class="tooltip-arrow" data-popper-arrow></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="https://twitter.com/bps_statistics" target="_blank"
-                                            data-tooltip-target="ig">
-                                            <span class="iconify text-2xl sm:text-3xl"
-                                                data-icon="ant-design:twitter-outlined"></span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.facebook.com/bpsstatistics" target="_blank"
-                                            data-tooltip-target="fb">
-                                            <span class="iconify text-2xl sm:text-3xl"
-                                                data-icon="ant-design:facebook-filled"></span>
-                                        </a>
-                                        <div id="fb" role="tooltip"
-                                            class="inline-block absolute invisible z-10 py-2 px-3 text-sm font-medium text-body-white bg-primary-hover rounded-lg shadow-sm opacity-0 transition-opacity duration-300 tooltip">
-                                            Badan Pusat Statistik
-                                            <div class="tooltip-arrow" data-popper-arrow></div>
-                                        </div>
-                                    </li>
-                                    <li>
-                                        <a href="https://www.youtube.com/c/BPSStatistics/videos target=" _blank"
-                                            data-tooltip-target="fb">
-                                            <span class="iconify text-2xl sm:text-3xl"
-                                                data-icon="ant-design:youtube-filled"></span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="text-sm space-y-2 hidden md:block">
-                        <p class="text-base font-semibold uppercase">produk statistik</p>
-                        <ul class="space-y-2">
-                            <li>
-                                <a href="./brs.html">Berita Resmi Statistik</a>
-                            </li>
-                            <li>
-                                <a href="./publikasi.html">Publikasi</a>
-                            </li>
-                        </ul>
-
-
-                    </div>
-                </div>
-
-                <p class="text-xs text-center my-2">Copyright &copy; 2022 - Faturrokhman (221810300)</br>Diseminasi
-                    Sensus Pertanian 2023</p>
-            </div>
-        </div>
-    </footer>
+    <my-footer></my-footer>
 </body>
 <script src="./js/navbar.js"></script>
 <script src="./js/upButton.js"></script>
 <script src="./js/flowbite.js"></script>
+<script type="module" src="./js/footer.js"></script>
+<script type="module" src="./js/common.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>

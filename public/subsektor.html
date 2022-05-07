@@ -13,7 +13,6 @@
   <script src="./js/tab.js"></script>
   <script type=module src="./js/footer.js"></script>
   <script type=module src="./js/common.js"></script>
-  <!--<script src="../node_modules/flowbite/dist/flowbite.js"></script>-->
   <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
   <title>Subsektor</title>
   <link rel="icon" href="./img/bps.png">
@@ -90,53 +89,53 @@
     <div class="max-w-6xl mx-auto md:px-10" id="tabs-id" data-aos="fade-up">
       <div class="w-full">
         <!-- Tab Subsektor -->
-        <ul class="flex mb-0 bg-primary-hover rounded-t-lg">
+        <ul class="grid grid-cols-7 mb-0 p-0 bg-primary-hover gap-0 rounded-t-lg">
           <li class="w-full">
-            <a class="inline-block w-full bg-body-white text-primary-hover hover:text-primary-hover rounded-tl-lg p-2 text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-subsektor')">
+            <a class="inline-block w-full h-full bg-body-white text-primary-hover hover:text-primary-hover rounded-tl-lg p-2 text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-subsektor')">
               <i class="iconify text-3xl mx-auto" data-icon="teenyicons:plant-solid" ></i>
             <span class="hidden md:block font-semibold">Tanaman Pangan</span>
             </a>
           </li>
           <li class="w-full">
-              <a class="inline-block w-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-hortikultura')">
+              <a class="inline-block w-full h-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-hortikultura')">
                 <i class="iconify text-3xl mx-auto" data-icon="icon-park-outline:chili" ></i>
               <span class="hidden md:block font-semibold">Hortikultura</span>
               </a>
           </li>
           <li class="w-full">
-              <a class="inline-block w-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-perkebunan')">
+              <a class="inline-block w-full h-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-perkebunan')">
                 <i class="iconify text-3xl mx-auto" data-icon="dashicons:palmtree" ></i>
               <span class="hidden md:block font-semibold capitalize">perkebunan</span>
               </a>
           </li>
           <li class="w-full">
-              <a class="inline-block w-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-peternakan')">
+              <a class="inline-block w-full h-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-peternakan')">
                 <i class="iconify text-3xl mx-auto" data-icon="healthicons:animal-cow" ></i>
               <span class="hidden md:block font-semibold capitalize">peternakan</span>
               </a>
           </li>
           <li class="w-full">
-              <a class="inline-block w-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-perikanan')">
+              <a class="inline-block w-full h-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-perikanan')">
                 <i class="iconify text-3xl mx-auto" data-icon="ion:fish-sharp" ></i>
               <span class="hidden md:block font-semibold capitalize">perikanan</span>
               </a>
           </li>
           <li class="w-full">
-              <a class="inline-block w-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-kehutanan')">
+              <a class="inline-block w-full h-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer" onclick="changeAtiveTab(event,'tab-kehutanan')">
                 <i class="iconify text-3xl mx-auto" data-icon="bi:tree-fill" ></i>
               <span class="hidden md:block font-semibold capitalize">kehutanan</span>
               </a>
           </li>
           <li class="w-full">
-              <a class="inline-block w-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer rounded-tr-lg" onclick="changeAtiveTab(event,'tab-jasa')">
+              <a class="inline-block w-full h-full text-body-white bg-primary-hover p-2 hover:text-primary-hover text-sm font-medium text-center hover:bg-body-white cursor-pointer rounded-tr-lg" onclick="changeAtiveTab(event,'tab-jasa')">
                 <i class="iconify text-3xl mx-auto" data-icon="healthicons:agriculture" ></i>
               <span class="hidden md:block font-semibold capitalize">jasa pertanian</span>
               </a>
           </li>
         </ul>
         <!-- Content Subsektor Tab -->
-        <div class="relative flex flex-col min-w-0 break-words bg-body-white w-full mb-6 pb-8 shadow-lg rounded-b-lg text-primary-hover">
-          <div class="px-4 py-5 flex-auto">
+        <div class="relative flex flex-col min-w-0 break-words w-full mb-6 pb-8 shadow-lg rounded-b-lg text-primary-hover bg-body-white">
+          <div class="flex-auto md:p-2">
             <div class="tab-content tab-space">
               <div class="block p-4 rounded-lg" id="tab-subsektor">
                       <h1 class="text-lg font-bold md:text-2xl mb-4" data-aos="slide-up">Tanaman Pangan</h1>
@@ -1267,7 +1266,7 @@
           </div>
         </div>
       </div>
-  </div>
+    </div>
 
     <!-- Navigasi Bottom (Mobile) -->
     <nav
@@ -1351,7 +1350,7 @@
 <script>
   const ijo = document.querySelectorAll('.hijau');
   ijo.forEach((a, i) => {
-    a.dataset.aosDelay = i * 300;
+    a.dataset.aosDelay = i * 200;
   });
   AOS.init({
     duration: 1000,
