@@ -4411,6 +4411,10 @@ textarea.form-control.is-invalid{
   grid-column: span 2 / span 2;
 }
 
+.col-auto{
+  grid-column: auto;
+}
+
 .m-0{
   margin: 0px;
 }
@@ -4924,6 +4928,10 @@ textarea.form-control.is-invalid{
   list-style-type: none;
 }
 
+.grid-flow-col{
+  grid-auto-flow: column;
+}
+
 .grid-cols-6{
   grid-template-columns: repeat(6, minmax(0, 1fr));
 }
@@ -5346,8 +5354,20 @@ textarea.form-control.is-invalid{
   background-size: cover;
 }
 
+.bg-auto{
+  background-size: auto;
+}
+
+.bg-fixed{
+  background-attachment: fixed;
+}
+
 .bg-center{
   background-position: center;
+}
+
+.bg-repeat{
+  background-repeat: repeat;
 }
 
 .object-cover{
@@ -6507,6 +6527,10 @@ body{
     width: 14rem;
   }
 
+  .sm\:w-1\/4{
+    width: 25%;
+  }
+
   .sm\:grid-cols-3{
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -6591,6 +6615,11 @@ body{
     font-size: 3.75rem;
     line-height: 1;
   }
+
+  .sm\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+  }
 }
 
 @media (min-width: 768px){
@@ -6646,6 +6675,18 @@ body{
 
   .md\:w-2\/3{
     width: 66.666667%;
+  }
+
+  .md\:w-1\/3{
+    width: 33.333333%;
+  }
+
+  .md\:w-1\/12{
+    width: 8.333333%;
+  }
+
+  .md\:w-1\/6{
+    width: 16.666667%;
   }
 
   .md\:grid-cols-2{
@@ -6800,6 +6841,10 @@ body{
   .md\:text-sm{
     font-size: 0.875rem;
     line-height: 1.25rem;
+  }
+
+  .md\:font-bold{
+    font-weight: 700;
   }
 }
 

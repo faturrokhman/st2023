@@ -75,19 +75,16 @@
     </header>
     <main class="bg-primary mt-10 pt-10 w-full">
         <!-- Content -->
-        <?php
-        $cari = $_REQUEST['cari'];
-        ?>
-        <div class="max-w-6xl mx-auto items-center text-center p-5 space-x-4 flex">
-            <img src="./img/pencarian.png" alt="Pencarian" class="mx-auto w-1/2" data-aos="zoom-in">
-            <h1>Hasil Pencarian '<?php $item ?>'</h1>
+        <div class="max-w-6xl mx-auto items-center text-center p-5 space-y-4 flex flex-col">
+            <img src="./img/pencarian.png" alt="Pencarian" class="w-1/2 sm:w-1/4 md:w-1/6 animation" data-aos="zoom-in">
+            <h1 class="font-semibold md:font-bold text-lg sm:text-3xl uppercase" data-aos="fade-up">Hasil Pencarian</h1>
         </div>
         <!-- Tab -->
-        <div class="flex flex-wrap max-w-6xl mx-auto md:px-10" id="tabs-id">
+        <div class="flex flex-wrap max-w-6xl mx-auto md:px-10" id="tabs-id" data-aos="fade-up">
             <div class="w-full">
                 <!-- Tab List -->
                 <ul
-                    class="flex items-center mb-0 list-none pt-3 pb-4 flex-row overflow-y-auto space-x-2 whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-400 scrollbar-rounded text-xs md:text-sm font-semibold uppercase">
+                    class="flex items-center list-none pt-3 pb-3 mb-2 flex-row overflow-y-auto space-x-2 whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-400 scrollbar-rounded text-xs md:text-sm font-semibold uppercase">
                     <li class="-mb-px flex-auto text-center cursor-pointer">
                         <a class=" px-3 py-2 shadow-lg rounded block bg-body-white text-primary-hover hover:text-primary-hover hover:bg-body-white"
                             onclick="changeAtiveTab(event,'tab-brs')">
@@ -160,14 +157,14 @@
                                         </thead>
                                         <tbody class="px-1 align-top whitespace-normal">
                                             <tr class="bg-slate-200 hover:bg-slate-300 divide-x divide-text-color/30">
-                                                <td class="px-1 py-2">Hasil Sensus Pertanian 2023</td>
+                                                <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
                                                 <td class="px-1 py-2">Indonesia</td>
                                                 <td class="px-1 py-2 whitespace-normal min-w-[300px]">Sensus Pertanian
                                                     2023 Mencatat Jumlah Rumah Tangga Usaha Tanaman Padi mencapai angka
                                                     76.872.728 rumah tangga. Dibandingkan Dengan Sensus Pertanian
                                                     Sebelumnya ...</td>
                                                 <td class="px-1 py-2">23 Januari 2024</td>
-                                                <td>
+                                                <td class="px-1 py-2">
                                                     <a href="./Hasil Sensus ST2023 (example).pdf" target="_blank"
                                                         download="Hasil Sensus ST2023">
                                                         <div
@@ -189,6 +186,7 @@
                                 <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2">
                                     Publikasi
                                 </h1>
+                                <my-publikasi class="flex flex-wrap pt-2 w-full text-sm gap-5 justify-evenly text-body-white text-center"></my-publikasi>
                             </div>
                             <div class="hidden" id="tab-infografis">
                                 <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
@@ -296,6 +294,7 @@
 <script src="./js/common.js"></script>
 <script src="./js/footer.js"></script>
 <script src="./js/tab.js"></script>
+<script src="./js/publikasi.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({
