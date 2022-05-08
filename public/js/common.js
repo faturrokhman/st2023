@@ -29,8 +29,8 @@ class PencarianLokasi extends HTMLElement {
         this.innerHTML = `
         <div class="flex px-0 xss:justify-start items-center justify-between">
             <div class="w-full py-0 transition">
-                <form action="./belumtersedia.html">
-                    <input type="search"
+                <form action="./pencarian.php" method="post">
+                    <input type="search" name="cari"
                         class="rounded w-full py-1 text-primary-hover text-sm border-slate-500 focus:ring-emerald-200 focus:border-emerald-200 border"
                         placeholder="Cari...">
                 </form>
