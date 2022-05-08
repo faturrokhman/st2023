@@ -14,6 +14,7 @@ class Logo extends HTMLElement {
           <div class="hidden sm:block transition">
               <div class="flex justify-end">
                   <img src="./img/st2023.png" alt="Logo ST2023" class="w-24">
+                  <p class="ml-2 font-bold uppercase">Sensus Pertanian</p>
               </div>
           </div>
         </div>

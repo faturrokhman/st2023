@@ -81,17 +81,19 @@
                     <!-- Judul -->
                     <div class="pt-12 pb-5 md:py-10 lg:py-14">
                         <div class="w-full">
-                            <div class="px-5 xss:px-10 w-3/4 xss:w-full">
+                            <div class="px-4 w-3/4 xss:w-full" data-aos="zoom-in">
                                 <h2
-                                    class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-white sm:text-center">
+                                    class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-body-white sm:text-center">
                                     Hasil Sensus Pertanian 2023</h2>
+                                <h3 
+                                    class="mencatat font-semibold text-xl md:text-2xl lg:text-3xl text-emerald-300 sm:text-center"></h3>
                             </div>
                         </div>
                     </div>
                     <div class="flex justify-between items-center">
                         <!-- Card -->
-                        <div class="flex flex-row m-3 w-full lg:flex-col lg:w-1/2">
-                            <div class="bg-primary-hover w-full m-2 h-min rounded-xl" data-aos="fade-right">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-4 auto-cols-max m-4 w-full lg:w-1/2">
+                            <div class="bg-primary-hover w-full h-min rounded-xl" data-aos="fade-right">
                                 <div class="flex flex-col lg:flex-row items-center text-center mx-auto p-5">
                                     <div
                                         class="flex lg:w-44 lg:h-16 text-emerald-300 items-center font-semibold text-xl sm:text-2xl md:text-3xl lg:text-4xl mx-auto">
@@ -106,7 +108,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="bg-primary-hover w-full m-2 h-min rounded-xl" data-aos="fade-left"
+                            <div class="bg-primary-hover w-full rounded-xl" data-aos="fade-left"
                                 data-aos-delay="500">
                                 <div class="flex flex-col lg:flex-row items-center text-center mx-auto p-5">
                                     <div
@@ -136,7 +138,7 @@
         <!-- Umum dan Subsektor -->
         <div class="-mt-2 w-full h-min bg-body-white">
             <!-- Umum -->
-            <div class="max-w-6xl mx-5 pt-5 grid grid-cols-6 gap-6 md:gap-8 justify-between lg:mx-auto transition-all">
+            <div class="max-w-6xl mx-4 pt-5 grid grid-cols-6 gap-6 md:gap-8 justify-between lg:mx-auto transition-all">
                 <div
                     class="col-span-6 sm:col-span-3 bg-primary-hover rounded-xl shadow-xl shadow-primary-hover/30 hover:shadow-primary-hover/60 w-full space-y-2 py-8 px-6 transition-all umum">
                     <span class="iconify text-center text-4xl mx-auto shadow-sm"
@@ -194,7 +196,7 @@
             <div class="max-w-6xl text-center mx-auto">
                 <p class="font-semibold text-primary-hover text-xl p-3 pt-12 sm:text-2xl">Subsektor Pertanian</p>
                 <div
-                    class="flex flex-row px-5 pt-2 pb-10 overflow-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-between ">
+                    class="flex flex-row px-4 pt-2 pb-10 overflow-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-between ">
                     <a href="./subsektor.html" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 transition hover:-translate-y-2">
@@ -433,32 +435,26 @@
             </div>
         </div>
         <!-- Grafik -->
-        <div class="h-full w-full pt-3 md:pt-6 bg-body-white rounded-lg sm:rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl"
+        <div class="h-full max-w-5xl pt-3 md:pt-6 bg-body-white rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl"
             data-aos="slide-up" data-aos-duration="1500">
-            <div class="max-w-6xl text-center mx-auto mb-5">
+            <div class="max-w-3xl text-center mx-auto mb-5">
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl text-primary-hover my-4">Grafik Hasil
                     Sensus Pertanian 2003 dan 2013</h1>
-                <div class="grid grid-cols-2 justify-between gap-4 lg:mx-auto">
-                    <div class="max-w-xl h-full col-span-2 md:col-span-1 mx-auto">
-                        <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Rumah Tangga Usaha Pertanian
-                            Tahun 2003 dan 2013</h2>
-                        <canvas id="grafikST" class="p-2 md:p-5"></canvas>
-                    </div>
-                    <div class="max-w-xl h-full col-span-2 md:col-span-1 mx-auto">
-                        <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Perusahaan Pertanian Berbadan Hukum
-                            Tahun 2003 dan 2013</h2>
-                        <canvas id="grafikST2" class="p-2 md:p-5"></canvas>
-                    </div>
+                <div class="max-w-2xl h-full mx-auto">
+                    <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Rumah Tangga Usaha Pertanian
+                        Berdasarkan Subsektor Pertanian Tahun 2003 dan 2013</h2>
+                    <canvas id="grafikST" class="md:p-5"></canvas>
                 </div>
-
-
+                <div class="text-text-color">
+                    <h2 class="text-sm font-semibold mb-2">Sumber : Badan Pusat Statistik</h2>
+                </div>
             </div>
         </div>
         <!-- Publikasi -->
         <div class="w-full h-min text-body-white">
             <div class="max-w-6xl text-center mx-auto relative mb-10">
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl">Publikasi</h1>
-                <my-publikasi class="flex flex-row px-5 pt-2 pb-10 overflow-x-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-around"></my-publikasi>
+                <my-publikasi class="flex flex-row px-4 pt-2 pb-10 overflow-x-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-around"></my-publikasi>
                 <a href="./publikasi.html"
                     class="border-2 border-body-white rounded-full flex py-1 pl-4 pr-2 items-center absolute right-4 sm:right-10 bottom-0 hover:bg-body-white hover:text-primary-hover transition">
                     <span class="text-sm font-semibold">Lihat Publikasi Lainnya</span>
@@ -736,6 +732,7 @@
 <script src="./js/publikasi.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
 <script>
     // AOS
@@ -764,6 +761,10 @@
         once: false,
     });
 
+    // Ngetik teks
+    gsap.registerPlugin(TextPlugin);
+    gsap.to('.mencatat', {duration:3, delay:0.5, text:'Mencatat Pertanian Indonesia', ease:"power1"}, "+0.5")
+    
     // Angka bergerak
     var obj5 = { value: 0 },
         obj6 = { value: 0 },
@@ -832,7 +833,6 @@
                 hoverBorderColor: '#000'
             }
             ],
-
         },
         options: {
             layout: {
@@ -848,70 +848,27 @@
             tooltips: {
                 enabled: true
             },
-            //maintainAspectRatio: false,
-            responsive: true,
-            aspectRatio: 1,
-        }
-    });
-    let grafikST2 = document.getElementById("grafikST2").getContext("2d");
-    let grafST2 = new Chart(grafikST2, {
-        type: 'bar',
-        data: {
-            labels: ['Tanaman Pangan', 'Hortikultura', 'Perkebunan', 'Peternakan', 'Perikanan', 'Kehutanan'],
-            datasets: [{
-                label: '2003',
-                data: [
-                    87,
-                    225,
-                    1862,
-                    475,
-                    631,
-                    730
-                ],
-                backgroundColor: '#065F46',
-                borderWidth: 1,
-                borderColor: '#777',
-                hoverBorderWidth: 3,
-                hoverBorderColor: '#000'
-            }, {
-                label: '2013',
-                data: [
-                    112,
-                    191,
-                    2216,
-                    629,
-                    394,
-                    678
-                ],
-                backgroundColor: '#064E3B',
-                borderWidth: 1,
-                borderColor: '#777',
-                hoverBorderWidth: 3,
-                hoverBorderColor: '#000'
-            }
-            ],
-
-        },
-        options: {
-            layout: {
-                padding: 0
-            },
-            legend: {
-                display: true,
-                position: 'bottom',
-                labels: {
-                    fontColor: '#000'
+            scales: {
+                x: {
+                    title: {
+                        display: true,
+                        text: 'Subsektor'
+                    },
+                },
+                y: {
+                    title: {
+                        display: true,
+                        text: 'Jumlah Rumah Tangga'
+                    },
                 }
             },
-            tooltips: {
-                enabled: true
-            },
             //maintainAspectRatio: false,
             responsive: true,
             aspectRatio: 1,
-        }
+        },
+        
     });
-
+    
 
 </script>
 

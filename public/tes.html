@@ -1283,5 +1283,70 @@
       </div>
   </a>
 </body>
+<script>
+  <div class="max-w-xl h-full col-span-2 md:col-span-1 mx-auto">
+                        <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Perusahaan Pertanian Berbadan Hukum
+                            Tahun 2003 dan 2013</h2>
+                        <canvas id="grafikST2" class="p-2 md:p-5"></canvas>
+                    </div>
+  let grafikST2 = document.getElementById("grafikST2").getContext("2d");
+    let grafST2 = new Chart(grafikST2, {
+        type: 'bar',
+        data: {
+            labels: ['Tanaman Pangan', 'Hortikultura', 'Perkebunan', 'Peternakan', 'Perikanan', 'Kehutanan'],
+            datasets: [{
+                label: '2003',
+                data: [
+                    87,
+                    225,
+                    1862,
+                    475,
+                    631,
+                    730
+                ],
+                backgroundColor: '#065F46',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+            }, {
+                label: '2013',
+                data: [
+                    112,
+                    191,
+                    2216,
+                    629,
+                    394,
+                    678
+                ],
+                backgroundColor: '#064E3B',
+                borderWidth: 1,
+                borderColor: '#777',
+                hoverBorderWidth: 3,
+                hoverBorderColor: '#000'
+            }
+            ],
 
+        },
+        options: {
+            layout: {
+                padding: 0
+            },
+            legend: {
+                display: true,
+                position: 'bottom',
+                labels: {
+                    fontColor: '#000'
+                }
+            },
+            tooltips: {
+                enabled: true
+            },
+            //maintainAspectRatio: false,
+            responsive: true,
+            aspectRatio: 1,
+        }
+    });
+
+</script>
 </html>

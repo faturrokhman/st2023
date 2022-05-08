@@ -4431,6 +4431,10 @@ textarea.form-control.is-invalid{
   margin: -2rem;
 }
 
+.m-4{
+  margin: 1rem;
+}
+
 .mx-auto{
   margin-left: auto;
   margin-right: auto;
@@ -4828,6 +4832,10 @@ textarea.form-control.is-invalid{
   max-width: 42rem;
 }
 
+.max-w-4xl{
+  max-width: 56rem;
+}
+
 .flex-initial{
   flex: 0 1 auto;
 }
@@ -4926,6 +4934,15 @@ textarea.form-control.is-invalid{
 
 .list-none{
   list-style-type: none;
+}
+
+.auto-cols-auto{
+  grid-auto-columns: auto;
+}
+
+.auto-cols-max{
+  grid-auto-columns: -webkit-max-content;
+  grid-auto-columns: max-content;
 }
 
 .grid-flow-col{
@@ -5796,6 +5813,16 @@ textarea.form-control.is-invalid{
 .text-pink-600{
   --tw-text-opacity: 1;
   color: rgb(214 31 105 / var(--tw-text-opacity));
+}
+
+.text-primary{
+  --tw-text-opacity: 1;
+  color: rgb(6 95 70 / var(--tw-text-opacity));
+}
+
+.text-gray-300{
+  --tw-text-opacity: 1;
+  color: rgb(209 213 219 / var(--tw-text-opacity));
 }
 
 .opacity-0{
@@ -6911,6 +6938,14 @@ body{
     width: 7rem;
   }
 
+  .lg\:grid-cols-1{
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+  }
+
+  .lg\:grid-rows-2{
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+
   .lg\:flex-row{
     flex-direction: row;
   }
@@ -6974,6 +7009,11 @@ body{
   .lg\:text-2xl{
     font-size: 1.5rem;
     line-height: 2rem;
+  }
+
+  .lg\:text-3xl{
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 }
 
