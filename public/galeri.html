@@ -84,36 +84,31 @@
             <h1 class="font-bold text-2xl mb-1">Galeri Sensus</h1>
             <periode-sensus></periode-sensus>
         </div>
-
         <!-- Tab Galeri -->
-        <div class="max-w-6xl mx-auto md:px-10 mb-6">
+        <div class="max-w-6xl mx-auto md:px-10 mb-6" id="tabs-id">
             <!-- Tab -->
-            <div class="bg-primary-hover rounded-t-lg">
-                <ul class="flex mb-0" id="myTab" data-tabs-toggle="#myTabContent" role="tablist">
-                    <li class="w-full" role="presentation">
-                        <button
-                            class="w-full hover:text-primary-hover rounded-tl-lg p-2 text-sm font-medium text-center active hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center"
-                            id="dashboard-tab" data-tabs-target="#dashboard" type="button" role="tab"
-                            aria-controls="dashboard" aria-selected="true">
+            <div class="bg-primary-hover rounded-t-lg w-full">
+                <ul class="grid grid-cols-2 mb-0">
+                    <li class="w-full">
+                        <a id="utama" 
+                            class="w-full text-primary-hover hover:text-primary-hover hover:bg-body-white rounded-tl-lg p-2 text-sm font-medium text-center bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-utama')">
                             <span class="iconify text-3xl" data-icon="heroicons-solid:photograph"></span>
                             <span class="font-semibold md:pl-3 md:text-lg">Foto</span>
-                        </button>
+                        </a>
                     </li>
-                    <li class="w-full" role="presentation">
-                        <button
-                            class="w-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center rounded-tr-lg"
-                            id="profile-tab" data-tabs-target="#profile" type="button" role="tab"
-                            aria-controls="profile" aria-selected="false">
+                    <li class="w-full">
+                        <a id="video" 
+                            class="w-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center rounded-tr-lg cursor-pointer" onclick="changeAtiveTab(event, 'tab-video')">
                             <span class="iconify text-3xl" data-icon="heroicons-solid:video-camera"></span>
                             <span class="font-semibold md:pl-3 md:text-lg">Video</span>
-                        </button>
+                        </a>
                     </li>
                 </ul>
             </div>
             <!-- Isi -->
-            <div id="myTabContent" class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6">
+            <div class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6 tab-content tab-space">
                 <!-- Foto -->
-                <div class="rounded-lg" id="dashboard" role="tabpanel" aria-labelledby="dashboard-tab">
+                <div class="rounded-lg" id="tab-utama">
                     <div class="p-4 md:pl-16 space-y-4 md:space-y-8">
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Persiapan Sensus</h1>
                         <!-- Carousel Persiapan -->
@@ -611,39 +606,38 @@
                     </div>
                 </div>
                 <!-- Video -->
-                <div class="rounded-lg hidden" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                <div class="rounded-lg hidden" id="tab-video">
                     <div class="p-4 md:px-16">
                         <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Galeri Video</h1>
                         <div class="grid md:grid-cols-2 gap-8 w-full">
                             <div>
                                 <iframe class="w-full aspect-video rounded-md"
-                                    src="https://www.youtube.com/embed/hGUWZc6EpFs" frameborder="0"
+                                    src="https://www.youtube.com/embed/L4779lVetY8" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
-                                <p class="text-center py-2 text-sm md:text-base font-semibold">Memaknai Data Inflasi</p>
+                                <p class="text-center py-2 text-sm md:text-base font-semibold">Kompilasi Uji Coba II Sensus Pertanian 2023</p>
                             </div>
                             <div>
                                 <iframe class="w-full aspect-video rounded-md"
-                                    src="https://www.youtube.com/embed/3Z7d-883-q0" frameborder="0"
+                                    src="https://www.youtube.com/embed/uspetbv4es8" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
-                                <p class="text-center py-2 text-sm md:text-base font-semibold">Pelopor Data Statistik
+                                <p class="text-center py-2 text-sm md:text-base font-semibold">Kompilasi Gladi Kotor Sensus Pertanian 2023
                                 </p>
                             </div>
                             <div>
                                 <iframe class="w-full aspect-video rounded-md"
-                                    src="https://www.youtube.com/embed/7gd1ICAvBgQ" frameborder="0"
+                                    src="https://www.youtube.com/embed/YddzqtKC-jc" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
-                                <p class="text-center py-2 text-sm md:text-base font-semibold">The Adventures of Sahabat
-                                    Data</p>
+                                <p class="text-center py-2 text-sm md:text-base font-semibold">Dokumentasi Uji Coba Sensus Pertanian 2023</p>
                             </div>
                             <div>
                                 <iframe class="w-full aspect-video rounded-md"
-                                    src="https://www.youtube.com/embed/b_IOmZnQPLE" frameborder="0"
+                                    src="https://www.youtube.com/embed/byh6R-4H4ug" frameborder="0"
                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                     allowfullscreen></iframe>
-                                <p class="text-center py-2 text-sm md:text-base font-semibold">Semangat Mencacah</p>
+                                <p class="text-center py-2 text-sm md:text-base font-semibold">Konsinyasi Sensus Pertanian 2023</p>
                             </div>
 
                         </div>
@@ -652,7 +646,6 @@
                 </div>
             </div>
         </div>
-
         <!-- Navigasi Bottom (Mobile) -->
         <nav
             class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2 md:hidden">
@@ -735,6 +728,7 @@
 <script src="./js/navbar.js"></script>
 <script src="./js/common.js"></script>
 <script src="./js/footer.js"></script>
+<script src="./js/tab.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({

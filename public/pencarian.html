@@ -294,6 +294,18 @@
             </li>
         </ul>
     </nav>
+    <!-- Tombol Up Kembali ke Atas -->
+    <my-topbutton></my-topbutton>
+    <!-- FAQ -->
+    <my-faq></my-faq>
+    <modal-faq id="faqmodal"
+    class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden"></modal-faq>    
+    <script>
+    let faqmodal = document.getElementById("faqmodal");
+    const showFAQ = (flag) => {
+        faqmodal.classList.toggle("hidden");
+    };
+    </script>
 </main>
 <my-footer></my-footer>
 </body>
