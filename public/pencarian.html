@@ -8,11 +8,12 @@
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
-    <title>Laman Belum Tersedia</title>
+    <title>Pencarian</title>
     <link rel="icon" href="./img/bps.png">
 </head>
 
 <body class="bg-primary">
+    
     <header id="page-header">
         <div class="navbar bg-primary text-body-white w-full h-min p-3 pb-0 sticky top-0 shadow-lg" id="navbar">
             <div class="max-w-6xl mx-auto">
@@ -288,6 +289,31 @@
         </nav>
     </main>
     <my-footer></my-footer>
+    <script>
+        $(document).ready(function(){    
+            var whichTab = getUrlVars();
+            function getUrlVars(){
+            var hash;
+            var hashes = window.location.href.slice(window.location.href.indexOf('?') + 1).split('&');
+            for(var i = 0; i < hashes.length; i++)
+            {
+                hash = hashes[i].split('=');
+            }
+            return hash[1];
+            }
+            switch(whichTab){
+                case '1':
+                    changeAtiveTab(event, 'tab-tabel')
+                    break;
+                case '2':
+                    $('[href="#nav-profile"]').tab('show');
+                    break;
+                case '3':
+                    $('[href="#nav-contact"]').tab('show');
+                    break;
+            }
+        });
+    </script>
 </body>
 <script src="./js/navbar.js"></script>
 <script src="./js/upButton.js"></script>

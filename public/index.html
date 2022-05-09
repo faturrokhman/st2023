@@ -79,7 +79,7 @@
                 <!-- Content -->
                 <div class="max-w-6xl mx-auto">
                     <!-- Judul -->
-                    <div class="pt-12 pb-5 md:py-10 lg:py-14">
+                    <div class="pt-12 pb-5 md:py-8">
                         <div class="w-full">
                             <div class="px-4 w-3/4 xss:w-full" data-aos="zoom-in">
                                 <h2
@@ -295,7 +295,7 @@
                                 </button>
                             </div>
                             <div class="bg-body-white w-full text-primary-hover rounded-b-lg">
-                                <form action="./belumtersedia.html" class="p-4">
+                                <form class="p-4">
                                     <label for="judul" class="text-sm font-normal">Dataset</label>
                                     <select name="judul" id="judul" class="w-full rounded-md text-sm mb-4">
                                         <option value="ruta">Jumlah Usaha Pertanian</option>
@@ -310,14 +310,15 @@
                                         <option value="sumut">Provinsi Sumatera Utara</option>
                                         <option value="sumbar">Provinsi Sumatera Barat</option>
                                     </select>
-                                    <div class="text-center my-4">
-                                        <input type="submit" value="Tampilkan"
-                                            class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
-                                    </div>
                                 </form>
+                                <div class="text-center mt-2 mb-4 gap-4 grid grid-cols-2 px-4">
+                                    <button onclick="showQuery(true)" class="w-full py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition" >Tutup</button>
+                                    <a href="./pencarian.html?tab=1" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Tampilkan</a>
+                                </div> 
+                                </div>
                             </div>
                         </div>
-                    </div>
+                </div>
                 </div>
                 <div id="query2"
                     class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center hidden z-50">
@@ -730,6 +731,7 @@
 <script type="module" src="./js/footer.js"></script>
 <script type="module" src="./js/common.js"></script>
 <script src="./js/publikasi.js"></script>
+<script src="./js/tab.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.4/TextPlugin.min.js"></script>
