@@ -4,7 +4,7 @@
 class Logo extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="flex justify-between md:text-lg mx-5 sm:mx-10">
+        <div class="flex justify-between md:text-lg mx-4 sm:mx-10">
           <a href="./index.html">
               <div class="flex justify-start transition">
                   <img src="./img/bps.png" alt="Logo BPS" class="w-8">
@@ -22,6 +22,22 @@ class Logo extends HTMLElement {
     }
 }
 customElements.define('my-logo', Logo)
+
+// Periode Sensus
+class PeriodeSensus extends HTMLElement {
+    constructor() {
+        super();
+        this.innerHTML = `
+        <select name="periode" id=periode
+            class="w-52 rounded-md mb-3 text-sm border-2 py-1 px-3 border-primary-hover bg-body-white text-text-color transition-all">
+            <option value="ruta" selected disabled class="">Periode Sensus</option>
+            <option value="2013">2013</option>
+            <option value="2023">2023</option>
+        </select>
+        `
+    }
+}
+customElements.define('periode-sensus', PeriodeSensus)
 
 // Pencarian dan Button Lokasi
 class PencarianLokasi extends HTMLElement {
