@@ -205,7 +205,7 @@
                             <p class="font-semibold">Tanaman Pangan</p>
                         </div>
                     </a>
-                    <a href="./subsektor.html" class="subsektor">
+                    <a href="./subsektor.html#tab-hortikultura" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto"
@@ -213,14 +213,14 @@
                             <p class="font-semibold text-center">Hortikultura</p>
                         </div>
                     </a>
-                    <a href="./subsektor.html" class="subsektor">
+                    <a href="./subsektor.html#tab-perkebunan" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto" data-icon="dashicons:palmtree"></span>
                             <p class="font-semibold">Perkebunan</p>
                         </div>
                     </a>
-                    <a href="./subsektor.html" class="subsektor">
+                    <a href="./subsektor.html#tab-peternakan" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-4xl sm:text-6xl mx-auto"
@@ -228,21 +228,21 @@
                             <p class="font-semibold">Peternakan</p>
                         </div>
                     </a>
-                    <a href="./subsektor.html" class="subsektor">
+                    <a href="./subsektor.html#tab-perikanan" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl sm:text-5xl mx-auto" data-icon="ion:fish-sharp"></span>
                             <p class="font-semibold">Perikanan</p>
                         </div>
                     </a>
-                    <a href="./subsektor.html" class="subsektor">
+                    <a href="./subsektor.html#tab-kehutanan" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 items-center transition hover:-translate-y-2">
                             <span class="iconify text-3xl md:text-5xl mx-auto" data-icon="bi:tree-fill"></span>
                             <p class="font-semibold">Kehutanan</p>
                         </div>
                     </a>
-                    <a href="./subsektor.html" class="subsektor">
+                    <a href="./subsektor.html#tab-jasa" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 mr-4 md:mr-0 items-center transition hover:-translate-y-2">
                             <span class="iconify text-4xl md:text-6xl mx-auto"
@@ -253,7 +253,6 @@
                 </div>
             </div>
         </div>
-
         <img src="./img/wave.svg" alt="wave"
             class="bg-primary w-full max-h-36 -m-8 p-0 mx-auto 2xl:max-h-44 rotate-180">
         <!-- Layanan Data -->
@@ -313,12 +312,11 @@
                                 </form>
                                 <div class="text-center mt-2 mb-4 gap-4 grid grid-cols-2 px-4">
                                     <button onclick="showQuery(true)" class="w-full py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition" >Tutup</button>
-                                    <a href="./pencarian.html?tab=1" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Tampilkan</a>
+                                    <a href="./pencarian.html#tab-tabel" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Tampilkan</a>
                                 </div> 
                                 </div>
                             </div>
                         </div>
-                </div>
                 </div>
                 <div id="query2"
                     class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center hidden z-50">
@@ -335,7 +333,7 @@
                                 </button>
                             </div>
                             <div class="bg-body-white w-full text-primary-hover rounded-b-lg ">
-                                <form class="p-4">
+                                <form class="p-4 pb-2">
                                     <label for="dataset" class="text-sm font-normal">Dataset</label>
                                     <select name="judul" id="judul" class="w-full rounded-md text-sm mb-4">
                                         <option value="ruta">Jumlah Usaha Pertanian</option>
@@ -358,12 +356,11 @@
                                         <option value="sumut">Provinsi Sumatera Utara</option>
                                         <option value="sumbar">Provinsi Sumatera Barat</option>
                                     </select>
-
-                                    <div class="text-center my-4">
-                                        <input type="submit" value="Tampilkan"
-                                            class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
-                                    </div>
                                 </form>
+                                <div class="text-center mt-2 mb-4 gap-4 grid grid-cols-2 px-4">
+                                    <button onclick="showWilayah(true)" class="w-full py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition" >Tutup</button>
+                                    <a href="./pencarian.html#tab-tabel" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Tampilkan</a>
+                                </div> 
                             </div>
                         </div>
                     </div>
@@ -383,7 +380,7 @@
                                 </button>
                             </div>
                             <div class="bg-body-white w-full text-primary-hover rounded-b-lg ">
-                                <form action="./belumtersedia.html" class="p-4">
+                                <form action="./belumtersedia.html" class="p-4 pb-2">
                                     <label for="dataset" class="text-sm font-normal">Dataset</label>
                                     <select name="judul" id="judul" class="w-full rounded-md text-sm mb-4">
                                         <option value="ruta">Jumlah Usaha Pertanian</option>
@@ -408,16 +405,15 @@
                                         <option value="2013">2013</option>
                                         <option value="2023">2023</option>
                                     </select>
-                                    <div class="text-center my-4">
-                                        <input type="submit" value="Tampilkan"
-                                            class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
-                                    </div>
                                 </form>
+                                <div class="text-center mt-2 mb-4 gap-4 grid grid-cols-2 px-4">
+                                    <button onclick="showTahun(true)" class="w-full py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition" >Tutup</button>
+                                    <a href="./pencarian.html#tab-tabel" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Tampilkan</a>
+                                </div> 
                             </div>
                         </div>
                     </div>
                 </div>
-
                 <!-- Script Modal Layanan Data-->
                 <script>
                     let query = document.getElementById("query");
@@ -436,10 +432,10 @@
             </div>
         </div>
         <!-- Grafik -->
-        <div class="h-full max-w-5xl pt-3 md:pt-6 bg-body-white rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl"
+        <div class="h-full max-w-5xl py-2 md:pt-6 bg-body-white rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl"
             data-aos="slide-up" data-aos-duration="1500">
             <div class="max-w-3xl text-center mx-auto mb-5">
-                <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl text-primary-hover my-4">Grafik Hasil
+                <h1 class="text-center font-semibold text-xl p-4 pt-0 sm:text-2xl text-primary-hover my-4">Grafik Hasil
                     Sensus Pertanian 2003 dan 2013</h1>
                 <div class="max-w-2xl h-full mx-auto">
                     <h2 class="text-center font-semibold text-text-color px-4">Grafik Jumlah Rumah Tangga Usaha Pertanian
@@ -447,7 +443,7 @@
                     <canvas id="grafikST" class="md:p-5"></canvas>
                 </div>
                 <div class="text-text-color">
-                    <h2 class="text-sm font-semibold mb-2">Sumber : Badan Pusat Statistik</h2>
+                    <h2 class="text-xs md:text-sm mb-2">Sumber : Badan Pusat Statistik</h2>
                 </div>
             </div>
         </div>
@@ -561,7 +557,7 @@
                         </button>
                     </div>
                     <div
-                        class="bg-body-white w-fit max-w-3xl h-[450px] text-primary-hover rounded-b-lg overflow-auto touch-pan-x touch-pan-y scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-emerald-600 transition-all">
+                        class="bg-body-white w-fit max-w-3xl h-[450px] text-primary-hover overflow-auto touch-pan-x touch-pan-y scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-emerald-600 transition-all">
                         <div id="accordion-open" data-accordion="open">
                             <h2 id="accordion-open-heading-1">
                                 <button type="button"
@@ -713,6 +709,9 @@
                         </div>
 
                     </div>
+                    <div class="text-center my-2 relative h-9 w-full">
+                        <button onclick="showFAQ(true)" class="absolute left-auto bottom-0 right-4 w-min py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition">Tutup</button>
+                    </div> 
                 </div>
             </div>
         </div>
