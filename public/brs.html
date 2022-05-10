@@ -23,9 +23,9 @@
                 <!-- Logo -->
                 <my-logo></my-logo>
                 <!-- Search Bar dan Lokasi dan Navbar Top -->
-                <div class="flex justify-between mx-5 sm:mx-10 mr-2 pt-1 pb-3">
+                <div class="flex justify-between mx-5 sm:mx-10 lg:mx-2 mr-2 pt-1 pb-3">
                     <!-- Pencarian dan Lokasi -->
-                    <pencarian-lokasi></pencarian-lokasi>
+                    <pencarian-lokasi class="w-full md:w-max pr-4 sm:pr-0"></pencarian-lokasi>
                     <modal-lokasi id="lokasi" class="z-50 w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden"></modal-lokasi>
                     <script>
                       let lokasi = document.getElementById("lokasi");
@@ -77,12 +77,12 @@
     </header>
     <main class="bg-primary mt-12 pt-10 w-full">
         <!-- Content -->
-        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto flex flex-col sm:flex-row justify-between" data-aos="fade-down">
+        <div class="max-w-6xl py-4 px-6 md:px-10 lg:px-2 mx-auto flex flex-col sm:flex-row justify-between" data-aos="fade-down">
             <h1 class="font-bold text-2xl mb-1">Berita Resmi Statistik</h1>
             <periode-sensus></periode-sensus>
         </div>
         <!-- Table -->
-        <div class="max-w-6xl mx-auto px-4 pb-4" data-aos="fade-up">
+        <div class="max-w-6xl mx-auto px-4 pb-4 lg:px-2" data-aos="fade-up">
             <div
                 class="overflow-auto max-w-3xl mx-auto rounded-md border bg-body-white border-text-color text-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded pt-1 pb-2 px-2">
                 <table class="w-full whitespace-nowrap text-sm divide-y divide-text-color">

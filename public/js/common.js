@@ -4,10 +4,10 @@
 class Logo extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <div class="flex justify-between md:text-lg mx-4 sm:mx-10">
+        <div class="flex justify-between md:text-lg mx-4 sm:mx-10 lg:mx-2">
           <a href="./index.html">
               <div class="flex justify-start transition">
-                  <img src="./img/bps.png" alt="Logo BPS" class="w-8">
+                  <img src="./img/bps.png" alt="Logo BPS" class="w-8 h-min">
                   <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
               </div>
           </a>
@@ -44,20 +44,20 @@ class PencarianLokasi extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-        <div class="flex px-0 xss:justify-start items-center justify-between space-x-4 w-full">
-            <div class="w-full py-0 transition">
+        <div class="flex px-0 items-center justify-between sm:justify-start space-x-4 w-full">
+            <div class="w-max py-0 transition">
                 <form action="./pencarian.html">
                     <input type="search" name="cari"
                         class="rounded w-full py-1 text-primary-hover text-sm border-slate-500 focus:ring-emerald-200 focus:border-emerald-200 border"
                         placeholder="Cari...">
                 </form>
             </div>
-            <div class="ml-5 items-center transition">
-                <div class="flex">
-                    <button onclick="showLocation(true)" class="flex items-center">
-                        <span class="iconify text-2xl" data-icon="heroicons-solid:location-marker"></span>
+            <div class="ml-5 items-center transition ">
+                <div class="flex ">
+                    <button onclick="showLocation(true)" class="flex items-center group">
+                        <span class="iconify text-3xl md:text-2xl hover:text-gray-300 sm:hover:text-body-white" data-icon="heroicons-solid:location-marker"></span>
                         <span
-                            class="ml-1 uppercase text-base md:text-base hidden sm:block hover:underline">
+                            class="ml-1 uppercase text-base md:text-base hidden sm:block group-hover:underline">
                             Indonesia</span>
                     </button>
                 </div>
@@ -88,6 +88,10 @@ class ModalLokasi extends HTMLElement {
                     <option value="sumbar">Provinsi Sumatera Barat</option>
                 </select>
             </form>
+            <button onclick="showLocation(true)"
+                class="absolute top-4 right-4 xl:right-8" aria-label="close">
+                <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
+            </button>
             <div class="text-center mt-2 mb-4 gap-4 grid grid-cols-2 px-4">
                 <button onclick="showLocation(true)" class="w-full py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition" >Batal</button>
                 <a href="./belumtersedia.html" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Ubah</a>

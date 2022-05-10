@@ -19,9 +19,9 @@
                 <!-- Logo -->
                 <my-logo></my-logo>
                 <!-- Search Bar dan Lokasi dan Navbar Top -->
-                <div class="flex justify-between mx-5 sm:mx-10 mr-2 pt-1 pb-3">
+                <div class="flex justify-between mx-5 sm:mx-10 lg:mx-2 mr-2 pt-1 pb-3">
                     <!-- Pencarian dan Lokasi -->
-                    <pencarian-lokasi></pencarian-lokasi>
+                    <pencarian-lokasi class="w-full md:w-max pr-4 sm:pr-0"></pencarian-lokasi>
                     <modal-lokasi id="lokasi" class="z-50 w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden"></modal-lokasi>
                     <script>
                         let lokasi = document.getElementById("lokasi");
@@ -69,9 +69,8 @@
                 </div>
             </div>
         </div>
-
     </header>
-    <main class="bg-primary">
+    <main class="">
         <!-- Jumbroton -->
         <div class="mt-10 pt-10 w-full">
             <div class="w-full bg-cover bg-center bg-blend-multiply bg-primary-hover"
@@ -92,7 +91,7 @@
                     </div>
                     <div class="flex justify-between items-center">
                         <!-- Card -->
-                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-4 auto-cols-max m-4 w-full lg:w-1/2">
+                        <div class="grid grid-cols-2 lg:grid-cols-1 gap-4 auto-cols-max m-4 lg:mx-2 w-full lg:w-1/2">
                             <div class="bg-primary-hover w-full h-min rounded-xl" data-aos="fade-right">
                                 <div class="flex flex-col lg:flex-row items-center text-center mx-auto p-5">
                                     <div
@@ -138,8 +137,9 @@
         <!-- Umum dan Subsektor -->
         <div class="-mt-2 w-full h-min bg-body-white">
             <!-- Umum -->
-            <div class="max-w-6xl mx-4 pt-5 grid grid-cols-6 gap-6 md:gap-8 justify-between lg:mx-auto transition-all">
-                <div
+            <div class="max-w-6xl mx-auto transition-all">
+                <div class="mx-4 lg:mx-2 pt-5 grid grid-cols-6 gap-6 md:gap-8 justify-between transition-all">
+                    <div
                     class="col-span-6 sm:col-span-3 bg-primary-hover rounded-xl shadow-xl shadow-primary-hover/30 hover:shadow-primary-hover/60 w-full space-y-2 py-8 px-6 transition-all umum">
                     <span class="iconify text-center text-4xl mx-auto shadow-sm"
                         data-icon="academicons:ideas-repec"></span>
@@ -191,12 +191,14 @@
                         </li>
                     </ol>
                 </div>
+                </div>
+                
             </div>
             <!-- Subsektor -->
             <div class="max-w-6xl text-center mx-auto">
                 <p class="font-semibold text-primary-hover text-xl p-3 pt-12 sm:text-2xl">Subsektor Pertanian</p>
                 <div
-                    class="flex flex-row px-4 pt-2 pb-10 overflow-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-between ">
+                    class="flex flex-row px-4 pt-2 pb-10 overflow-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:px-2 lg:justify-between ">
                     <a href="./subsektor.html" class="subsektor">
                         <div
                             class="flex flex-col flex-initial p-2 bg-primary-hover rounded-md justify-around w-24 h-24 sm:w-32 sm:h-36 transition hover:-translate-y-2">
@@ -261,21 +263,21 @@
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl">Layanan Data</h1>
                 <!-- Button Layanan Data -->
                 <div
-                    class="mt-4 grid sm:grid-cols-3 sm:gap-8 mx-4 sm:mx-5 space-y-4 sm:space-y-0 sm:justify-between sm:items-start">
+                    class="mt-4 grid grid-cols-1 sm:grid-cols-3 sm:gap-8 mx-4 sm:mx-5 lg:mx-2 space-y-4 sm:space-y-0 items-stretch sm:justify-between sm:items-start">
                     <button onclick="showQuery(true)"
-                        class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
+                        class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full sm:h-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
                         <span class="iconify text-3xl sm:text-5xl md:text-6xl" data-icon="heroicons-solid:code"></span>
                         <span class="ml-4 sm:ml-0 font-semibold">Dataset</span>
                     </button>
                     <button onclick="showWilayah(true)"
-                        class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
+                        class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full sm:h-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
                         <span class="iconify text-3xl sm:text-5xl md:text-6xl" data-icon="heroicons-solid:map"></span>
-                        <span class="ml-4 sm:ml-0 font-semibold">Perbandingan Antar Wilayah</span>
+                        <span class="ml-4 sm:ml-0 font-semibold text-left sm:text-center">Perbandingan Antar Wilayah</span>
                     </button>
                     <button onclick="showTahun(true)"
-                        class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
+                        class="layanan bg-primary-hover rounded-lg flex sm:flex-col w-full sm:h-full px-4 py-3 items-center shadow-lg hover:bg-body-white hover:text-primary-hover transition">
                         <span class="iconify text-3xl sm:text-5xl md:text-6xl" data-icon="heroicons-solid:clock"></span>
-                        <span class="ml-4 sm:ml-0 font-semibold">Perbandingan Antar Tahun</span>
+                        <span class="ml-4 sm:ml-0 font-semibold text-left sm:text-center">Perbandingan Antar Tahun</span>
                     </button>
                 </div>
                 <!-- Modals -->
@@ -432,9 +434,10 @@
             </div>
         </div>
         <!-- Grafik -->
-        <div class="h-full max-w-5xl py-2 md:pt-6 bg-body-white rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl"
+        <div class="h-full max-w-6xl mx-auto"
             data-aos="slide-up" data-aos-duration="1500">
-            <div class="max-w-3xl text-center mx-auto mb-5">
+            <div class="lg:mx-2 bg-body-white py-2 md:pt-6 rounded-xl md:rounded-3xl mx-auto drop-shadow-md transition duration-300 hover:drop-shadow-2xl">
+                <div class="max-w-3xl text-center mx-auto mb-5">
                 <h1 class="text-center font-semibold text-xl p-4 pt-0 sm:text-2xl text-primary-hover my-4">Grafik Hasil
                     Sensus Pertanian 2003 dan 2013</h1>
                 <div class="max-w-2xl h-full mx-auto">
@@ -446,14 +449,16 @@
                     <h2 class="text-xs md:text-sm mb-2">Sumber : Badan Pusat Statistik</h2>
                 </div>
             </div>
+            </div>
+            
         </div>
         <!-- Publikasi -->
         <div class="w-full h-min text-body-white">
             <div class="max-w-6xl text-center mx-auto relative mb-10">
                 <h1 class="text-center font-semibold text-xl p-4 sm:text-2xl">Publikasi</h1>
-                <my-publikasi class="flex flex-row px-4 pt-2 pb-10 overflow-x-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:justify-around"></my-publikasi>
+                <my-publikasi class="flex flex-row px-4 lg:px-2 pt-2 pb-10 overflow-x-auto touch-pan-x touch-pan-y w-full scrollbar-hide text-sm space-x-5 lg:space-x-0 lg:justify-between"></my-publikasi>
                 <a href="./publikasi.html"
-                    class="border-2 border-body-white rounded-full flex py-1 pl-4 pr-2 items-center absolute right-4 sm:right-10 bottom-0 hover:bg-body-white hover:text-primary-hover transition">
+                    class="border-2 border-body-white rounded-full flex py-1 pl-4 pr-2 items-center absolute right-4 sm:right-10 lg:right-2 bottom-0 hover:bg-body-white hover:text-primary-hover transition">
                     <span class="text-sm font-semibold">Lihat Publikasi Lainnya</span>
                     <span class="iconify text-2xl " data-icon="heroicons-solid:chevron-right"></span>
                 </a>

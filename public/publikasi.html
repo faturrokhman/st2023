@@ -23,9 +23,9 @@
                 <!-- Logo -->
                 <my-logo></my-logo>
                 <!-- Search Bar dan Lokasi dan Navbar Top -->
-                <div class="flex justify-between mx-5 sm:mx-10 mr-2 pt-1 pb-3">
+                <div class="flex justify-between mx-5 sm:mx-10 lg:mx-2 mr-2 pt-1 pb-3">
                     <!-- Pencarian dan Lokasi -->
-                    <pencarian-lokasi></pencarian-lokasi>
+                    <pencarian-lokasi class="w-full md:w-max pr-4 sm:pr-0"></pencarian-lokasi>
                     <modal-lokasi id="lokasi" class="z-50 w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden"></modal-lokasi>
                     <script>
                       let lokasi = document.getElementById("lokasi");
@@ -77,7 +77,7 @@
     </header>
     <main class="bg-primary mt-12 pt-10 w-full">
         <!-- Content -->
-        <div class="max-w-6xl py-4 px-6 md:px-10 mx-auto" >
+        <div class="max-w-6xl py-4 px-6 md:px-10 lg:px-2 mx-auto" >
             <div class="flex flex-col xss:flex-row space-y-3 xss:space-y-0 justify-between mt-2 mb-6" data-aos="fade-down">
                 <h1 class="font-bold text-2xl md:text-4xl">Publikasi</h1>
                 <periode-sensus></periode-sensus>
@@ -97,8 +97,8 @@
         <!-- Publikasi -->
         <div class="w-full h-min text-body-white">
             <div class="max-w-6xl text-center mx-auto relative mb-10">
-                <my-publikasi class="flex flex-row flex-wrap px-5 pt-2 w-full scrollbar-hide text-sm gap-5 justify-around items-start mb-5"></my-publikasi>
-                <my-publikasi class="flex flex-row flex-wrap px-5 pt-2 w-full scrollbar-hide text-sm gap-5 justify-around items-start"></my-publikasi>
+                <my-publikasi class="flex flex-row flex-wrap px-5 lg:px-2 pt-2 w-full scrollbar-hide text-sm gap-5 justify-between items-start mb-5"></my-publikasi>
+                <my-publikasi class="flex flex-row flex-wrap px-5 lg:px-2 pt-2 w-full scrollbar-hide text-sm gap-5 justify-between items-start"></my-publikasi>
             </div>
         </div>
 

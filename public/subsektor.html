@@ -25,9 +25,9 @@
         <!-- Logo -->
         <my-logo></my-logo>
         <!-- Search Bar dan Lokasi dan Navbar Top -->
-        <div class="flex justify-between mx-5 sm:mx-10 mr-2 pt-1 pb-3">
+        <div class="flex justify-between mx-5 sm:mx-10 lg:mx-2 mr-2 pt-1 pb-3">
           <!-- Pencarian dan Lokasi -->
-          <pencarian-lokasi></pencarian-lokasi>
+          <pencarian-lokasi class="w-full md:w-max pr-4 sm:pr-0"></pencarian-lokasi>
           <modal-lokasi id="lokasi" class="z-50 w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden"></modal-lokasi>
           <script>
             let lokasi = document.getElementById("lokasi");
@@ -80,13 +80,13 @@
   <main class="bg-primary mt-10 pt-10 w-full">
     <!-- Content Subsektor -->
     <!-- Judul -->
-    <div class="max-w-6xl p-4 md:px-10 mx-auto" data-aos="fade-down">
+    <div class="max-w-6xl p-4 lg:mx-2 md:px-10 mx-auto" data-aos="fade-down">
       <h1 class="font-bold text-2xl">Subsektor Pertanian</h1>
       <p class="text-sm md:py-2">Dalam Sensus Pertanian 2023, Lapangan Usaha Pertanian di bagi menjadi 7 (tujuh) Subsektor atau Cakupan Kegiatan Pertanian.
       </p>
     </div>
     <!-- TAB -->
-    <div class="max-w-6xl mx-auto md:px-10" id="tabs-id" data-aos="fade-up">
+    <div class="max-w-6xl mx-auto md:px-10 lg:px-2" id="tabs-id" data-aos="fade-up">
       <div class="w-full">
         <!-- Tab Subsektor -->
         <ul class="grid grid-cols-7 mb-0 p-0 bg-primary-hover gap-0 rounded-t-lg">
