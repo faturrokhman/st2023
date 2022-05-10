@@ -44,7 +44,7 @@ class PencarianLokasi extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-        <div class="flex px-0 xss:justify-start items-center justify-between">
+        <div class="flex px-0 xss:justify-start items-center justify-between space-x-4 w-full">
             <div class="w-full py-0 transition">
                 <form action="./pencarian.html">
                     <input type="search" name="cari"
@@ -57,7 +57,7 @@ class PencarianLokasi extends HTMLElement {
                     <button onclick="showLocation(true)" class="flex items-center">
                         <span class="iconify text-2xl" data-icon="heroicons-solid:location-marker"></span>
                         <span
-                            class="ml-1 uppercase text-base md:text-base hidden xss:block hover:underline">
+                            class="ml-1 uppercase text-base md:text-base hidden sm:block hover:underline">
                             Indonesia</span>
                     </button>
                 </div>
@@ -73,7 +73,7 @@ class ModalLokasi extends HTMLElement {
         super();
         this.innerHTML = `
         <!-- Modal Lokasi -->
-        <div class="2xl:container  2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
+        <div class="2xl:container 2xl:mx-auto py-48 px-4 md:px-28 flex justify-center items-center">
         <div
             class="w-96 md:w-auto relative flex flex-col justify-center items-center bg-body-white text-text-color rounded-xl py-4 px-4 md:px-10 xl:py-8 xl:px-12">
             <h1 class="text-base font-medium">
@@ -88,13 +88,11 @@ class ModalLokasi extends HTMLElement {
                     <option value="sumbar">Provinsi Sumatera Barat</option>
                 </select>
             </form>
-            <button onclick="showLocation(true)" class="absolute top-4 right-4 xl:right-8" aria-label="close">
-                <span class="iconify text-xl" data-icon="heroicons-solid:x"></span>
-            </button>
             <div class="text-center mt-2 mb-4 gap-4 grid grid-cols-2 px-4">
                 <button onclick="showLocation(true)" class="w-full py-2 px-4 rounded-md text-sm font-medium hover:bg-gray-100 text-primary-hover bg-body-white transition" >Batal</button>
                 <a href="./belumtersedia.html" class="w-full bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition cursor-pointer">Ubah</a>
             </div> 
+            
         </div>
         </div>                
         `
