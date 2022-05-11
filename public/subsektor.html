@@ -74,7 +74,7 @@
   <main class="bg-primary mt-10 pt-10 w-full">
     <!-- Content Subsektor -->
     <!-- Judul -->
-    <div class="max-w-6xl p-4 lg:mx-2 md:px-10 mx-auto" data-aos="fade-down">
+    <div class="max-w-6xl p-4 lg:px-2 md:px-10 mx-auto" data-aos="fade-down">
       <h1 class="font-bold text-2xl">Subsektor Pertanian</h1>
       <p class="text-sm md:py-2">Dalam Sensus Pertanian 2023, Lapangan Usaha Pertanian di bagi menjadi 7 (tujuh) Subsektor atau Cakupan Kegiatan Pertanian.
       </p>
@@ -1122,7 +1122,7 @@
             </span>
           </button>
           <div id="produkDropdown" class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
-            <ul class="" aria-labelledby="dropdownButton">
+            <ul class="">
               <li>
                 <a href="./brs.html" class="rounded-t-md">Berita Resmi Statistik</a>
               </li>
@@ -1135,7 +1135,7 @@
       </ul>
     </nav>
     <!-- Tombol Up Kembali ke Atas -->
-    <my-topbutton></my-topbutton>
+    <my-topbutton id="onTopBtn"></my-topbutton>
     <!-- FAQ -->
     <my-faq></my-faq>
     <modal-faq id="faqmodal"
@@ -1148,10 +1148,9 @@
     </script>
   </main>
   <my-footer></my-footer>
-</body>
 <script type=module src="./js/common.js"></script>
 <script type=module src="./js/navbar.js"></script>
-<script type=module src="./js/upButton.js"></script>
+<script src="./js/upButton.js"></script>
 <script type=module src="./js/flowbite.js"></script>
 <script type=module src="./js/tab.js"></script>
 <script type=module src="./js/subsektor.js"></script>
@@ -1190,5 +1189,7 @@
     once: true,
   });
 </script>
+
+</body>
 
 </html>

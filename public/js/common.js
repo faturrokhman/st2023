@@ -108,7 +108,7 @@ customElements.define('modal-lokasi', ModalLokasi)
 class TopButton extends HTMLElement {
     connectedCallback() {
         this.innerHTML = `
-        <button onclick="topFunction()" id="onTopBtn" data-tooltip-target="up" data-tooltip-placement="left"
+        <button onclick="topFunction()" data-tooltip-target="up" data-tooltip-placement="left"
             class="fixed bottom-16 sm:bottom-20 md:bottom-5 right-4 md:right-8 w-10 h-10 p-1 cursor-pointer rounded-full border border-primary-hover focus:outline-none z-1 bg-body-white items-center">
             <span class="iconify text-primary-hover mx-auto text-3xl" data-icon="heroicons-solid:chevron-up"></span>
             <div id="up" role="tooltip"
