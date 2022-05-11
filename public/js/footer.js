@@ -5,7 +5,7 @@ class Footer extends HTMLElement {
         <!-- Footer -->
         <div class="w-full border-t-2 border-primary-hover text-body-white">
             <div class="max-w-6xl mx-auto p-5 lg:px-2 mb-20 md:mb-5">
-                <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-2 sm:justify-between">
+                <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:justify-between">
                     <div class="flex-col space-y-3">
                         <div class="flex justify-start">
                             <img src="./img/bps.png" alt="Logo BPS" class="w-8 h-min">
