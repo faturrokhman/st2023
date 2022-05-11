@@ -12,8 +12,7 @@ class Footer extends HTMLElement {
                             <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
                         </div>
                         <div class="items-center">
-                            <img src="./img/st2023.png" alt="Logo BPS" class="w-24">
-                            <p class="font-bold text-[10px] uppercase">Sensus Pertanian</p>
+                            <img src="./img/st2023-putih.svg" alt="Logo Sensus Pertanian 2023" class="w-24 sm:w-32">
                         </div>
                     </div>
                     <div class="space-y-2">
