@@ -5,9 +5,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
-    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('06eajg/st2023');</script>
     <title>Laman Belum Tersedia</title>
     <link rel="icon" href="./img/bps.png">
 </head>
@@ -15,23 +14,10 @@
 <body class="bg-primary">
     <main class="bg-primary mb-20">
         <!-- Content -->
-        <div class="max-w-6xl mx-auto items-center text-center p-5 space-y-4">
+        <div class="max-w-6xl mx-auto items-center text-center pt-3 space-y-4">
             <!-- Logo -->
-            <div class="flex justify-between md:text-lg mx-5 sm:mx-10">
-                <a href="./index.html">
-                    <div class="flex justify-start transition">
-                        <img src="./img/bps.png" alt="Logo BPS" class="w-8">
-                        <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
-                    </div>
-                </a>
-                <div class="hidden sm:block transition">
-                    <div class="flex justify-end">
-                        <img src="./img/st2023.png" alt="Logo ST2023" class="w-20">
-                        <p class="ml-2 font-bold italic uppercase">Sensus Pertanian 2023</p>
-                    </div>
-                </div>
-            </div>
-            <img src="./img/laman-belum-tersedia.png" alt="Mohon Maaf, Laman Belum Tersedia" class="mx-auto sm:w-1/2" data-aos="zoom-in">
+            <my-logo></my-logo>
+            <img src="./img/laman-belum-tersedia.png" alt="Mohon Maaf, Laman Belum Tersedia" class="mx-auto px-5 sm:w-1/2" data-aos="zoom-in">
             <button onclick="history.back()" class="bg-primary-hover pl-2 pr-4 py-2 rounded-md text-sm font-semibold uppercase flex mx-auto border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white transition">
                 <span class="iconify text-xl" data-icon="heroicons-solid:chevron-left"></span>
                 Kembali</button>
@@ -100,7 +86,11 @@
         </nav>
     </main>
 </body>
+<link rel="stylesheet" href="./css/style.css">
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
 <script src="./js/navbar.js"></script>
+<script src="./js/common.js"></script>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>
     AOS.init({
