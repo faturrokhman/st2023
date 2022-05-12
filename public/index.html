@@ -85,7 +85,7 @@
                                     class="font-heading font-bold text-2xl md:text-3xl lg:text-4xl text-body-white sm:text-center">
                                     Hasil Sensus Pertanian 2023</h2>
                                 <h3 
-                                    class="mencatat font-semibold text-xl md:text-2xl lg:text-3xl text-emerald-300 sm:text-center"></h3>
+                                    class="mencatat font-semibold text-xl md:text-2xl lg:text-3xl text-emerald-300 sm:text-center">.</h3>
                             </div>
                         </div>
                     </div>
@@ -336,8 +336,8 @@
                             </div>
                             <div class="bg-body-white w-full text-primary-hover rounded-b-lg ">
                                 <form class="p-4 pb-2">
-                                    <label for="dataset" class="text-sm font-normal">Dataset</label>
-                                    <select name="judul" id="judul" class="w-full rounded-md text-sm mb-4">
+                                    <label class="text-sm font-normal">Dataset</label>
+                                    <select name="judul2" id="judul2" class="w-full rounded-md text-sm mb-4">
                                         <option value="ruta">Jumlah Usaha Pertanian</option>
                                         <option value="petani">Jumlah Rumah Tangga Petani</option>
                                         <option value="tanaman">Jumlah Rumah Tangga, Luas Tanam Usaha</option>
@@ -383,15 +383,15 @@
                             </div>
                             <div class="bg-body-white w-full text-primary-hover rounded-b-lg ">
                                 <form action="./belumtersedia.html" class="p-4 pb-2">
-                                    <label for="dataset" class="text-sm font-normal">Dataset</label>
-                                    <select name="judul" id="judul" class="w-full rounded-md text-sm mb-4">
+                                    <label class="text-sm font-normal">Dataset</label>
+                                    <select name="judul4" id="judul4" class="w-full rounded-md text-sm mb-4">
                                         <option value="ruta">Jumlah Usaha Pertanian</option>
                                         <option value="petani">Jumlah Rumah Tangga Petani</option>
                                         <option value="tanaman">Jumlah Rumah Tangga, Luas Tanam Usaha</option>
                                         <option value="hewan">Populasi Ternak yang Dipelihara</option>
                                     </select>
                                     <label for="wilayah" class="text-sm font-normal mt-4">Wilayah</label>
-                                    <select name="wilayah" id="wilayah" class="w-full rounded-md text-sm mb-4">
+                                    <select name="wilayah3" id="wilayah3" class="w-full rounded-md text-sm mb-4">
                                         <option value="indonesia">Indonesia</option>
                                         <option value="aceh">Provinsi Aceh</option>
                                         <option value="sumut">Provinsi Sumatera Utara</option>
@@ -516,7 +516,7 @@
                     </button>
                     <div id="produkDropdown"
                         class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
-                        <ul class="" aria-labelledby="dropdownButton">
+                        <ul class="">
                             <li>
                                 <a href="./brs.html" class="rounded-t-md">Berita Resmi Statistik</a>
                             </li>
@@ -534,12 +534,12 @@
         <button onclick="showFAQ(true)" id="faq" data-tooltip-target="faqq" data-tooltip-placement="left"
             class="fixed bottom-28 sm:bottom-32 md:bottom-16 right-4 md:right-8 w-10 h-10 p-1 cursor-pointer rounded-full border border-primary-hover focus:outline-none z-1 bg-body-white items-center">
             <span class="iconify text-primary-hover mx-auto text-3xl" data-icon="bi:question-lg"></span>
-            <div id="faqq" role="tooltip"
+        </button>
+        <div id="faqq" role="tooltip"
                 class="inline-block absolute invisible z-10 py-1 px-2 text-sm font-medium text-body-white bg-text-color rounded-lg opacity-0 transition-opacity duration-300 tooltip w-max">
                 FAQ
                 <div class="tooltip-arrow" data-popper-arrow></div>
-            </div>
-        </button>
+        </div>
         <!-- Modal FAQ -->
         <div id="faqmodal"
             class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden">
