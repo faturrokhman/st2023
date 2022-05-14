@@ -318,13 +318,3 @@ class ModalFAQ extends HTMLElement {
     }
 }
 customElements.define('modal-faq', ModalFAQ)
-
-class Tes extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = `
-        
-        `
-    }
-}
-customElements.define('my-tes', Tes)
