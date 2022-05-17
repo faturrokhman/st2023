@@ -29,7 +29,7 @@ class PeriodeSensus extends HTMLElement {
         super();
         this.innerHTML = `
         <select name="periode" id=periode
-            class="w-52 rounded-md mb-3 text-sm border-2 py-1 px-3 border-primary-hover bg-body-white text-text-color transition-all">
+            class="w-52 rounded-md mb-3 text-sm border-2 py-1 px-3 border-primary-hover bg-body-white text-text-color transition-all  focus:ring-emerald-200 focus:border-emerald-200 ">
             <option value="ruta" selected disabled class="">Periode Sensus</option>
             <option value="2013">2013</option>
             <option value="2023">2023</option>
@@ -44,7 +44,7 @@ class PencarianLokasi extends HTMLElement {
     constructor() {
         super();
         this.innerHTML = `
-        <div class="flex px-0 items-center justify-between sm:justify-start space-x-4 w-full">
+        <div class="flex px-0 items-center sm:justify-start space-x-4 w-full">
             <div class="w-max py-0 transition">
                 <form action="./pencarian.html">
                     <input type="search" name="cari"
@@ -52,7 +52,17 @@ class PencarianLokasi extends HTMLElement {
                         placeholder="Cari...">
                 </form>
             </div>
-            <div class="ml-5 items-center transition ">
+            <select name="bahasa" id=bahasa data-tooltip-target="bahasaa" data-tooltip-placement="bottom"
+                class="w-16 rounded-md text-sm border-1 py-1 px-3 border-slate-500 bg-body-white text-text-color transition-all focus:ring-emerald-200 focus:border-emerald-200 items-center self-center">
+                <option value="Indonesia" selected>ID</option>
+                <option value="English">EN</option>
+            </select>
+            <div id="bahasaa" role="tooltip"
+                class="inline-block absolute invisible z-10 py-1 px-2 text-sm font-medium text-body-white bg-text-color rounded-lg opacity-0 transition-opacity duration-300 tooltip w-max">
+                Ubah Bahasa
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
+            <div class="ml-5 items-center transition" data-tooltip-target="lokasii" data-tooltip-placement="bottom">
                 <div class="flex ">
                     <button onclick="showLocation(true)" class="flex items-center group">
                         <span class="iconify text-3xl md:text-2xl hover:text-gray-300 sm:hover:text-body-white" data-icon="heroicons-solid:location-marker"></span>
@@ -62,7 +72,13 @@ class PencarianLokasi extends HTMLElement {
                     </button>
                 </div>
             </div>
+            <div id="lokasii" role="tooltip"
+                class="inline-block absolute invisible z-10 py-1 px-2 text-sm font-medium text-body-white bg-text-color rounded-lg opacity-0 transition-opacity duration-300 tooltip w-max">
+                Ubah Lokasi
+                <div class="tooltip-arrow" data-popper-arrow></div>
+            </div>
           </div>
+          
         `
     }
 }
