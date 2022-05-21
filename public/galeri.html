@@ -82,19 +82,26 @@
         <div class="max-w-6xl mx-auto md:px-10 lg:px-2 mb-6" id="tabs-id">
             <!-- Tab -->
             <div class="bg-primary-hover rounded-t-lg w-full">
-                <ul class="grid grid-cols-2 mb-0">
+                <ul class="grid grid-cols-3 mb-0">
                     <li class="w-full">
                         <a id="utama" 
-                            class="w-full text-primary-hover hover:text-primary-hover hover:bg-body-white rounded-tl-lg p-2 text-sm font-medium text-center bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-utama')">
+                            class="w-full h-full text-primary-hover hover:text-primary-hover hover:bg-body-white rounded-tl-lg p-2 text-sm font-medium text-center bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-utama')">
                             <span class="iconify text-3xl" data-icon="heroicons-solid:photograph"></span>
                             <span class="font-semibold md:pl-3 md:text-lg">Foto</span>
                         </a>
                     </li>
                     <li class="w-full">
                         <a id="video" 
-                            class="w-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center rounded-tr-lg cursor-pointer" onclick="changeAtiveTab(event, 'tab-video')">
+                            class="w-full h-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-video')">
                             <span class="iconify text-3xl" data-icon="heroicons-solid:video-camera"></span>
                             <span class="font-semibold md:pl-3 md:text-lg">Video</span>
+                        </a>
+                    </li>
+                    <li class="w-full">
+                        <a id="kisah" 
+                            class="w-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center rounded-tr-lg cursor-pointer" onclick="changeAtiveTab(event, 'tab-kisah')">
+                            <span class="iconify text-3xl" data-icon="dashicons:book-alt"></span>
+                            <span class="font-semibold md:pl-3 md:text-lg">Kisah Sensus</span>
                         </a>
                     </li>
                 </ul>
@@ -638,6 +645,30 @@
 
                     </div>
                 </div>
+                <!-- Kisah Sensus -->
+                <div class="rounded-lg hidden" id="tab-kisah">
+                    <div class="p-4 md:px-16">
+                        <div class="sm:flex sm:justify-between mb-2 sm:mb-0">
+                            <div class="text-lg font-bold md:text-2xl mb-2">Kisah Sensus</div>
+                            <div>
+                                <form action="./pencarian.html">
+                                <input type="search" name="cari_judul"
+                                    class="rounded w-full py-1 border-text-color focus:ring-emerald-200 focus:border-emerald-200 border"
+                                    placeholder="Cari Judul...">
+                                </form>
+                            </div>
+                        </div>
+                        <div class="text-text-color grid sm:grid-cols-2 gap-4 mb-4">
+                            <tab-kisah></tab-kisah>
+                            <tab-kisah></tab-kisah>
+                            <tab-kisah></tab-kisah>
+                            <tab-kisah></tab-kisah>
+                        </div>
+                        
+                </div>
+                <!-- Modal Kisah Sensus -->
+                <kisah-sensus id="kisah_modal" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden"> 
+                </kisah-sensus>
             </div>
         </div>
         <!-- Navigasi Bottom (Mobile) -->
@@ -715,6 +746,10 @@
         const showFAQ = (flag) => {
             faqmodal.classList.toggle("hidden");
         };
+        let kisah_modal = document.getElementById("kisah_modal");
+        const show_kisah = (flag) => {
+            kisah_modal.classList.toggle("hidden");
+        };
         </script>
     </main>
     <my-footer></my-footer>
@@ -728,6 +763,7 @@
 <script src="./js/common.js"></script>
 <script src="./js/footer.js"></script>
 <script src="./js/tab.js"></script>
+<script src="./js/kisah.js"></script>
 </body>
 
 </html>
