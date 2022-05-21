@@ -5,11 +5,19 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">    
     <!-- <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
     <script>window.LogRocket && window.LogRocket.init('06eajg/st2023');</script> -->
     <link rel="stylesheet" href="./css/style.css">
     <title>Sensus Pertanian 2023</title>
     <link rel="icon" href="./img/bps.png">
+    <style>
+        #map {
+            width: 900px;
+            height: 400px;
+        }
+        </style>
 </head>
 
 <body class="bg-primary">
@@ -450,8 +458,42 @@
                 </div>
             </div>
             </div>
-            
         </div>
+        <!-- PETA -->
+        <div class="w-full h-full max-w-6xl mx-auto mt-10 ">
+            <div class="lg:mx-2 rounded-xl md:rounded-3xl drop-shadow-md transition duration-300 overflow-hidden bg-white items-center content-center" data-aos="slide-up" data-aos-duration="1500">
+            <h1 class="text-center font-semibold text-xl p-4 pt-0 sm:text-2xl text-primary-hover my-4">
+                Peta Penyebaran Rumah Tangga Usaha Pertanian di Indonesia, Tahun 2013</h1>
+            <div class="lg:flex lg:justify-end">
+                <div id="map" loading="lazy" class="rounded-md items-center mx-auto"></div>
+                <div class="mx-2 mb-5 text-text-color text-sm lg:text-base font-medium space-y-2 flex flex-col rounded-md bg-body-white p-2 w-max h-min shadow-lg">
+                    <span class="font-semibold w-full">Legenda (Unit Rumah Tangga)</span>
+                    <div class="flex space-x-2">
+                        <img src="./legend/1.png" alt="1">
+                        <span>&lt; 158.000</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <img src="./legend/2.png" alt="2">
+                        <span>158.000 - 333.000</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <img src="./legend/3.png" alt="3">
+                        <span>333.000 - 565.000</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <img src="./legend/4.png" alt="4">
+                        <span>565.000 - 850.000</span>
+                    </div>
+                    <div class="flex space-x-2">
+                        <img src="./legend/5.png" alt="5">
+                        <span>&gt; 850.000</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+        
+        
         <!-- Publikasi -->
         <div class="w-full h-min text-body-white mt-5">
             <div class="max-w-6xl text-center mx-auto relative mb-10">
@@ -703,7 +745,170 @@
     
 
 </script>
+<!-- START MAP -->
+<link rel="stylesheet" href="./css/leaflet.css">
+<link rel="stylesheet" href="./css/qgis2web.css">
+<link rel="stylesheet" href="./css/fontawesome-all.min.css">
+<script src="./js/qgis2web_expressions.js"></script>
+<script src="./js/leaflet.js"></script>
+<script src="./js/leaflet.rotatedMarker.js"></script>
+<script src="./js/leaflet.pattern.js"></script>
+<script src="./js/leaflet-hash.js"></script>
+<script src="./js/Autolinker.min.js"></script>
+<script src="./js/rbush.min.js"></script>
+<script src="./js/labelgun.min.js"></script>
+<script src="./js/labels.js"></script>
+<script src="./data/INDO_PROV_2016_0.js"></script>
+<script>
+var highlightLayer;
+function highlightFeature(e) {
+    highlightLayer = e.target;
 
+    if (e.target.feature.geometry.type === 'LineString') {
+        highlightLayer.setStyle({
+        color: '#ffff00',
+        });
+    } else {
+        highlightLayer.setStyle({
+        fillColor: '#ffff00',
+        fillOpacity: 1
+        });
+    }
+    highlightLayer.openPopup();
+}
+var map = L.map('map', {
+    zoomControl:true, maxZoom:28, minZoom:3
+}).fitBounds([[-14.138136405350176,95.24277849213587],[9.983811168765945,138.18556579404063]]);
+var hash = new L.Hash(map);
+map.attributionControl.setPrefix('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a> &middot; <a href="https://leafletjs.com" title="A JS library for interactive maps">Leaflet</a> &middot; <a href="https://qgis.org">QGIS</a>');
+var autolinker = new Autolinker({truncate: {length: 30, location: 'smart'}});
+var bounds_group = new L.featureGroup([]);
+function setBounds() {
+}
+function pop_INDO_PROV_2016_0(feature, layer) {
+    layer.on({
+        mouseout: function(e) {
+            for (i in e.target._eventParents) {
+                e.target._eventParents[i].resetStyle(e.target);
+            }
+            if (typeof layer.closePopup == 'function') {
+                layer.closePopup();
+            } else {
+                layer.eachLayer(function(feature){
+                    feature.closePopup()
+                });
+            }
+        },
+        mouseover: highlightFeature,
+    });
+    var popupContent = '<table>\
+            <tr>\
+                <td colspan="2">' + (feature.properties['IDPROV'] !== null ? autolinker.link(feature.properties['IDPROV'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <td colspan="2">' + (feature.properties['DataST_PROVINSI'] !== null ? autolinker.link(feature.properties['DataST_PROVINSI'].toLocaleString()) : '') + '</td>\
+            </tr>\
+            <tr>\
+                <td colspan="2">' + (feature.properties['DataST_st'] !== null ? autolinker.link(feature.properties['DataST_st'].toLocaleString()) : '') + '</td>\
+            </tr>\
+        </table>';
+    layer.bindPopup(popupContent, {maxHeight: 400});
+}
+
+function style_INDO_PROV_2016_0_0(feature) {
+    if (feature.properties['DataST_st'] >= 12287.000000 && feature.properties['DataST_st'] <= 157310.400000 ) {
+        return {
+        pane: 'pane_INDO_PROV_2016_0',
+        opacity: 1,
+        color: 'rgba(35,35,35,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 1.0, 
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(110,231,183,1.0)',
+        interactive: true,
+    }
+    }
+    if (feature.properties['DataST_st'] >= 157310.400000 && feature.properties['DataST_st'] <= 333387.800000 ) {
+        return {
+        pane: 'pane_INDO_PROV_2016_0',
+        opacity: 1,
+        color: 'rgba(35,35,35,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 1.0, 
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(84,193,152,1.0)',
+        interactive: true,
+    }
+    }
+    if (feature.properties['DataST_st'] >= 333387.800000 && feature.properties['DataST_st'] <= 564369.800000 ) {
+        return {
+        pane: 'pane_INDO_PROV_2016_0',
+        opacity: 1,
+        color: 'rgba(35,35,35,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 1.0, 
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(58,155,121,1.0)',
+        interactive: true,
+    }
+    }
+    if (feature.properties['DataST_st'] >= 564369.800000 && feature.properties['DataST_st'] <= 850802.000000 ) {
+        return {
+        pane: 'pane_INDO_PROV_2016_0',
+        opacity: 1,
+        color: 'rgba(35,35,35,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 1.0, 
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(32,116,90,1.0)',
+        interactive: true,
+    }
+    }
+    if (feature.properties['DataST_st'] >= 850802.000000 && feature.properties['DataST_st'] <= 4978358.000000 ) {
+        return {
+        pane: 'pane_INDO_PROV_2016_0',
+        opacity: 1,
+        color: 'rgba(35,35,35,1.0)',
+        dashArray: '',
+        lineCap: 'butt',
+        lineJoin: 'miter',
+        weight: 1.0, 
+        fill: true,
+        fillOpacity: 1,
+        fillColor: 'rgba(6,78,59,1.0)',
+        interactive: true,
+    }
+    }
+}
+map.createPane('pane_INDO_PROV_2016_0');
+map.getPane('pane_INDO_PROV_2016_0').style.zIndex = 400;
+map.getPane('pane_INDO_PROV_2016_0').style['mix-blend-mode'] = 'normal';
+var layer_INDO_PROV_2016_0 = new L.geoJson(json_INDO_PROV_2016_0, {
+    attribution: '',
+    interactive: true,
+    dataVar: 'json_INDO_PROV_2016_0',
+    layerName: 'layer_INDO_PROV_2016_0',
+    pane: 'pane_INDO_PROV_2016_0',
+    onEachFeature: pop_INDO_PROV_2016_0,
+    style: style_INDO_PROV_2016_0_0,
+});
+bounds_group.addLayer(layer_INDO_PROV_2016_0);
+map.addLayer(layer_INDO_PROV_2016_0);
+setBounds();
+</script>
+<!-- END MAP -->
 </body>
 
 </html>
