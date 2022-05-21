@@ -341,7 +341,7 @@ class Bagikan extends HTMLElement {
         this.innerHTML = `
         <div class="text-sm font-medium">
             <h3 class="text-center">Bagikan ke :</h3>
-            <div class="flex text-3xl">
+            <div class="flex text-3xl justify-center">
                 <span class="iconify" data-icon="majesticons:printer"></span>
                 <span class="iconify " data-icon="ant-design:facebook-filled"></span>
                 <span class="iconify "  data-icon="ant-design:instagram-filled"></span>
