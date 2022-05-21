@@ -2660,14 +2660,14 @@ body{
   margin-right: 1.25rem;
 }
 
-.my-2{
-  margin-top: 0.5rem;
-  margin-bottom: 0.5rem;
-}
-
 .mx-4{
   margin-left: 1rem;
   margin-right: 1rem;
+}
+
+.my-2{
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
 }
 
 .my-14{
@@ -2698,6 +2698,11 @@ body{
 .my-6{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.mx-6{
+  margin-left: 1.5rem;
+  margin-right: 1.5rem;
 }
 
 .mb-20{
@@ -3004,16 +3009,23 @@ body{
   width: 11rem;
 }
 
-.min-w-0{
-  min-width: 0px;
-}
-
+<<<<<<< HEAD
+=======
 .min-w-\[300px\]{
   min-width: 300px;
 }
 
+>>>>>>> 9235baf161b3d5db99132637286ac3bdb642b735
+.min-w-0{
+  min-width: 0px;
+}
+
 .min-w-\[150px\]{
   min-width: 150px;
+}
+
+.min-w-\[200px\]{
+  min-width: 200px;
 }
 
 .max-w-6xl{
@@ -3705,6 +3717,14 @@ body{
   padding-bottom: 2.5rem;
 }
 
+<<<<<<< HEAD
+=======
+.py-20{
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+}
+
+>>>>>>> 9235baf161b3d5db99132637286ac3bdb642b735
 .py-36{
   padding-top: 9rem;
   padding-bottom: 9rem;
@@ -4758,6 +4778,11 @@ body{
   .md\:px-5{
     padding-left: 1.25rem;
     padding-right: 1.25rem;
+  }
+
+  .md\:px-2{
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
   }
 
   .md\:pl-3{
