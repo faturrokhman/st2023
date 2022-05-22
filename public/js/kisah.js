@@ -7,12 +7,12 @@ class Kisah extends HTMLElement {
                 class="w-auto max-w-3xl relative flex flex-col items-center bg-white text-text-color rounded-xl py-4 px-4 md:px-10 xl:py-8 xl:px-12 h-[450px] overflow-auto touch-pan-x touch-pan-y scrollbar-thin scrollbar-thumb-primary-hover scrollbar-track-emerald-600 transition-all space-y-4">
                 <img src="./img/kisah.webp" loading="lazy" alt="Kisah Sensus" class="w-48 md:w-64 lg:w-80 rounded-lg shadow-lg">
                 <div class="leading-none lg:leading-5 space-y-1">
-                    <h3 class="font-medium lg:text-lg text-center">Gladi Bersih Sensus Pertanian 2023 di Kabupaten Kebumen</h3>
+                    <h3 class="font-medium lg:text-lg text-center">Awal Sensus Pertanian 2023 (ST2023) Dengan Pemutakhiran Kerangka Geospasial Dan Muatan Wilkerstat</h3>
                     <div class="flex gap-2 justify-center">
                         <span class="iconify text-sm" data-icon="heroicons-outline:calendar"></span>
-                        <p class="text-xs">3 Mei 2022</p>
+                        <p class="text-xs">31 Maret 2022</p>
                     </div>
-                    <p class="font-light text-sm text-justify">Kab. Kebumen - 1 Mei 2022, Gladi bersih Sensus Pertanian 2023 mulai dilaksanakan di Kabupaten Kebumen. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ipsa? Tempora doloribus molestias nesciunt vel optio aspernatur! Nulla at ipsam laboriosam odio. Dolorum commodi deserunt eveniet voluptate facere quae ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat necessitatibus distinctio, neque ullam minus nesciunt obcaecati ut quasi possimus culpa perspiciatis quisquam a placeat architecto debitis perferendis dolorem mollitia dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsum doloremque animi ducimus consectetur tempora sunt enim ad praesentium blanditiis! Ipsam veniam iste quam magni ab, harum cupiditate sunt dolorum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis inventore sapiente nihil omnis qui!  </p>
+                    <p class="font-light text-sm text-justify">Sensus Pertanian 2023 (ST2023) Akan Dilaksanakan Kembali Oleh BPS Pada Tahun 2023. Salah Satu Upaya Dalam Mencapai Data ST2023 Yang Berkualitas Adalah Penyediaan Kerangka Induk Wilayah Kerja Statistik (Wilkerstat) Yang Mutakhir. Oleh Karenanya BPS Di Tahun 2022 Ini Melaksanakan Pemutakhiran Kerangka Induk Sebagai Dasar Perencanaan Dalam Pelaksanaan ST2023. Kerangka Induk Yang Dibangun Tidak Hanya Pada Muatan Wilayah Kerja Statistik (Wilkerstat) Saja, Tetapi Juga Terkait Penyusunan Kerangka Geospasial Lahan Pertanian.Agar Dapat Dimanfaatkan Secara Lebih Luas Untuk Berbagai Kebutuhan Statistik Pertanian. Sebagaimana Direkomendasikan Oleh Food And Agriculture Organization (FAO), Penyusunan Peta Klasifikasi Ini Dilakukan Dengan Memanfaatkan Teknologi Penginderaan Jauh (Remote Sensing) Yang Dipadukan Dengan Proses Pengambilan Titik Koordinat Dari Sampel Tutupan Lahan Untuk Memproduksi Statistik Pertanian Yang Lebih Efektif. Kegiatan Pemutakhiran Kerangka Geospasial Dan Muatan Wilayah Kerja Statistik Dilaksanakan Secara Serentak Di Seluruh Indonesia, Termasuk Di Wilayah Kabupaten Barito Timur. Kegiatan Pemetaan Di Lapangan Dilaksanakan Pada Bulan Maret 2022. Sebanyak 48 Orang Petugas Lapangan Yang Melaksanakan Kegiatan Pemetaan Lapangan Di Seluruh Desa/Kelurahan Di Wilayah Barito Timur. Berbagai Tantangan Dihadapi Oleh Petugas Selama Di Lapangan, Khususnya Kondisi Alam. Namun Hal Ini Tidak Menyurutkan Semangat Mereka Untuk Menghasilkan Data Yang Berkualitas.</p>
                 </div>
                 <div>
                 <h3 class="text-center text-sm font-medium">Bagikan ke :</h3>
@@ -40,12 +40,12 @@ class TabKisah extends HTMLElement {
         <div id="kisah" class="bg-white rounded-lg shadow-md hover:shadow-xl items-center p-2 cursor-pointer flex sm:flex-col lg:flex-row gap-4" onclick="show_kisah(true)">
             <img src="./img/kisah.webp" loading="lazy" alt="Kisah Sensus" class="w-48 rounded-lg">
             <div class="leading-none lg:leading-5 space-y-1">
-                <h3 class="font-medium text-sm lg:text-base">Gladi Bersih Sensus Pertanian 2023 di Kabupaten Kebumen</h3>
+                <h3 class="font-medium text-sm lg:text-base">Awal Sensus Pertanian 2023 (ST2023) Dengan Pemutakhiran Kerangka Geospasial Dan Muatan Wilkerstat</h3>
                 <div class="flex gap-2">
                     <span class="iconify text-sm" data-icon="heroicons-outline:calendar"></span>
-                    <p class="text-xs">3 Mei 2022</p>
+                    <p class="text-xs">31 Maret 2022</p>
                 </div>
-                <p class="font-thin text-xs lg:text-sm">Kab. Kebumen - 1 Mei 2022, Gladi bersih Sensus Pertanian 2023 mulai dilaksanakan di Kabupaten Kebumen... </p>
+                <p class="font-thin text-xs lg:text-sm">Sensus Pertanian 2023 (ST2023) Akan Dilaksanakan Kembali Oleh BPS Pada Tahun 2023. Salah Satu Upaya... </p>
             </div>  
         </div>
         `
