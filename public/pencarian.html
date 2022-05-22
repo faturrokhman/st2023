@@ -118,7 +118,7 @@
                 <li class="-mb-px flex-auto text-center cursor-pointer">
                     <a id="tabel" class=" px-3 py-2 shadow-lg rounded block bg-primary-hover text-body-white hover:text-primary-hover hover:bg-body-white"
                         onclick="changeAtiveTab(event,'tab-tabel')">
-                        tabel
+                        tabel topik
                     </a>
                 </li>
                 <li class="-mb-px flex-auto text-center cursor-pointer">
@@ -140,8 +140,8 @@
                 <div class="px-4 py-5 flex-auto">
                     <div class="tab-content tab-space">
                         <div class="block" id="tab-utama">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2">
-                                Dokumen
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2">
+                                Berita Resmi Statistik
                             </h1>
                             <div
                                 class="overflow-auto max-w-5xl mx-auto rounded-md border bg-body-white border-text-color text-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded pt-1 pb-2 px-2">
@@ -156,7 +156,7 @@
                                         </tr>
                                     </thead>
                                     <tbody class="px-1 align-top whitespace-normal">
-                                        <tr class="bg-slate-200 hover:bg-slate-300 divide-x divide-text-color/30">
+                                        <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
                                             <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
                                             <td class="px-1 py-2">Indonesia</td>
                                             <td class="px-1 py-2 whitespace-normal min-w-[300px]">Sensus Pertanian
@@ -183,28 +183,24 @@
                             </div>
                         </div>
                         <div class="hidden" id="tab-publikasi">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2">
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2">
                                 Publikasi
                             </h1>
-                            <my-publikasi class="flex flex-wrap pt-2 w-full text-sm gap-5 justify-evenly text-body-white text-center"></my-publikasi>
+                            <my-publikasi class="flex flex-wrap pt-2 w-full max-w-5xl mx-auto text-sm gap-5 justify-evenly text-body-white text-center"></my-publikasi>
                         </div>
                         <div class="hidden" id="tab-infografis">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
                                 infografis
                             </h1>
                         </div>
-                        <div class="hidden" id="tab-leaflet">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
-                                leaflet
-                            </h1>
+                        <div class="hidden max-w-5xl mx-auto" id="tab-leaflet">
+                            <tab-leaflet></tab-leaflet>
                         </div>
-                        <div class="hidden" id="tab-dokumen-terkait">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
-                                dokumen terkait
-                            </h1>
+                        <div class="hidden max-w-5xl mx-auto" id="tab-dokumen-terkait">
+                            <tab-terkait></tab-terkait>
                         </div>
                         <div class="hidden" id="tab-tabel">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
                                 tabel
                             </h1>
                             <h3 class="text-sm md:text-base font-medium text-text-color mb-3 text-center max-w-xl mx-auto">
@@ -217,12 +213,12 @@
                             <my-keterangan></my-keterangan>
                         </div>
                         <div class="hidden" id="tab-foto">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
                                 foto
                             </h1>
                         </div>
                         <div class="hidden" id="tab-video">
-                            <h1 class="font-bold md:text-lg max-w-5xl mx-auto mb-2 capitalize">
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
                                 video
                             </h1>
                         </div>
@@ -318,6 +314,7 @@
 <script src="./js/subsektor.js"></script>
 <script src="./js/publikasi.js"></script>
 <script src="./js/flowbite.js"></script>
+<script src="./js/tabdokumen.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){    
