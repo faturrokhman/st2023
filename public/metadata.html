@@ -109,7 +109,7 @@
             <!-- Isi Tab -->
             <div class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6 tab-content tab-space">
                 <!-- Tab Metadata -->
-                <div class="block rounded-lg pt-4 md:pt-0" id="tab-utama">
+                <div class="block rounded-lg pt-4 md:pt-0 " id="tab-utama">
                     <div class="dropdown2 text-sm">
                         <div class="dropdown-select">
                             <span class="select">-- Pilih Metadata --</span>
@@ -312,29 +312,25 @@
                 </div>
                 <!-- Tab Kuesioner -->
                 <div class="p-4 rounded-lg hidden" id="tab-kuesioner" >
-                    <h1 class="text-lg font-bold md:text-2xl lg:ml-2 mb-2 text-primary-hover">Kuesioner Sensus Pertanian
+                    <div class="max-w-5xl mx-auto">
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Kuesioner Sensus Pertanian
                     </h1>
+                    </div>
+                    
                     <div
                         class="overflow-auto max-w-5xl mx-auto rounded-md border my-3 border-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded pt-1 pb-2 px-2">
                         <table class="text-text-color w-full text-sm divide-y divide-text-body">
                             <thead class="px-1">
-                                <tr class="items-center">
-                                    <th class="px-2 py-1 w-1/3">Kuesioner</th>
-                                    <th class="px-2 py-1 w-1/3">Deskripsi</th>
-                                    <th class="px-2 py-1 w-1/6 transition-all">Metode<span class="hidden sm:block">
-                                            Pengumpulan Data</span></th>
-                                    <th class="px-2 py-1 w-1/6">File</th>
+                                <tr class="items-center divide-x divide-text-color/30">
+                                    <th class="px-2 py-1">Kuesioner</th>
+                                    <th class="px-2 py-1">File</th>
                                 </tr>
                             </thead>
-                            <tbody class="px-1 align-top">
-                                <tr class="bg-slate-200 hover:bg-slate-300">
-                                    <td class="px-1 py-2">Daftar ST2023 Pemutakhiran Rumah Tangga</td>
-                                    <td class="py-2">Kuesioner Sensus Pertanian 2023 Republik Indonesia Bahasa Indonesia
-                                    </td>
-                                    <td class="py-2">CAPI</td>
+                            <tbody class="px-1 align-top divide-y divide-text-color/30">
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Berbadan Hukum</td>
                                     <td class="px-1 py-2">
-                                        <a href="./download/example.pdf" target="_blank"
-                                            download="Hasil Sensus ST2023">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L1%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Berbadan%20Hukum'">
                                             <div
                                                 class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
                                                 <span class="iconify text-2xl"
@@ -346,14 +342,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="py-1 hover:bg-slate-300">
-                                    <td class="px-1 py-2">Daftar ST2023 Pemutakhiran Rumah Tangga</td>
-                                    <td class="py-2">Kuesioner Sensus Pertanian 2023 Republik Indonesia Bahasa Indonesia
-                                    </td>
-                                    <td class="py-2">CAPI</td>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Pertanian Lainnya</td>
                                     <td class="px-1 py-2">
-                                        <a href="./download/example.pdf" target="_blank"
-                                            download="Hasil Sensus ST2023">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L1%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Pertanian%20Lainnya'">
                                             <div
                                                 class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
                                                 <span class="iconify text-2xl"
@@ -365,14 +357,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="bg-slate-200 px-1 hover:bg-slate-300">
-                                    <td class="px-1 py-2">Daftar ST2023 Pemutakhiran Rumah Tangga</td>
-                                    <td class="py-2">Kuesioner Sensus Pertanian 2023 Republik Indonesia Bahasa Indonesia
-                                    </td>
-                                    <td class="py-2">CAPI</td>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Pertanian Perorangan (Door to Door)</td>
                                     <td class="px-1 py-2">
-                                        <a href="./download/example.pdf" target="_blank"
-                                            download="Hasil Sensus ST2023">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L1%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Pertanian%20Perorangan%20(Door%20to%20Door)'">
                                             <div
                                                 class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
                                                 <span class="iconify text-2xl"
@@ -384,14 +372,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="py-1 hover:bg-slate-300">
-                                    <td class="px-1 py-2">Daftar ST2023 Pemutakhiran Rumah Tangga</td>
-                                    <td class="py-2">Kuesioner Sensus Pertanian 2023 Republik Indonesia Bahasa Indonesia
-                                    </td>
-                                    <td class="py-2">CAPI</td>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Pertanian Perorangan Snowball</td>
                                     <td class="px-1 py-2">
-                                        <a href="./download/example.pdf" target="_blank"
-                                            download="Hasil Sensus ST2023">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L1%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Pertanian%20Perorangan%20Snowball'">
                                             <div
                                                 class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
                                                 <span class="iconify text-2xl"
@@ -403,14 +387,10 @@
                                         </a>
                                     </td>
                                 </tr>
-                                <tr class="bg-slate-200 px-1 hover:bg-slate-300">
-                                    <td class="px-1 py-2">Daftar ST2023 Pemutakhiran Rumah Tangga</td>
-                                    <td class="py-2">Kuesioner Sensus Pertanian 2023 Republik Indonesia Bahasa Indonesia
-                                    </td>
-                                    <td class="py-2">CAPI</td>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Pertanian Lainnya</td>
                                     <td class="px-1 py-2">
-                                        <a href="./download/example.pdf" target="_blank"
-                                            download="Hasil Sensus ST2023">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L2%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Pertanian%20Lainnya'">
                                             <div
                                                 class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
                                                 <span class="iconify text-2xl"
@@ -422,21 +402,69 @@
                                         </a>
                                     </td>
                                 </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Pertanian Perorangan</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L2%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Pertanian%20Perorangan'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-2xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Kuesioner L1 Gladi Bersih ST2023 - Usaha Perusahaan Berbadan Hukum</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Kuesioner%20L2%20Gladi%20Bersih%20ST2023%20-%20Usaha%20Perusahaan%20Berbadan%20Hukum'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-2xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 align-middle">Daftar Kode ST2023</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=kuesioner&doc=Daftar%20Kode%20ST2023'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white px-1 sm:pl-4 sm:pr-6 py-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-2xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                </tr>
+                                
                             </tbody>
                         </table>
                     </div>
                 </div>
                 <!-- Tab Istilah -->
                 <div class="p-4 rounded-lg hidden" id="tab-istilah">
-                    <h1 class="text-lg font-bold md:text-2xl lg:ml-2 mb-2 text-primary-hover">Istilah Sensus Pertanian
+                    <div class="max-w-5xl mx-auto">
+                        <h1 class="text-lg font-bold md:text-2xl mb-2 text-primary-hover">Istilah Sensus Pertanian
                     </h1>
-                    <form action="./pencarian.html" class="h-min max-w-3xl mx-auto text-sm relative items-center">
-                        <label class="font-medium md:text-lg w-1/3">Kata Kunci</label>
+                    </div>
+                    <form action="./pencarian.html" class="max-w-3xl lg:ml-10 text-sm justify-between flex flex-wrap">
+                        <label class="font-medium md:text-lg">Kata Kunci :</label>
                         <input type="text"
-                            class="rounded-md right-0 absolute text-primary-hover text-sm border-slate-500 focus:ring-emerald-200 focus:border-emerald-200 border mb-4 py-1 px-3 w-2/3">
-                        <div class="text-center mx-auto mt-6">
+                            class="rounded-md text-primary-hover text-sm border-slate-500 focus:ring-emerald-200 focus:border-emerald-200 border mb-1 py-1 px-3 w-2/3">
+                        <div class="text-center lg:ml-8">
                             <input type="submit" value="Tampilkan"
-                                class="bg-primary-hover py-2 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
+                                class="bg-primary-hover py-1 px-4 rounded-md text-body-white text-sm font-medium border-2 border-primary-hover hover:bg-body-white hover:text-primary-hover transition">
                         </div>
                     </form>
                     <div class="relative min-h-screen">
