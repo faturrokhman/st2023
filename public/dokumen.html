@@ -1,0 +1,471 @@
+<!DOCTYPE html>
+<html lang="id" class="">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.lr-in-prod.com/LogRocket.min.js" crossorigin="anonymous"></script>
+    <script>window.LogRocket && window.LogRocket.init('06eajg/st2023');</script>
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Dokumen</title>
+    <link rel="icon" href="./img/bps.png">
+</head>
+
+<body class="bg-primary">
+    <header id="page-header">
+        <div class="navbar bg-primary text-body-white w-full h-min pt-3 pb-0 sticky top-0 shadow-lg" id="navbar">
+            <div class="max-w-6xl mx-auto">
+                <!-- Logo -->
+                <my-logo></my-logo>
+                <!-- Search Bar dan Lokasi dan Navbar Top -->
+                <div class="flex justify-between mx-5 sm:mx-10 lg:mx-2 mr-2 pt-1 pb-3">
+                    <!-- Pencarian dan Lokasi -->
+                    <pencarian-lokasi class="w-full md:w-max pr-4 sm:pr-0"></pencarian-lokasi>
+                    <modal-lokasi id="lokasi"
+                        class="z-50 w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 hidden">
+                    </modal-lokasi>
+                    <script>
+                        let lokasi = document.getElementById("lokasi");
+                        const showLocation = (flag) => {
+                            lokasi.classList.toggle("hidden");
+                        };
+                    </script>
+                    <!-- Navbar Top -->
+                    <nav class="w-min hidden md:block ml-2">
+                        <ul class="w-full flex space-x-3 justify-between text-xs lg:text-sm font-medium uppercase">
+                            <li
+                                class="w-full py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                <a href="./index.html">Beranda</a>
+                            </li>
+                            <li
+                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                <a href="./subsektor.html" class="">
+                                    Subsektor
+                                </a>
+                            </li>
+                            <li
+                                class="w-full dropdown py-1 px-2 lg:px-4 bg-primary-hover rounded-md border-2 border-primary-hover transition duration-300 hover:bg-body-white hover:text-primary-hover">
+                                <a href="#" class="">
+                                    Tentang
+                                </a>
+                                <div id="menu_tentang"
+                                    class="dropdown-content w-max text-xs top-full left-0 rounded-md border border-body-white">
+                                    <a href="./metadata.html" class="rounded-t-md">Metadata</a>
+                                    <a href="./galeri.html" class="rounded-b-md">Galeri</a>
+                                </div>
+                            </li>
+                            <li
+                                class="font-bold w-full dropdown py-1 px-2 lg:px-4 rounded-md border-2 border-primary-hover transition duration-300 bg-body-white text-primary-hover">
+                                <a href="#" class="">
+                                    Produk
+                                </a>
+                                <div id="menu_produk"
+                                    class="dropdown-content w-max text-xs top-full right-0 lg:left-0 rounded-md border border-body-white">
+                                    <a href="./dokumen.html" class="rounded-t-md">Dokumen</a>
+                                    <a href="./publikasi.html" class="rounded-b-md">Publikasi</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="bg-primary mt-12 pt-10 w-full">
+        <!-- Content -->
+        <div class="max-w-6xl py-4 px-6 md:px-10 lg:px-2 mx-auto flex flex-col sm:flex-row justify-between"
+            data-aos="fade-down">
+            <h1 class="font-bold text-2xl mb-1">Dokumen Sensus Pertanian</h1>
+            <periode-sensus></periode-sensus>
+        </div>
+        <!-- Tab -->
+        <div class="max-w-6xl mx-auto md:px-10 lg:px-2 mb-6" id="tabs-id" data-aos="fade-up">
+            <!-- Tab -->
+            <div class="bg-primary-hover rounded-t-lg w-full">
+                <ul class="grid grid-cols-3 mb-0">
+                    <li class="w-full">
+                        <a id="brs"
+                            class="w-full h-full text-primary-hover hover:text-primary-hover hover:bg-body-white rounded-tl-lg p-2 text-sm font-medium text-center bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-brs')">
+                            <span class="iconify text-3xl" data-icon="fluent:news-28-filled"></span>
+                            <span class="font-semibold md:pl-3 md:text-lg">Berita Resmi Statistik</span>
+                        </a>
+                    </li>
+                    <li class="w-full">
+                        <a id="leaflet"
+                            class="w-full h-full hover:text-primary-hover p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-leaflet')">
+                            <span class="iconify text-3xl" data-icon="ri:booklet-fill"></span>
+                            <span class="font-semibold md:pl-3 md:text-lg">Leaflet & Buletin</span>
+                        </a>
+                    </li>
+                    <li class="w-full">
+                        <a id="terkait" 
+                            class="w-full h-full hover:text-primary-hover rounded-tr-lg p-2 text-sm font-medium text-center hover:bg-body-white flex flex-col md:flex-row items-center md:justify-center cursor-pointer" onclick="changeAtiveTab(event, 'tab-terkait')">
+                            <span class="iconify text-3xl" data-icon="mdi:file-document"></span>
+                            <span class="font-semibold md:pl-3 md:text-lg">Dokumen Terkait</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <!-- Isi Tab -->
+            <div class="bg-body-white text-primary-hover m-0 rounded-b-lg mb-6 tab-content tab-space">
+                <!-- Tab BRS -->
+                <div class="rounded-lg p-4 max-w-5xl mx-auto " id="tab-brs">
+                    <h1 class="text-lg font-bold md:text-2xl mb-2 md:mb-4 text-primary-hover">Berita Resmi Statistik
+                    </h1>
+                    <!-- Table -->
+                    <div
+                        class="overflow-auto mb-4" data-aos="fade-up">
+                        <div class="rounded-md border bg-body-white border-text-color text-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded pt-1 pb-2 px-2">
+                            <table class="w-full whitespace-nowrap divide-y divide-text-color md:px-2">
+                            <thead class="px-1">
+                                <tr class="items-center divide-x divide-text-color/30">
+                                    <th class="px-2 py-1">Judul</th>
+                                    <th class="px-2 py-1">Wilayah</th>
+                                    <th class="px-2 py-1">Tanggal Rilis</th>
+                                </tr>
+                            </thead>
+                            <tbody class="px-1 align-top whitespace-normal divide-y divide-text-color/30">
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil1(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Indonesia</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil2(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Aceh</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil3(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Sumatera Utara</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil2(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Aceh</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil3(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Sumatera Utara</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil2(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Aceh</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil3(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Sumatera Utara</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil2(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Aceh</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil3(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Sumatera Utara</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr><tr class="hover:bg-slate-300 divide-x divide-text-color/30 cursor-pointer" onclick="showHasil2(true)">
+                                    <td class="px-1 py-2 font-semibold">Hasil Sensus Pertanian 2023</td>
+                                    <td class="px-1 py-2">Provinsi Aceh</td>
+                                    <td class="px-1 py-2">23 Januari 2024</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab Leaflet -->
+                <div class="p-4 rounded-lg max-w-5xl mx-auto hidden" id="tab-leaflet" >
+                    <h1 class="text-lg font-bold md:text-2xl mb-2 md:mb-4 text-primary-hover">Leaflet & Buletin</h1>
+                    <!-- Table -->
+                    <div
+                        class="overflow-auto mb-4" data-aos="fade-up">
+                        <div class="rounded-md border bg-body-white border-text-color text-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded pt-1 pb-2 px-2">
+                            <table class="w-full whitespace-nowrap divide-y divide-text-color md:px-2">
+                            <thead class="px-1">
+                                <tr class="items-center divide-x divide-text-color/30">
+                                    <th class="px-2 py-1">Judul</th>
+                                    <th class="px-2 py-1">Tanggal</th>
+                                    <th class="px-2 py-1">File</th>
+                                    <th class="px-2 py-1">Bagikan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="px-1 align-top whitespace-normal divide-y divide-text-color/30">
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 font-semibold">Buletin ST2023 Edisi 1</td>
+                                    <td class="px-1 py-2">31 Desember 2021</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=leaflet&doc=Buletin%20ST2023%20Edisi%2031%20Desember%202021'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white sm:pl-4 sm:pr-6 p-2 sm:p-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="px-1 py-2">
+                                        <bagikan-ke class="text-primary-hover"></bagikan-ke>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 font-semibold">Buletin ST2023 Edisi 2</td>
+                                    <td class="px-1 py-2">31 Januari 2022</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=leaflet&doc=Buletin%20ST2023%20Edisi%2031%20Januari%202022'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white sm:pl-4 sm:pr-6 p-2 sm:p-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="px-1 py-2">
+                                        <bagikan-ke class="text-primary-hover"></bagikan-ke>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 font-semibold">Buletin ST2023 Edisi 3</td>
+                                    <td class="px-1 py-2">28 Februari 2022</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=leaflet&doc=Buletin%20ST2023%20Edisi%2028%20Februari%202022'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white sm:pl-4 sm:pr-6 p-2 sm:p-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="px-1 py-2">
+                                        <bagikan-ke class="text-primary-hover"></bagikan-ke>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2 font-semibold">Leaflet Sensus Pertanian 2023 (Trifold)</td>
+                                    <td class="px-1 py-2">30 April 2022</td>
+                                    <td class="px-1 py-2">
+                                        <a href="javascript:void(0)" onclick="location.href='https://sensus.bps.go.id/st2023/download/?q=leaflet&doc=Leaflet%20ST2023'">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white sm:pl-4 sm:pr-6 p-2 sm:p-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="px-1 py-2">
+                                        <bagikan-ke class="text-primary-hover"></bagikan-ke>
+                                    </td>
+                                </tr>
+                                
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+                <!-- Tab Terkait -->
+                <div class="p-4 rounded-lg max-w-5xl mx-auto hidden" id="tab-terkait">
+                    <h1 class="text-lg font-bold md:text-2xl lg:ml-2 mb-2 text-primary-hover">Dokumen Terkait
+                    </h1>
+                    <div
+                        class="overflow-auto mb-4" data-aos="fade-up">
+                        <div class="rounded-md border bg-body-white border-text-color text-text-color scrollbar-thin scrollbar-thumb-text-body scrollbar-rounded pt-1 pb-2 px-2">
+                            <table class="w-full whitespace-nowrap divide-y divide-text-color md:px-2">
+                            <thead class="px-1">
+                                <tr class="items-center divide-x divide-text-color/30">
+                                    <th class="px-2 py-1 min-w-[250px]">Judul</th>
+                                    <th class="px-2 py-1">Tanggal</th>
+                                    <th class="px-2 py-1">File</th>
+                                    <th class="px-2 py-1">Bagikan</th>
+                                </tr>
+                            </thead>
+                            <tbody class="px-1 align-top whitespace-normal divide-y divide-text-color/30">
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2">
+                                        <h2 class="font-semibold">Informasi kegiatan Sensus Pertanian 2023 selama Bulan Mei 2022</h2>
+                                        <p class="text-xs md:text-sm">BPS telah melaksanakan salah satu rangkaian panjang kegiatan Sensus Pertanian 2023</p>
+                                    </td>
+                                    <td class="px-1 py-2">30 Mei 2022</td>
+                                    <td class="px-1 py-2">
+                                        <a href="./download/example.pdf" target="_blank"
+                                            download="Hasil Sensus ST2023">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white sm:pl-4 sm:pr-6 p-2 sm:p-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="px-1 py-2">
+                                        <bagikan-ke class="text-primary-hover"></bagikan-ke>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-slate-300 divide-x divide-text-color/30">
+                                    <td class="px-1 py-2">
+                                        <h2 class="font-semibold">Surat Edaran Dukungan Pelaksaan Sensus Pertanian 2023</h2>
+                                        <p class="text-xs md:text-sm">Surat Edaran Guberneur Provinsi X ini terkait dukungan pelaksanaan Sensus Pertanian 2023</p>
+                                    </td>
+                                    <td class="px-1 py-2">31 Mei 2022</td>
+                                    <td class="px-1 py-2">
+                                        <a href="./download/example.pdf" target="_blank"
+                                            download="Hasil Sensus ST2023">
+                                            <div
+                                                class="mx-auto bg-primary-hover rounded-full text-body-white sm:pl-4 sm:pr-6 p-2 sm:p-1 flex items-center justify-center w-min border-2 border-primary-hover hover:text-primary-hover hover:bg-body-white cursor-pointer transition-all">
+                                                <span class="iconify text-xl"
+                                                    data-icon="heroicons-solid:document-download"></span>
+                                                <span class="ml-1 text-sm font-semibold hidden sm:block">
+                                                    Unduh
+                                                </span>
+                                            </div>
+                                        </a>
+                                    </td>
+                                    <td class="px-1 py-2">
+                                        <bagikan-ke class="text-primary-hover"></bagikan-ke>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <modal-tabel1 id="hasil1" class="hidden"></modal-tabel1>
+        <modal-tabel2 id="hasil2" class="hidden"></modal-tabel2>
+        <modal-tabel3 id="hasil3" class="hidden"></modal-tabel3>
+        <script>
+            let hasil1 = document.getElementById("hasil1");
+            const showHasil1 = (flag) => {
+                hasil1.classList.toggle("hidden");
+            };
+            let hasil2 = document.getElementById("hasil2");
+            const showHasil2 = (flag) => {
+                hasil2.classList.toggle("hidden");
+            };
+            let hasil3 = document.getElementById("hasil3");
+            const showHasil3 = (flag) => {
+                hasil3.classList.toggle("hidden");
+            };
+        </script>
+        </div>
+        <!-- Navigasi Bottom (Mobile) -->
+        <nav
+            class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2 md:hidden">
+            <ul class="flex justify-between">
+                <li class="w-full">
+                    <a href="./index.html"
+                        class="w-full block px-2 py-4 text-center transition duration-300 hover:bg-body-white hover:text-primary-hover font-bold">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:home"></span>
+                        <span class="hidden sm:block">
+                            Beranda
+                        </span>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="./subsektor.html"
+                        class="w-full block px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:server"></span>
+                        <span class="hidden sm:block">
+                            subsektor
+                        </span>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="./metadata.html"
+                        class="w-full block px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:database"></span>
+                        <span class="hidden sm:block">
+                            metadata
+                        </span>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <a href="./galeri.html"
+                        class="w-full block px-2 py-4 text-center hover:bg-body-white hover:text-primary-hover transition duration-300">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-outline:photograph"></span>
+                        <span class="hidden sm:block">
+                            galeri
+                        </span>
+                    </a>
+                </li>
+                <li class="w-full">
+                    <button id="produkButton" data-dropdown-toggle="produkDropdown"
+                        class="w-full flex-row px-2 py-4 text-center bg-body-white text-primary-hover transition duration-300"
+                        type="button">
+                        <span class="iconify w-6 h-6 mx-auto" data-icon="heroicons-solid:chart-bar"></span>
+                        <span class="hidden uppercase font-medium sm:block">
+                            Produk
+                        </span>
+                    </button>
+                    <div id="produkDropdown"
+                        class="hidden w-1/2 sm:w-1/3 rounded-md dropup-content border border-body-white">
+                        <ul class="">
+                            <li>
+                                <a href="./dokumen.html" class="rounded-t-md">Dokumen</a>
+                            </li>
+                            <li>
+                                <a href="./publikasi.html" class="rounded-b-md">Publikasi</a>
+                            </li>
+                        </ul>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+        <!-- Tombol Up Kembali ke Atas -->
+        <my-topbutton id="onTopBtn"></my-topbutton>
+        <!-- FAQ -->
+        <my-faq></my-faq>
+        <modal-faq id="faqmodal"
+            class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden">
+        </modal-faq>
+        <script>
+            let faqmodal = document.getElementById("faqmodal");
+            const showFAQ = (flag) => {
+                faqmodal.classList.toggle("hidden");
+            };
+        </script>
+    </main>
+    <my-footer></my-footer>
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <script src="./js/navbar.js"></script>
+    <script src="./js/upButton.js"></script>
+    <script src="./js/flowbite.js"></script>
+    <script src="https://code.iconify.design/2/2.1.0/iconify.min.js"></script>
+    <script src="./js/navbar.js"></script>
+    <script src="./js/common.js"></script>
+    <script src="./js/tabel.js"></script>
+    <script src="./js/footer.js"></script>
+    <script src="./js/tab.js"></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 1000,
+            once: false,
+        });
+    </script>
+
+</body>
+
+</html>

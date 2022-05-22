@@ -14,7 +14,11 @@ class Kisah extends HTMLElement {
                     </div>
                     <p class="font-light text-sm text-justify">Kab. Kebumen - 1 Mei 2022, Gladi bersih Sensus Pertanian 2023 mulai dilaksanakan di Kabupaten Kebumen. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, ipsa? Tempora doloribus molestias nesciunt vel optio aspernatur! Nulla at ipsam laboriosam odio. Dolorum commodi deserunt eveniet voluptate facere quae ex. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat necessitatibus distinctio, neque ullam minus nesciunt obcaecati ut quasi possimus culpa perspiciatis quisquam a placeat architecto debitis perferendis dolorem mollitia dignissimos. Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti ipsum doloremque animi ducimus consectetur tempora sunt enim ad praesentium blanditiis! Ipsam veniam iste quam magni ab, harum cupiditate sunt dolorum? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis inventore sapiente nihil omnis qui!  </p>
                 </div>
-                <bagikan-ke class="text-primary-hover"></bagikan-ke>   
+                <div>
+                <h3 class="text-center text-sm font-medium">Bagikan ke :</h3>
+                <bagikan-ke class="text-primary-hover"></bagikan-ke>  
+                </div>
+                 
                 <button onclick="show_kisah(true)"
                     class="absolute top-2 right-4 xl:right-8" aria-label="close">
                     <span class="iconify text-2xl" data-icon="heroicons-solid:x"></span>
