@@ -350,26 +350,6 @@
                 </div>
             </div>
         </div>
-        
-        
-        <modal-tabel1 id="hasil1" class="hidden"></modal-tabel1>
-        <modal-tabel2 id="hasil2" class="hidden"></modal-tabel2>
-        <modal-tabel3 id="hasil3" class="hidden"></modal-tabel3>
-        <script>
-            let hasil1 = document.getElementById("hasil1");
-            const showHasil1 = (flag) => {
-                hasil1.classList.toggle("hidden");
-            };
-            let hasil2 = document.getElementById("hasil2");
-            const showHasil2 = (flag) => {
-                hasil2.classList.toggle("hidden");
-            };
-            let hasil3 = document.getElementById("hasil3");
-            const showHasil3 = (flag) => {
-                hasil3.classList.toggle("hidden");
-            };
-        </script>
-        </div>
         <!-- Navigasi Bottom (Mobile) -->
         <nav
             class="fixed bottom-0 inset-x-0 max-w-6xl mx-auto h-min p-0 my-0 bg-primary text-body-white text-xs font-medium uppercase border-t-2 md:hidden">
@@ -440,10 +420,26 @@
         <modal-faq id="faqmodal"
             class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden">
         </modal-faq>
+        <!-- Modal Tabel -->
+        <modal-tabel1 id="hasil1" class="hidden"></modal-tabel1>
+        <modal-tabel2 id="hasil2" class="hidden"></modal-tabel2>
+        <modal-tabel3 id="hasil3" class="hidden"></modal-tabel3>
         <script>
             let faqmodal = document.getElementById("faqmodal");
             const showFAQ = (flag) => {
                 faqmodal.classList.toggle("hidden");
+            };
+            let hasil1 = document.getElementById("hasil1");
+            const showHasil1 = (flag) => {
+                hasil1.classList.toggle("hidden");
+            };
+            let hasil2 = document.getElementById("hasil2");
+            const showHasil2 = (flag) => {
+                hasil2.classList.toggle("hidden");
+            };
+            let hasil3 = document.getElementById("hasil3");
+            const showHasil3 = (flag) => {
+                hasil3.classList.toggle("hidden");
             };
         </script>
     </main>
@@ -465,7 +461,27 @@
             once: false,
         });
     </script>
-
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function(){    
+          tabID = window.location.hash.replace('#', '');
+          tab = tabID.replace('tab-', '');
+          if(tabID != ''){
+              document.getElementById('brs').classList.remove("text-primary-hover");
+              document.getElementById('brs').classList.remove("bg-body-white");
+              document.getElementById('brs').classList.add("text-body-white");
+              document.getElementById('brs').classList.add("bg-primary-hover");
+              document.getElementById('tab-brs').classList.remove("block");
+              document.getElementById('tab-brs').classList.add("hidden");
+              document.getElementById(tab).classList.remove("text-body-white");
+              document.getElementById(tab).classList.remove("bg-primary-hover");
+              document.getElementById(tab).classList.add("text-primary-hover");
+              document.getElementById(tab).classList.add("bg-body-white");
+              document.getElementById(tabID).classList.remove("hidden");
+              document.getElementById(tabID).classList.add("block");
+          }
+      });
+      </script>
 </body>
 
 </html>

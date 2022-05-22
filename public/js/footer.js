@@ -87,10 +87,16 @@ class Footer extends HTMLElement {
                         <p class="text-base font-semibold uppercase">produk statistik</p>
                         <ul class="space-y-2">
                             <li>
-                                <a href="./dokumen.html">Dokumen</a>
+                                <a href="./dokumen.html">Berita Resmi Statistik</a>
                             </li>
                             <li>
                                 <a href="./publikasi.html">Publikasi</a>
+                            </li>
+                            <li>
+                                <a href="./dokumen.html#tab-leaflet">Leaflet & Buletin</a>
+                            </li>
+                            <li>
+                                <a href="./dokumen.html#tab-terkait">Dokumen Terkait</a>
                             </li>
                         </ul>
 
