@@ -84,7 +84,7 @@
         <div class="w-full">
             <!-- Tab List -->
             <ul
-                class="flex items-center list-none pt-3 pb-3 mb-2 flex-row overflow-y-auto space-x-2 whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-400 scrollbar-rounded text-xs md:text-sm font-semibold uppercase">
+                class="flex items-center list-none pt-3 pb-3 mb-2 flex-row overflow-y-auto space-x-2 lg:space-x-4 whitespace-nowrap scrollbar-thin scrollbar-thumb-gray-400 scrollbar-rounded text-xs md:text-sm font-semibold uppercase">
                 <li class="-mb-px flex-auto text-center cursor-pointer">
                     <a id="utama" class=" px-3 py-2 shadow-lg rounded block bg-body-white text-primary-hover hover:text-primary-hover hover:bg-body-white"
                         onclick="changeAtiveTab(event,'tab-utama')">
@@ -95,12 +95,6 @@
                     <a id="publikasi" class=" px-3 py-2 shadow-lg rounded block bg-primary-hover text-body-white hover:text-primary-hover hover:bg-body-white"
                         onclick="changeAtiveTab(event,'tab-publikasi')">
                         publikasi
-                    </a>
-                </li>
-                <li class="-mb-px flex-auto text-center cursor-pointer">
-                    <a id="infografis" class=" px-3 py-2 shadow-lg rounded block bg-primary-hover text-body-white hover:text-primary-hover hover:bg-body-white"
-                        onclick="changeAtiveTab(event,'tab-infografis')">
-                        infografis
                     </a>
                 </li>
                 <li class="-mb-px flex-auto text-center cursor-pointer">
@@ -188,11 +182,6 @@
                             </h1>
                             <my-publikasi class="flex flex-wrap pt-2 w-full max-w-5xl mx-auto text-sm gap-5 justify-evenly text-body-white text-center"></my-publikasi>
                         </div>
-                        <div class="hidden" id="tab-infografis">
-                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
-                                infografis
-                            </h1>
-                        </div>
                         <div class="hidden max-w-5xl mx-auto" id="tab-leaflet">
                             <tab-leaflet></tab-leaflet>
                         </div>
@@ -216,11 +205,32 @@
                             <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
                                 foto
                             </h1>
+                            <div class="grid md:grid-cols-2 gap-10">
+                                <div class="mx-auto text-center">
+                                    <img src="./img/persiapan.webp" alt="Persiapan Sensus" loading="lazy" class="rounded-md w-96 mx-auto">
+                                <h2 class="text-lg font-medium">Rapat Persiapan di BPS RI</h2>
+                                <p class="text-sm">Bagikan ke :</p>
+                                <bagikan-ke></bagikan-ke>
+                                </div>
+                                <div class="mx-auto text-center">
+                                    <img src="./img/pelaksanaan.webp" alt="Persiapan Sensus" loading="lazy" class="rounded-md w-96 ">
+                                <h2 class="text-lg font-medium">Pelaksanaan Sensus di BPS RI</h2>
+                                <p class="text-sm">Bagikan ke :</p>
+                                <bagikan-ke></bagikan-ke>
+                                </div>
+                            </div>
                         </div>
                         <div class="hidden" id="tab-video">
                             <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
                                 video
                             </h1>
+                            <iframe class="w-full max-w-5xl mx-auto aspect-video rounded-md border-0" loading="lazy"
+                                        src="https://www.youtube.com/embed/L4779lVetY8"
+                                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                        allowfullscreen></iframe>
+                            <p class="text-center py-2 text-sm md:text-base font-semibold">Kompilasi Uji Coba II Sensus Pertanian 2023</p>
+                            <h3 class="text-center text-sm font-medium">Bagikan ke :</h3>
+                            <bagikan-ke></bagikan-ke>
                         </div>
                     </div>
                 </div>
