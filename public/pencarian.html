@@ -127,6 +127,12 @@
                         video
                     </a>
                 </li>
+                <li class="-mb-px flex-auto text-center cursor-pointer">
+                    <a id="video" class=" px-3 py-2 shadow-lg rounded block bg-primary-hover text-body-white hover:text-primary-hover hover:bg-body-white"
+                        onclick="changeAtiveTab(event,'tab-kisah')">
+                        Kisah sensus
+                    </a>
+                </li>
             </ul>
             <!-- Content Tab -->
             <div
@@ -232,6 +238,18 @@
                             <h3 class="text-center text-sm font-medium">Bagikan ke :</h3>
                             <bagikan-ke></bagikan-ke>
                         </div>
+                        <div class="hidden" id="tab-kisah">
+                            <h1 class="font-bold text-lg md:text-2xl max-w-5xl mx-auto mb-2 capitalize">
+                                Kisah Sensus
+                            </h1>
+                            <div class="text-text-color grid sm:grid-cols-2 gap-4 mb-4 max-w-5xl mx-auto">
+                                <tab-kisah></tab-kisah>
+                                <tab-kisah></tab-kisah>
+                            </div>  
+                            <!-- Modal Kisah Sensus -->
+                            <kisah-sensus id="kisah_modal" class="w-full h-full bg-gray-900 bg-opacity-80 top-0 inset-0 fixed sticky-0 justify-center items-center z-50 hidden"> 
+                            </kisah-sensus>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -311,6 +329,10 @@
     const showFAQ = (flag) => {
         faqmodal.classList.toggle("hidden");
     };
+    let kisah_modal = document.getElementById("kisah_modal");
+        const show_kisah = (flag) => {
+            kisah_modal.classList.toggle("hidden");
+        };
     </script>
 </main>
 <my-footer></my-footer>
@@ -325,6 +347,7 @@
 <script src="./js/publikasi.js"></script>
 <script src="./js/flowbite.js"></script>
 <script src="./js/tabdokumen.js"></script>
+<script src="./js/kisah.js"></script>
 <script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
 <script>
     $(document).ready(function(){    
