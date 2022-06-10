@@ -2,22 +2,22 @@
 const umum = document.querySelectorAll('.umum');
 umum.forEach((a, i) => {
     a.dataset.aos = 'slide-up';
-    a.dataset.aosDelay = i * 100;
+    a.dataset.aosDelay = i * 50;
 });
 const sub = document.querySelectorAll('.subsektor');
 sub.forEach((a, i) => {
     a.dataset.aos = 'fade-down';
-    a.dataset.aosDelay = i * 100;
+    a.dataset.aosDelay = i * 50;
 });
 const layanan = document.querySelectorAll('.layanan');
 layanan.forEach((a, i) => {
     a.dataset.aos = 'zoom-in';
-    a.dataset.aosDelay = i * 100;
+    a.dataset.aosDelay = i * 50;
 })
 const publikasi = document.querySelectorAll('.publikasi');
 publikasi.forEach((a, i) => {
     a.dataset.aos = 'fade-up';
-    a.dataset.aosDelay = i * 100;
+    a.dataset.aosDelay = i * 50;
 })
 AOS.init({
     duration: 1000,
@@ -26,7 +26,7 @@ AOS.init({
 
 // Ngetik teks
 gsap.registerPlugin(TextPlugin);
-gsap.to('.mencatat', { duration: 3, delay: 0.5, text: 'Mencatat Pertanian Indonesia', ease: "power1" }, "+0.5")
+gsap.to('.mencatat', { duration: 2.5, delay: 0.5, text: 'Mencatat Pertanian Indonesia', ease: "power1" }, "+0.5")
 
 // Angka bergerak
 var obj5 = { value: 0 },
@@ -34,7 +34,7 @@ var obj5 = { value: 0 },
     element5 = document.getElementById("angka1"),
     element6 = document.getElementById("angka2");
 
-TweenMax.to(obj5, 2.4, {
+TweenMax.to(obj5, 1.5, {
     value: 17.56,
     delay: 1,
     ease: Linear.easeNone,
@@ -43,7 +43,7 @@ TweenMax.to(obj5, 2.4, {
     }
 });
 
-TweenMax.to(obj6, 2.4, {
+TweenMax.to(obj6, 1.5, {
     value: -9.16,
     delay: 1.5,
     ease: Linear.easeNone,
