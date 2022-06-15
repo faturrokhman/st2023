@@ -8,7 +8,7 @@ class Footer extends HTMLElement {
                 <div class="flex flex-col sm:flex-row space-y-5 sm:space-y-0 sm:justify-between">
                     <div class="flex-col space-y-3">
                         <div class="flex justify-start">
-                            <img src="./img/bps.png" alt="Logo BPS" class="w-8 h-min">
+                            <img src="./img/bps.png" alt="Logo BPS" class="w-8 h-6">
                             <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
                         </div>
                         <div class="items-center">

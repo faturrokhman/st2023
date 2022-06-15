@@ -7,7 +7,7 @@ class Logo extends HTMLElement {
         <div class="flex justify-between md:text-lg mx-4 sm:mx-10 lg:mx-2">
           <a href="./index.html">
               <div class="flex justify-start transition">
-                  <img src="./img/bps.png" alt="Logo BPS" class="w-8 h-min">
+                  <img src="./img/bps.png" alt="Logo BPS" class="w-8 h-6">
                   <p class="ml-2 font-bold italic uppercase">Badan Pusat Statistik</p>
               </div>
           </a>
